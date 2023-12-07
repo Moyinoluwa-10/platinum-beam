@@ -1,4 +1,17 @@
-import image from "../assets/images/image.png";
+// components
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
+import { Link } from "react-router-dom";
+
+// images
+import professional from "../assets/images/professional.png";
+import transform from "../assets/images/transform.png";
+import service1 from "../assets/images/service-1.png";
+import service2 from "../assets/images/service-2.png";
+import service3 from "../assets/images/service-3.png";
+import service4 from "../assets/images/service-4.png";
+
+//svgs
 import chipper from "../assets/svgs/chipper.svg";
 import dominos from "../assets/svgs/dominos.svg";
 import mtn from "../assets/svgs/mtn.svg";
@@ -7,9 +20,6 @@ import attention from "../assets/svgs/attention.svg";
 import luxurious from "../assets/svgs/luxurious.svg";
 import proficient from "../assets/svgs/proficient.svg";
 import superior from "../assets/svgs/superior.svg";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -51,7 +61,7 @@ const Home = () => {
 
       <section className="p-5 py-24 container flex justify-between items-center gap-12">
         <div>
-          <img src={image} alt="" />
+          <img src={professional} alt="image" />
         </div>
         <div className="max-w-xl">
           <h3 className="text-secondary text-6xl mb-4 font-bold">
@@ -85,7 +95,7 @@ const Home = () => {
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-20 justify-between">
           <div>
-            <img src={image} alt="" />
+            <img src={service1} alt="service-image" />
             <h4 className="text-secondary text-3xl mb-2 font-bold">
               Corporate Cleaning
             </h4>
@@ -101,7 +111,7 @@ const Home = () => {
           </div>
 
           <div>
-            <img src={image} alt="" />
+            <img src={service2} alt="service-image" />
             <h4 className="text-secondary text-3xl mb-2 font-bold">
               Industrial Maintenance
             </h4>
@@ -116,7 +126,7 @@ const Home = () => {
           </div>
 
           <div>
-            <img src={image} alt="" />
+            <img src={service3} alt="service-image" />
             <h4 className="text-secondary text-3xl mb-2 font-bold">
               Commercial Spaces
             </h4>
@@ -131,7 +141,7 @@ const Home = () => {
           <div className="hidden lg:block"></div>
 
           <div>
-            <img src={image} alt="" />
+            <img src={service4} alt="service-image" />
             <h4 className="text-secondary text-3xl mb-2 font-bold">
               Residential Bliss
             </h4>
@@ -214,7 +224,7 @@ const Home = () => {
 
       <section className="p-5 py-24 container flex gap-12 justify-between items-center">
         <div>
-          <img src={image} alt="" />
+          <img src={transform} alt="image" />
         </div>
         <div className="max-w-xl">
           <h3 className="text-secondary text-6xl mb-4 font-bold max-w-md">
