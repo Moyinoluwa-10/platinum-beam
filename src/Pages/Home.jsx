@@ -4,6 +4,7 @@ import dominos from "../assets/svgs/dominos.svg";
 import mtn from "../assets/svgs/mtn.svg";
 import piggyvest from "../assets/svgs/piggyvest.svg";
 import cleaning from "../assets/svgs/cleaning.svg";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
@@ -200,6 +201,8 @@ const Home = () => {
           <button>Book Now</button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
