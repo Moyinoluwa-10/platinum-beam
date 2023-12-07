@@ -13,24 +13,16 @@ const Header = () => {
       </div>
       <ul className="list-none items-center gap-6 uppercase font-bold lg:flex hidden">
         <li>
-          <Link to={"/"} className="">
-            Home
-          </Link>
+          <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <Link to={"/about"} className="">
-            About Us
-          </Link>
+          <Link to={"/about"}>About Us</Link>
         </li>
         <li>
-          <Link to={"/services"} className="">
-            Our Services
-          </Link>
+          <Link to={"/services"}>Our Services</Link>
         </li>
         <li>
-          <Link to={"/contact"} className="">
-            Contact Us
-          </Link>
+          <Link to={"/contact"}>Contact Us</Link>
         </li>
       </ul>
 
