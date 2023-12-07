@@ -5,11 +5,13 @@ import mtn from "../assets/svgs/mtn.svg";
 import piggyvest from "../assets/svgs/piggyvest.svg";
 import cleaning from "../assets/svgs/cleaning.svg";
 import Footer from "../Components/Footer";
+import Header from "../Components/Header";
 
 const Home = () => {
   return (
     <div className="font-lato">
-      <section className="hero min-h-screen text-white p-5">
+      <section className="hero min-h-screen text-white p-5 pt-0">
+        <Header />
         <div className="container">
           <h1 className="text-5xl max-w-2xl mb-5">
             Step into a World of Immaculate Luxury with Platinum Beam Concept
