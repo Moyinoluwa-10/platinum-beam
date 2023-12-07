@@ -6,23 +6,33 @@ import piggyvest from "../assets/svgs/piggyvest.svg";
 import cleaning from "../assets/svgs/cleaning.svg";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="font-lato">
-      <section className="hero min-h-screen text-white p-5 pt-0">
+      <section className="hero min-h-screen text-white">
         <Header />
-        <div className="container">
-          <h1 className="text-5xl max-w-2xl mb-5">
-            Step into a World of Immaculate Luxury with Platinum Beam Concept
-            Ltd.
-          </h1>
-          <p className="text-2xl max-w-2xl mb-8">
-            It's not about routines; it's about transforming your space into a
-            haven of pristine beauty. Discover a cleaning service that cares
-            about the details as much as you do.
-          </p>
-          <button>Book Now</button>
+        <div className="p-5">
+          <div className="container">
+            <h1 className="text-5xl max-w-2xl mb-5">
+              Step into a World of Immaculate Luxury with Platinum Beam Concept
+              Ltd.
+            </h1>
+            <p className="text-2xl max-w-2xl mb-8">
+              It's not about routines; it's about transforming your space into a
+              haven of pristine beauty. Discover a cleaning service that cares
+              about the details as much as you do.
+            </p>
+            <div className="lg:block hidden">
+              <Link
+                to={"/book"}
+                className="uppercase p-4 bg-primary rounded-2xl text-white"
+              >
+                Book Now
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
