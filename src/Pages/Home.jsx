@@ -1,11 +1,11 @@
 // components
-import Footer from "../Components/Footer";
 import Header from "../Components/Header";
+import Transform from "../Components/Transform";
+import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 
 // images
 import professional from "../assets/images/professional.png";
-import transform from "../assets/images/transform.png";
 import service1 from "../assets/images/service-1.png";
 import service2 from "../assets/images/service-2.png";
 import service3 from "../assets/images/service-3.png";
@@ -48,7 +48,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <section className="p-5 pt-20 md:pb-20 container">
         <p className="text-center text-secondary text-3xl mb-8">Trusted by</p>
         <div className="flex max-w-4xl mx-auto justify-evenly gap-x-5 gap-y-7 flex-wrap items-center">
@@ -58,7 +57,6 @@ const Home = () => {
           <img src={dominos} alt="dominos-logo" className="h-6 md:h-10" />
         </div>
       </section>
-
       <section className="p-5 py-24 container flex flex-col lg:flex-row justify-between items-center gap-12">
         <div>
           <img src={professional} alt="image" />
@@ -82,7 +80,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <section className="container p-5 py-5 md:pt-36 pb-36">
         <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
           Our Services
@@ -160,7 +157,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <section className="container p-5 py-5 md:pt-36 pb-36">
         <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
           Why Choose Us
@@ -224,34 +220,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <section className="p-5 pt-5 md:pt-24 pb-24 container flex flex-col lg:flex-row gap-12 justify-between items-center">
-        <div>
-          <img src={transform} alt="image" />
-        </div>
-        <div className="lg:max-w-xl">
-          <h3 className="text-secondary text-4xl md:text-6xl mb-4 font-bold lg:max-w-md">
-            Let's Transform Your Space
-          </h3>
-          <p className="text-xl md:text-2xl mb-10">
-            Ready to experience the Platinum Beam difference? Contact us today
-            for a consultation and let's embark on the journey to elevate your
-            space to new heights of cleanliness and luxury.Get in touch with us
-            today to learn how our team can help you clean and de-clutter.
-            Choose from any of our three cleaning plans designed to cater to
-            your lifestyle.
-          </p>
-          <div>
-            <Link
-              to={"/book"}
-              className="uppercase py-6 px-14 md:p-7 bg-primary rounded-2xl text-white inline-block"
-            >
-              Book Now
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      <Transform />
       <Footer />
     </div>
   );
