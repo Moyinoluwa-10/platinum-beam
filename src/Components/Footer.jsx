@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-black text-white p-5 pt-12 py-7">
-      <div className="container flex justify-between gap-20">
-        <div>
+      <div className="container flex flex-wrap flex-col md:flex-row justify-between gap-x-10 gap-y-8">
+        <div className="max-w-md">
           <h4 className="font-bold mb-5 text-2xl">Platinum Beam Concept Ltd</h4>
           <p className="text-lg">
             PBC Ltd is a premium cleaning service company committed to
@@ -24,17 +24,17 @@ const Footer = () => {
             </Link>
           </p>
           <p className="mb-5">
-            <Link to={"/"} className="text-base">
+            <Link to={"/about"} className="text-base">
               About Us
             </Link>
           </p>
           <p className="mb-5">
-            <Link to={"/"} className="text-base">
+            <Link to={"/contact"} className="text-base">
               Contact
             </Link>
           </p>
           <p className="mb-5">
-            <Link to={"/"} className="text-base">
+            <Link to={"/services"} className="text-base">
               Our Services
             </Link>
           </p>
@@ -45,20 +45,37 @@ const Footer = () => {
             Services
           </h4>
           <p className="mb-5">
-            <Link to={"/"} className="text-base">
+            <Link to={"/book"} className="text-base">
               Book a service
             </Link>
           </p>
         </div>
 
-        <div>
+        <div className="lg:min-w-fit">
           <h4 className="font-bold mb-5 text-2xl sm:whitespace-nowrap">
             Contact Info
           </h4>
           <p className="text-lg mb-5">
             Address: <br /> Lekki Phase 1, Lekki, Lagos 101245, NG
           </p>
-          <p className="text-lg">08131014376</p>
+          <p className="text-lg mb-5">08131014376</p>
+          <div className="flex items-center gap-5">
+            <p>
+              <a href="#">
+                <i className="fa-brands fa-instagram text-2xl"></i>
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                <i className="fa-brands fa-facebook text-2xl"></i>
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                <i className="fa-brands fa-x-twitter text-2xl"></i>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 
