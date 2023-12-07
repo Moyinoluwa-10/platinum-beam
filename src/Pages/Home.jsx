@@ -57,6 +57,7 @@ const Home = () => {
           <img src={dominos} alt="dominos-logo" className="h-6 md:h-10" />
         </div>
       </section>
+
       <section className="p-5 py-24 container flex flex-col lg:flex-row justify-between items-center gap-12">
         <div>
           <img src={professional} alt="image" />
@@ -80,6 +81,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="container p-5 py-5 md:pt-36 pb-36">
         <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
           Our Services
@@ -157,6 +159,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="container p-5 py-5 md:pt-36 pb-36">
         <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
           Why Choose Us
@@ -220,6 +223,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <Transform />
       <Footer />
     </div>
