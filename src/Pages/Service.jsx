@@ -26,12 +26,15 @@ const Service = () => {
         </div>
       </section>
 
-      <section className="p-5 container">
-        <h2></h2>
-        <p></p>
-      </section>
-
       <section className="p-5 py-24 container">
+        <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
+          Our Services
+        </h3>
+        <p className="text-xl md:text-2xl mb-16 md:mb-28 text-center max-w-5xl mx-auto">
+          At Platinum Beam Concept Ltd., our commitment to excellence extends to
+          a diverse range of services, each meticulously designed to meet your
+          unique requirements.
+        </p>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20 md:mb-40">
           <div>
             <img src={service5} alt="image" />
