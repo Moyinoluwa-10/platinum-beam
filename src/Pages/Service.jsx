@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Transform from "../Components/Transform";
@@ -7,33 +6,19 @@ import image from "../assets/images/image.png";
 const Service = () => {
   return (
     <div className="font-lato">
-      <section className="hero min-h-screen text-white">
+      <section className="hero min-h-screen text-white flex flex-col">
         <Header />
-        <div className="p-5 pb-20 pt-[10%]">
-          <div className="container">
-            <h1 className="text-4xl md:text-5xl max-w-2xl mb-5">
-              Step into a World of Immaculate Luxury with Platinum Beam Concept
-              Ltd.
-            </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mb-9">
-              It's not about routines; it's about transforming your space into a
-              haven of pristine beauty. Discover a cleaning service that cares
-              about the details as much as you do.
-            </p>
-            <div>
-              <Link
-                to={"/book"}
-                className="uppercase py-6 px-16 md:p-7 bg-primary rounded-2xl text-white inline-block md:text-2xl"
-              >
-                Book Now
-              </Link>
-            </div>
-          </div>
+        <div className="p-5 container flex-grow flex place-items-center">
+          <p className="text-2xl max-w-2xl mx-auto text-center">
+            Our Services <br /> Tailor-Made Cleaning Solutions for Every Need
+          </p>
         </div>
       </section>
 
+      <section className="p-5 container"></section>
+
       <section className="p-5 py-24 container">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20 md:mb-40">
           <div>
             <img src={image} alt="image" />
           </div>
@@ -42,9 +27,9 @@ const Service = () => {
               Professional Cleaning Services
             </h3>
             <p className="text-xl md:text-2xl mb-10">
-              Get in touch with us today to learn how our team can help you
-              clean and de-clutter. Choose from any of our three cleaning plans
-              designed to cater to your lifestyle.
+              We offer bespoke cleaning solutions tailored to the specific needs
+              of each space, whether it's a cozy home or a sprawling corporate
+              office.
             </p>
             <p>
               <a href="" className="text-primary text-xl md:text-2xl">
@@ -54,18 +39,18 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20">
+        <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-12 mb-20">
           <div>
             <img src={image} alt="image" />
           </div>
           <div className="lg:max-w-xl">
             <h3 className="text-secondary text-2xl md:text-3xl mb-4 font-bold">
-              Professional Cleaning Services
+              Specialized Cleaning Services
             </h3>
             <p className="text-xl md:text-2xl mb-10">
-              Get in touch with us today to learn how our team can help you
-              clean and de-clutter. Choose from any of our three cleaning plans
-              designed to cater to your lifestyle.
+              Our expertise extends to post-construction clean-up, rental revamp
+              cleaning, and intricate carpet cleaning services, all performed
+              with meticulous attention to detail.
             </p>
             <p>
               <a href="" className="text-primary text-xl md:text-2xl">
@@ -75,18 +60,19 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20 md:mb-40">
           <div>
             <img src={image} alt="image" />
           </div>
           <div className="lg:max-w-xl">
             <h3 className="text-secondary text-2xl md:text-3xl mb-4 font-bold">
-              Professional Cleaning Services
+              Horticulture and Landscaping
             </h3>
             <p className="text-xl md:text-2xl mb-10">
-              Get in touch with us today to learn how our team can help you
-              clean and de-clutter. Choose from any of our three cleaning plans
-              designed to cater to your lifestyle.
+              Extend the luxury beyond your indoor spaces. We integrate
+              eco-friendly practices in our horticulture and landscaping
+              services, enhancing the beauty and sustainability of your outdoor
+              spaces.
             </p>
             <p>
               <a href="" className="text-primary text-xl md:text-2xl">
@@ -96,18 +82,18 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20">
+        <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-12 mb-20">
           <div>
             <img src={image} alt="image" />
           </div>
           <div className="lg:max-w-xl">
             <h3 className="text-secondary text-2xl md:text-3xl mb-4 font-bold">
-              Professional Cleaning Services
+              Premium Product Line
             </h3>
             <p className="text-xl md:text-2xl mb-10">
-              Get in touch with us today to learn how our team can help you
-              clean and de-clutter. Choose from any of our three cleaning plans
-              designed to cater to your lifestyle.
+              Our exclusive range of cleaning products, aromatic candles,
+              diffusers, and custom oils are specially designed to elevate the
+              ambiance of corporate and hotel environments.
             </p>
             <p>
               <a href="" className="text-primary text-xl md:text-2xl">
@@ -123,78 +109,66 @@ const Service = () => {
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
             Innovative Training and Consultancy
           </h3>
-          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl mb-6">
+          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
             We're not just cleaning service providers; we're educators and
             innovators. Our training and consultancy services aim to empower the
             next generation of cleaning professionals, sharing our knowledge and
             expertise to elevate industry standards.
           </p>
-          <img src={image} alt="" />
+          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
-            Innovative Training and Consultancy
+            Leadership and Management Team
           </h3>
-          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl mb-6">
-            We're not just cleaning service providers; we're educators and
-            innovators. Our training and consultancy services aim to empower the
-            next generation of cleaning professionals, sharing our knowledge and
-            expertise to elevate industry standards.
+          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
+            Our team is a blend of experienced professionals dedicated to
+            maintaining the highest standards, ensuring Platinum Beam Concept
+            remains a leader in the cleaning services sector.
           </p>
-          <img src={image} alt="" />
+          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
-            Innovative Training and Consultancy
+            Unique Selling Proposition
           </h3>
-          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl mb-6">
-            We're not just cleaning service providers; we're educators and
-            innovators. Our training and consultancy services aim to empower the
-            next generation of cleaning professionals, sharing our knowledge and
-            expertise to elevate industry standards.
+          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
+            We redefine cleaning with our luxurious, holistic approach, focusing
+            on leadership, eco-friendly practices, community engagement, and
+            innovative training and consultancy services.
           </p>
-          <img src={image} alt="" />
+          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
-            Innovative Training and Consultancy
+            Quality Assurance
           </h3>
-          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl mb-6">
-            We're not just cleaning service providers; we're educators and
-            innovators. Our training and consultancy services aim to empower the
-            next generation of cleaning professionals, sharing our knowledge and
-            expertise to elevate industry standards.
+          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
+            We promise the highest quality in every service through standardized
+            cleaning protocols, customer feedback, continuous staff training,
+            and a commitment to eco-friendly and sustainable cleaning solutions.
           </p>
-          <img src={image} alt="" />
+          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
-            Innovative Training and Consultancy
+            Community Engagement
           </h3>
-          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl mb-6">
-            We're not just cleaning service providers; we're educators and
-            innovators. Our training and consultancy services aim to empower the
-            next generation of cleaning professionals, sharing our knowledge and
-            expertise to elevate industry standards.
+          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
+            Our role extends beyond cleaning services; we actively participate
+            in community development to improve lifestyles and promote a sense
+            of belonging among our clients and staff.
           </p>
-          <img src={image} alt="" />
-        </div>
-
-        <div className="mb-32">
-          <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
-            Innovative Training and Consultancy
-          </h3>
-          <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl mb-6">
-            We're not just cleaning service providers; we're educators and
-            innovators. Our training and consultancy services aim to empower the
-            next generation of cleaning professionals, sharing our knowledge and
-            expertise to elevate industry standards.
-          </p>
-          <img src={image} alt="" />
+          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
         </div>
       </section>
 
