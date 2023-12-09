@@ -9,7 +9,7 @@ import location from "../assets/svgs/location.svg";
 
 const Contact = () => {
   return (
-    <div className="font-lato">
+    <>
       <section className="hero min-h-screen text-white flex flex-col">
         <Header />
         <div className="p-5 container flex-grow flex place-items-center">
@@ -88,7 +88,7 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

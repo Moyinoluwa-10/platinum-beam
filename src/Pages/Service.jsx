@@ -16,7 +16,7 @@ import service8 from "../assets/images/service-8.png";
 
 const Service = () => {
   return (
-    <div className="font-lato">
+    <>
       <section className="hero min-h-screen text-white flex flex-col">
         <Header />
         <div className="p-5 container flex-grow flex place-items-center">
@@ -231,7 +231,7 @@ const Service = () => {
 
       <Transform />
       <Footer />
-    </div>
+    </>
   );
 };
 

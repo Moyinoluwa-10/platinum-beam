@@ -23,7 +23,7 @@ import superior from "../assets/svgs/superior.svg";
 
 const Home = () => {
   return (
-    <div className="font-lato">
+    <>
       <section className="hero min-h-screen text-white">
         <Header />
         <div className="p-5 pb-20 pt-[10%]">
@@ -226,7 +226,7 @@ const Home = () => {
 
       <Transform />
       <Footer />
-    </div>
+    </>
   );
 };
 
