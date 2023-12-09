@@ -48,6 +48,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="p-5 pt-20 md:pb-20 container">
         <p className="text-center text-secondary text-3xl mb-8">Trusted by</p>
         <div className="flex max-w-4xl mx-auto justify-evenly gap-x-5 gap-y-7 flex-wrap items-center">
