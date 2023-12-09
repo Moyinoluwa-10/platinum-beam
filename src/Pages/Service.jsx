@@ -1,7 +1,18 @@
+// components
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Transform from "../Components/Transform";
-import image from "../assets/images/image.png";
+
+// images
+import training from "../assets/images/training.png";
+import unique from "../assets/images/unique.png";
+import community from "../assets/images/community.png";
+import quality from "../assets/images/quality.png";
+import leadership from "../assets/images/leadership.png";
+import service5 from "../assets/images/service-5.png";
+import service6 from "../assets/images/service-6.png";
+import service7 from "../assets/images/service-7.png";
+import service8 from "../assets/images/service-8.png";
 
 const Service = () => {
   return (
@@ -15,12 +26,15 @@ const Service = () => {
         </div>
       </section>
 
-      <section className="p-5 container"></section>
+      <section className="p-5 container">
+        <h2></h2>
+        <p></p>
+      </section>
 
       <section className="p-5 py-24 container">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20 md:mb-40">
           <div>
-            <img src={image} alt="image" />
+            <img src={service5} alt="image" />
           </div>
           <div className="lg:max-w-xl">
             <h3 className="text-secondary text-2xl md:text-3xl mb-4 font-bold">
@@ -41,7 +55,7 @@ const Service = () => {
 
         <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-12 mb-20">
           <div>
-            <img src={image} alt="image" />
+            <img src={service6} alt="image" />
           </div>
           <div className="lg:max-w-xl">
             <h3 className="text-secondary text-2xl md:text-3xl mb-4 font-bold">
@@ -62,7 +76,7 @@ const Service = () => {
 
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20 md:mb-40">
           <div>
-            <img src={image} alt="image" />
+            <img src={service7} alt="image" />
           </div>
           <div className="lg:max-w-xl">
             <h3 className="text-secondary text-2xl md:text-3xl mb-4 font-bold">
@@ -84,7 +98,7 @@ const Service = () => {
 
         <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-12 mb-20">
           <div>
-            <img src={image} alt="image" />
+            <img src={service8} alt="image" />
           </div>
           <div className="lg:max-w-xl">
             <h3 className="text-secondary text-2xl md:text-3xl mb-4 font-bold">
@@ -109,66 +123,106 @@ const Service = () => {
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
             Innovative Training and Consultancy
           </h3>
-          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <img
+            src={training}
+            alt="training-image"
+            className="mx-auto mb-6 md:hidden"
+          />
           <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
             We're not just cleaning service providers; we're educators and
             innovators. Our training and consultancy services aim to empower the
             next generation of cleaning professionals, sharing our knowledge and
             expertise to elevate industry standards.
           </p>
-          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
+          <img
+            src={training}
+            alt="training-image"
+            className="mx-auto hidden md:block"
+          />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
             Leadership and Management Team
           </h3>
-          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <img
+            src={leadership}
+            alt="leadership-image"
+            className="mx-auto mb-6 md:hidden"
+          />
           <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
             Our team is a blend of experienced professionals dedicated to
             maintaining the highest standards, ensuring Platinum Beam Concept
             remains a leader in the cleaning services sector.
           </p>
-          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
+          <img
+            src={leadership}
+            alt="leadership-image"
+            className="mx-auto hidden md:block"
+          />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
             Unique Selling Proposition
           </h3>
-          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <img
+            src={unique}
+            alt="unique-image"
+            className="mx-auto mb-6 md:hidden"
+          />
           <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
             We redefine cleaning with our luxurious, holistic approach, focusing
             on leadership, eco-friendly practices, community engagement, and
             innovative training and consultancy services.
           </p>
-          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
+          <img
+            src={unique}
+            alt="unique-image"
+            className="mx-auto hidden md:block"
+          />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
             Quality Assurance
           </h3>
-          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <img
+            src={quality}
+            alt="quality-image"
+            className="mx-auto mb-6 md:hidden"
+          />
           <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
             We promise the highest quality in every service through standardized
             cleaning protocols, customer feedback, continuous staff training,
             and a commitment to eco-friendly and sustainable cleaning solutions.
           </p>
-          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
+          <img
+            src={quality}
+            alt="quality-image"
+            className="mx-auto hidden md:block"
+          />
         </div>
 
         <div className="mb-32">
           <h3 className="text-4xl md:text-6xl mb-6 font-bold text-secondary text-center">
             Community Engagement
           </h3>
-          <img src={image} alt="" className="mx-auto mb-6 md:hidden" />
+          <img
+            src={community}
+            alt="community-image"
+            className="mx-auto mb-6 md:hidden"
+          />
           <p className="text-center max-w-5xl mx-auto text-xl md:text-2xl md:mb-6">
             Our role extends beyond cleaning services; we actively participate
             in community development to improve lifestyles and promote a sense
             of belonging among our clients and staff.
           </p>
-          <img src={image} alt="" className="mx-auto hidden md:inline-block" />
+          <img
+            src={community}
+            alt="community-image"
+            className="mx-auto hidden md:block"
+          />
         </div>
       </section>
 
