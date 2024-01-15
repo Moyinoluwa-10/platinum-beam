@@ -5,10 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "#edbd3d",
-        secondary: "#344169",
-      },
-      fontFamily: {
-        lato: "Montserrat, sans-serif",
+        secondary: "#728ad3",
       },
       container: {
         center: true,
