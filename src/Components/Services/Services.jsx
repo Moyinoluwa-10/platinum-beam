@@ -1,7 +1,7 @@
 // components
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import Transform from "../Components/Transform";
+import Header from "../Header";
+import Footer from "../Footer";
+import Transform from "../Transform";
 
 // images
 import training from "../assets/images/training.png";
