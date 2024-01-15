@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-const ChoiceItem = ({ img, name, description }) => {
+const ChoiceItem = ({ img, title, description }) => {
   return (
     <>
-      {name ? (
+      {title ? (
         <div className="text-center">
           <img src={img} alt="cleaning-service-logo" className="mx-auto" />
           <h4 className="text-secondary text-2xl md:text-3xl my-2 font-bold">
-            {name}
+            {title}
           </h4>
           <p className="text-xl md:text-2xl mb-10 max-w-5xl">{description}</p>
         </div>
@@ -20,7 +20,7 @@ const ChoiceItem = ({ img, name, description }) => {
 
 ChoiceItem.propTypes = {
   img: PropTypes.any,
-  name: PropTypes.string,
+  title: PropTypes.string,
   description: PropTypes.string,
 };
 
