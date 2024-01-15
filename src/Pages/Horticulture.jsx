@@ -10,8 +10,8 @@ const Horticulture = () => {
   return (
     <>
       <Services>
-        <section className="container max-w-6xl mx-auto p-5 py-20">
-          <p className="text-center text-xl md:text-2xl mb-10">
+        <section className="container p-5 py-20 max-w-6xl mx-auto ">
+          <p className="text-center text-xl md:text-2xl mb-16">
             In this unique offering, we provide garden and landscape maintenance
             services, ensuring that outdoor spaces are as well-groomed and
             aesthetically pleasing as the interiors. This service includes
@@ -19,20 +19,32 @@ const Horticulture = () => {
             our holistic approach to cleanliness and aesthetics.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
-            <img src={horticulture1} alt="horticulture" className="w-full" />
-            <img src={horticulture2} alt="horticulture" className="w-full" />
-            <img src={horticulture3} alt="horticulture" className="w-full" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mb-20">
+            <img
+              src={horticulture1}
+              alt="horticulture"
+              className="w-full max-w-lg"
+            />
+            <img
+              src={horticulture2}
+              alt="horticulture"
+              className="w-full max-w-lg"
+            />
+            <img
+              src={horticulture3}
+              alt="horticulture"
+              className="w-full max-w-lg"
+            />
           </div>
 
           <h3 className="text-2xl font-semibold mb-4 text-center uppercase">
-            GOOD THINGS TO KNOW
+            Good things to know
           </h3>
 
           <p className="text-center text-xl md:text-2xl">
-            Reliable & friendly staff Insured, bonded & criminal record checks
-            on all staff Cleaning services are a tax write-off . No contract
-            required Commercial clients are invoiced monthly Easy payment
+            Reliable & friendly staff. Insured, bonded & criminal record checks
+            on all staff. Cleaning services are a tax write-off. No contract
+            required. Commercial clients are invoiced monthly. Easy payment
             options. We provide the supplies & equipment.
           </p>
         </section>
