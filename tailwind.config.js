@@ -8,7 +8,7 @@ export default {
         secondary: "#344169",
       },
       fontFamily: {
-        lato: "Lato, sans-serif",
+        lato: "Montserrat, sans-serif",
       },
       container: {
         center: true,
