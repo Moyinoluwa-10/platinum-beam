@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png";
+// import logo from "../assets/images/logo.png";
 
 const Header = () => {
   return (
     <header className="bg-white text-black md:container rounded-b-[32px] flex items-center justify-between pr-10 sm:pr-24">
-      <div className="max-w-xs h-24">
+      {/* <div className="max-w-xs h-24">
         <img
           src={logo}
           alt="logo"
           className="h-full relative -left-7 sm:left-0"
         />
-      </div>
+      </div> */}
       <ul className="list-none items-center gap-6 uppercase font-bold lg:flex hidden">
         <li>
           <Link to={"/"}>Home</Link>
