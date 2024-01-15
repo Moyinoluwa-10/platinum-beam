@@ -4,7 +4,7 @@ import ladyT from "../../assets/images/lady-t.png";
 import olumide from "../../assets/images/olumide.png";
 import omotolani from "../../assets/images/omotolani.png";
 
-export const members = [
+const members = [
   {
     img: ladyT,
     name: "Lady T",
@@ -31,3 +31,5 @@ export const members = [
     position: "Executive Assistant to the CEO",
   },
 ];
+
+export default members;
