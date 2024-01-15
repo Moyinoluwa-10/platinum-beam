@@ -1,4 +1,7 @@
+// react
 import { Link } from "react-router-dom";
+
+// images
 import transform from "../assets/images/transform.png";
 
 const Transform = () => {
@@ -8,7 +11,7 @@ const Transform = () => {
         <img src={transform} alt="image" />
       </div>
       <div className="lg:max-w-xl">
-        <h3 className="text-secondary text-4xl md:text-6xl mb-4 font-bold lg:max-w-md">
+        <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-semibold lg:max-w-md">
           Let's Transform Your Space
         </h3>
         <p className="text-xl md:text-2xl mb-10">
