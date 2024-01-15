@@ -8,6 +8,8 @@ import Residential from "./Pages/Residential";
 import Commercial from "./Pages/Commercial";
 import Specialized from "./Pages/Specialized";
 import Horticulture from "./Pages/Horticulture";
+import ResidentialBasic from "./Pages/ResidentialBasic";
+import ResidentialDeep from "./Pages/ResidentialDeep";
 
 function App() {
   return (
@@ -16,6 +18,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services/residential" element={<Residential />} />
+        <Route
+          path="/services/residential/basic"
+          element={<ResidentialBasic />}
+        />
+        <Route
+          path="/services/residential/deep"
+          element={<ResidentialDeep />}
+        />
         <Route path="/services/commercial" element={<Commercial />} />
         <Route path="/services/specialized" element={<Specialized />} />
         <Route path="/services/horticulture" element={<Horticulture />} />
