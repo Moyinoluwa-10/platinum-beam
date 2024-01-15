@@ -4,7 +4,7 @@ const Residential = () => {
   return (
     <>
       <Services>
-        <section className="grid grid-cols-2 max-w-4xl mx-auto gap-10 container p-5 py-20">
+        <section className="grid md:grid-cols-2 max-w-4xl mx-auto gap-10 container p-5 py-20">
           <div>
             <h3 className="text-2xl font-medium mb-2">KITCHEN</h3>
             <p className="text-xl">
