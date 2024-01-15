@@ -1,4 +1,5 @@
 // components
+import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 
 // images
@@ -6,9 +7,18 @@ import horticulture1 from "../assets/images/horticulture-1.png";
 import horticulture2 from "../assets/images/horticulture-2.png";
 import horticulture3 from "../assets/images/horticulture-3.png";
 
+// images
+import bgImg from "../assets/images/bg-2.png";
+
 const Horticulture = () => {
   return (
     <>
+      <Hero
+        bgImg={bgImg}
+        pageTitle={"Horticulture & Landscape"}
+        pageText={"Plant care and landscape beautification"}
+      />
+
       <Services>
         <section className="container p-5 py-20 max-w-6xl mx-auto ">
           <p className="text-center text-xl md:text-2xl mb-16">

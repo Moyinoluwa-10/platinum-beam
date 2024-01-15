@@ -16,6 +16,7 @@ const Residential = () => {
         pageTitle={"Residential"}
         pageText={"Basic and deep cleanings tailored to your taste"}
       />
+
       <Services>
         <section className="container p-5 py-20 grid md:grid-cols-2 max-w-6xl mx-auto gap-10 ">
           <div>

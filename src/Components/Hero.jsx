@@ -8,7 +8,7 @@ const Hero = ({ pageTitle, pageText, bgImg }) => {
   return (
     <section
       style={{
-        background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImg})`,
+        background: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${bgImg})`,
       }}
       className="flex flex-col text-white !bg-cover !bg-no-repeat !bg-center"
     >

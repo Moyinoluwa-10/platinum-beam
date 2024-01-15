@@ -1,9 +1,19 @@
 // components
+import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
+
+// images
+import bgImg from "../assets/images/bg-1.png";
 
 const ResidentialDeep = () => {
   return (
     <>
+      <Hero
+        bgImg={bgImg}
+        pageTitle={"Residential"}
+        pageText={"Basic and deep cleanings tailored to your taste"}
+      />
+
       <Services>
         <section className="container p-5 py-20">
           <h2 className="text-2xl font-semibold mb-10 text-center uppercase">

@@ -1,4 +1,5 @@
 // components
+import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 
 // images
@@ -6,9 +7,20 @@ import category1 from "../assets/images/category-1.png";
 import category2 from "../assets/images/category-2.png";
 import category3 from "../assets/images/category-3.png";
 
+// images
+import bgImg from "../assets/images/bg-1.png";
+
 const Specialized = () => {
   return (
     <>
+      <Hero
+        bgImg={bgImg}
+        pageTitle={"Specialized Cleaning"}
+        pageText={
+          "Post-construction, rental revamp and carpet cleaning services"
+        }
+      />
+
       <Services>
         <section className="container p-5 py-20">
           <div className="flex justify-center items-center gap-5 mb-10 text-center">
