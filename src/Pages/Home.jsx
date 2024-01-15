@@ -4,9 +4,9 @@ import Transform from "../Components/Transform";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import ChoiceItem from "../Components/Home/ChoiceItem";
+import choices from "../Components/Home/choices";
 import ServiceItem from "../Components/Home/ServiceItem";
-import { services } from "../Components/Home/services";
-import { choices } from "../Components/Home/choices";
+import services from "../Components/Home/services";
 import Flex from "../Components/Home/Flex";
 
 // images
@@ -62,7 +62,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-5 pt-20 md:pb-20 container">
+      <section className="container p-5 pt-20 md:pb-20">
         <p className="text-center text-secondary text-3xl mb-8">Trusted by</p>
         <div className="flex max-w-4xl mx-auto justify-evenly gap-7 flex-wrap items-center">
           <img src={mtn} alt="mtn-logo" className="h-6 md:h-10" />
@@ -92,7 +92,7 @@ const Home = () => {
           giant, or a cozy residence, our skilled team ensures each space is
           treated with the utmost care and attention to detail.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20 justify-between">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-y-16 justify-between">
           {services.map((service, i) => {
             return <ServiceItem key={i} {...service} />;
           })}
@@ -100,13 +100,13 @@ const Home = () => {
       </section>
 
       <section className="container p-5 py-5 md:pt-10 pb-10">
-        <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
+        <h3 className="text-secondary text-4xl md:text-5xl mb-5 font-semibold text-center">
           Why Choose Us
         </h3>
         <p className="text-xl md:text-2xl mb-10 text-center max-w-5xl mx-auto">
           Setting the Standard for Excellence
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5 md:gap-y-20 justify-evenly content-evenly items-center justify-items-end">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-y-20 justify-evenly content-evenly items-center justify-items-end">
           {choices.map((choice, i) => {
             return <ChoiceItem key={i} {...choice} />;
           })}

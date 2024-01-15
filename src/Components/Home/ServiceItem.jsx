@@ -1,3 +1,4 @@
+// react
 import PropTypes from "prop-types";
 
 const ServiceItem = ({ img, title, description }) => {
@@ -6,7 +7,7 @@ const ServiceItem = ({ img, title, description }) => {
       {title ? (
         <div>
           <img src={img} alt="service-image" />
-          <h4 className="text-secondary text-2xl md:text-3xl mb-2 font-bold mt-6">
+          <h4 className="text-secondary text-2xl md:text-3xl mb-2 font-semibold mt-6">
             {title}
           </h4>
           <p className="text-xl md:text-2xl mb-5 md:mb-8 max-w-5xl">

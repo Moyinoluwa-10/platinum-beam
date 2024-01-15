@@ -1,14 +1,15 @@
+// react
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Flex = ({ img, name, description, linkAdd, linkText }) => {
   return (
-    <section className="p-5 py-24 container flex flex-col lg:flex-row justify-between items-center gap-12">
+    <section className="container p-5 py-16 flex flex-col lg:flex-row justify-between items-center gap-12">
       <div>
         <img src={img} alt="image" />
       </div>
       <div className="lg:max-w-xl">
-        <h3 className="text-secondary text-4xl md:text-6xl mb-4 font-bold">
+        <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-semibold">
           {name}
         </h3>
         <p className="text-xl md:text-2xl mb-10">{description}</p>

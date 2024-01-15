@@ -1,9 +1,10 @@
+// svgs
 import attention from "../../assets/svgs/attention.svg";
 import luxurious from "../../assets/svgs/luxurious.svg";
 import proficient from "../../assets/svgs/proficient.svg";
 import superior from "../../assets/svgs/superior.svg";
 
-export const choices = [
+const choices = [
   {
     img: luxurious,
     title: "Luxurious Experience",
@@ -34,3 +35,5 @@ export const choices = [
       "We pride ourselves on maintaining the highest standards in the cleaning industry.",
   },
 ];
+
+export default choices;

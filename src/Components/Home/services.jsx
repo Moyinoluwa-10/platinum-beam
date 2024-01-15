@@ -1,9 +1,10 @@
+// images
 import service1 from "../../assets/images/service-1.png";
 import service2 from "../../assets/images/service-2.png";
 import service3 from "../../assets/images/service-3.png";
 import service4 from "../../assets/images/service-4.png";
 
-export const services = [
+const services = [
   {
     img: service1,
     title: "Residential Cleaning",
@@ -34,3 +35,5 @@ export const services = [
       "This service includes garden cleanup, plant care, and landscape beautification, reflecting our holistic approach to cleanliness and aesthetics.",
   },
 ];
+
+export default services;
