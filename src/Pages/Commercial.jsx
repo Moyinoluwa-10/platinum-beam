@@ -5,7 +5,7 @@ const Commercial = () => {
     <>
       <Services>
         <section className="container max-w-6xl mx-auto p-5 py-20">
-          <p className="text-center">
+          <p className="text-center md:text-xl text-2xl">
             Designed for business spaces, this service ensures that offices,
             retail spaces, and other commercial premises are not just clean, but
             also presentable and conducive to productivity. The focus is on
