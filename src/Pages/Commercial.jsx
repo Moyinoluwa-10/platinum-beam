@@ -25,7 +25,7 @@ const Commercial = () => {
           </p>
           <section className="grid md:grid-cols-2 max-w-6xl mx-auto gap-10">
             <div>
-              <h3 className="text-2xl font-medium mb-2">
+              <h3 className="text-2xl font-medium mb-2 uppercase">
                 COMMON TASKS COMPLETED
               </h3>
               <p className="text-xl">
@@ -42,7 +42,9 @@ const Commercial = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-medium mb-2">DEEP CLEANING</h3>
+              <h3 className="text-2xl font-medium mb-2 uppercase">
+                DEEP CLEANING
+              </h3>
               <p className="text-xl">
                 Clean interior windows (remove window stickers). <br /> Carpet
                 cleaning, available by request. <br /> Wipe down computer

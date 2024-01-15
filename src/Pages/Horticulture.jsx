@@ -25,7 +25,7 @@ const Horticulture = () => {
             <img src={horticulture3} alt="horticulture" className="w-full" />
           </div>
 
-          <h3 className="text-2xl font-semibold mb-4 text-center">
+          <h3 className="text-2xl font-semibold mb-4 text-center uppercase">
             GOOD THINGS TO KNOW
           </h3>
 
