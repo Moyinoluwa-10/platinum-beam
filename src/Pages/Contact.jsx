@@ -1,11 +1,9 @@
-// components
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-
-//svgs
 import whatsapp from "../assets/svgs/whatsapp.svg";
 import email from "../assets/svgs/email.svg";
 import location from "../assets/svgs/location.svg";
+import ContactForm from "../Components/Contact/ContactForm";
 
 const Contact = () => {
   return (
@@ -25,7 +23,7 @@ const Contact = () => {
         <h3 className="text-secondary text-4xl md:text-6xl mb-20 font-bold text-center">
           Contact us via
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-10 text-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 text-center max-w-7xl mx-auto">
           <div className="flex flex-col place-items-center gap-x-5 gap-y-7 md:gap-14 max-w-xs ">
             <img src={whatsapp} alt="whatsapp-logo" />
             <p className="text-xl md:text-2xl">09131704005</p>
@@ -43,48 +41,12 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="p-5 py-24 container">
+      <section className="p-5 py-10 md:py-24 container">
         <h3 className="text-secondary text-4xl md:text-6xl mb-20 font-bold text-center">
           Send Us a Message <br /> Get in Touch
         </h3>
 
-        <form className="max-w-5xl mx-auto mb-20">
-          <div className="mb-10 md:mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-            <div className="w-full">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="border-[#728ad3] border-2 py-6 pl-5 rounded-2xl w-full focus:border-secondary outline-none"
-                placeholder="Your Name"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                className="border-[#728ad3] border-2 py-6 pl-5 rounded-2xl w-full focus:border-secondary outline-none"
-                placeholder="Email Address"
-              />
-            </div>
-          </div>
-          <div className="mb-16">
-            <textarea
-              name=""
-              id=""
-              className="border-[#728ad3] border-2 py-6 pl-5 rounded-2xl w-full resize-none focus:border-secondary outline-none"
-              cols="30"
-              rows="10"
-              placeholder="Your Message"
-            ></textarea>
-          </div>
-          <div>
-            <button className="uppercase py-5 px-14 md:px-20 bg-primary rounded-2xl text-white block mx-auto">
-              Send
-            </button>
-          </div>
-        </form>
+        <ContactForm />
       </section>
 
       <Footer />
