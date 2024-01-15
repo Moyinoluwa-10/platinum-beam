@@ -2,13 +2,13 @@
 import Header from "../Components/Header";
 import Transform from "../Components/Transform";
 import Footer from "../Components/Footer";
+import MemberItem from "../Components/About/MemberItem";
+import { members } from "../Components/About/members";
 
 // images
 import cleaning from "../assets/images/cleaning.png";
+import about from "../assets/images/about.png";
 import bunmi from "../assets/images/bunmi.png";
-import olabunmi from "../assets/images/olabunmi.jpeg";
-import emmanuel from "../assets/images/emmanuel.jpeg";
-import olumide from "../assets/images/olumide.jpeg";
 
 const About = () => {
   return (
@@ -17,7 +17,7 @@ const About = () => {
         <Header />
       </section>
 
-      <section className="container p-5 py-5 md:pt-36 pb-36">
+      <section className="container p-5 py-5 md:pt-28 pb-36">
         <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
           Helping you flourish every day.
         </h3>
@@ -27,62 +27,60 @@ const About = () => {
           commitment to efficiency, eco-friendly practices, and sustainable
           cleaning solutions sets us apart in the cleaning industry.
         </p>
-        <img src={cleaning} alt="cleaning-image" className="max-w-xl mx-auto" />
+        <img
+          src={cleaning}
+          alt="cleaning-image"
+          className="w-full max-w-xl mx-auto"
+        />
       </section>
 
-      <section className="container p-5 py-5 md:pt-36 pb-36">
-        <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
+      <section className="container p-5 py-5 md:pt-28 pb-36">
+        <img
+          src={about}
+          alt="cleaning-image"
+          className="w-full max-w-xl mx-auto"
+        />
+        <p className="text-xl md:text-2xl text-center max-w-5xl mx-auto mt-10">
+          We're not just a cleaning service provider, we're educators and
+          innovators. Our training and consultancy services aim to empower the
+          next generation of cleaning professionals, sharing our knowledge and
+          expertise to elevate industry standards. Our team is a blend of
+          experienced professionals dedicated to maintaining the highest
+          standards, ensuring Platinum Beam Concept remains a leader in the
+          cleaning services sector.
+        </p>
+      </section>
+
+      <section className="container p-5 py-5 md:py-0">
+        <h3 className="text-secondary text-4xl md:text-6xl mb-10 md:mb-16 font-bold text-center">
           Meet the faces behind the brand
         </h3>
-        <div className="p-5 py-24 container flex flex-col lg:flex-row justify-between items-center gap-12">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
           <div>
-            <img src={bunmi} alt="founder-image" className="max-w-[640px]" />
+            <img
+              src={bunmi}
+              alt="founder-image"
+              className="w-full max-w-[450px] xl:max-w-[640px]"
+            />
           </div>
           <div className="lg:max-w-xl">
             <p className="text-xl md:text-2xl mb-10">
               <span className="text-[#728ad3]">Bunmi Obanise</span> founded
-              Platinum Beam Concept Ltd. with the dream of transforming the
-              cleaning industry. With years of experience as a consultant,
-              trainer, coach, and speaker in the cleaning business arena, Bunmi
-              brought her expertise, innovation, and deep understanding of
-              customer needs to Platinum Beam.
+              Platinum Beam Concept Limited to offer her valuable contribution
+              towards the enhancement and growth of the cleaning industry.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="container p-5 py-5 md:pt-36 pb-36">
-        <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
+      <section className="container p-5 py-5 pb-16 md:pt-20 md:pb-10">
+        <h3 className="text-secondary text-4xl md:text-6xl mb-10 font-bold text-center">
           Other faces to see
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-10 max-w-7xl mx-auto">
-          <div className="">
-            <img
-              src={olabunmi}
-              alt="member-image"
-              className="w-full aspect-[100/105]"
-            />
-            <p className="text-xl md:text-2xl mb-4 mt-9">CEO</p>
-            <p className="text-2xl md:text-3xl font-bold">Olubunmi Obanise</p>
-          </div>
-          <div className="">
-            <img
-              src={emmanuel}
-              alt="member-image"
-              className="w-full aspect-[100/105]"
-            />
-            <p className="text-xl md:text-2xl mb-4 mt-9">Admin Manager</p>
-            <p className="text-2xl md:text-3xl font-bold">Emmanuel Asotie</p>
-          </div>
-          <div className="">
-            <img
-              src={olumide}
-              alt="member-image"
-              className="w-full aspect-[100/105]"
-            />
-            <p className="text-xl md:text-2xl mb-4 mt-9">Head of Operations</p>
-            <p className="text-2xl md:text-3xl font-bold">Olumide Adesina</p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-10 gap-y-16 max-w-7xl mx-auto">
+          {members.map((member, i) => {
+            return <MemberItem key={i} {...member} />;
+          })}
         </div>
       </section>
 
