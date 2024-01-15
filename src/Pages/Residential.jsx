@@ -3,10 +3,19 @@ import { Link } from "react-router-dom";
 
 // components
 import Services from "../Components/Services/Services";
+import Hero from "../Components/Hero";
+
+// images
+import bgImg from "../assets/images/bg-1.png";
 
 const Residential = () => {
   return (
     <>
+      <Hero
+        bgImg={bgImg}
+        pageTitle={"Residential"}
+        pageText={"Basic and deep cleanings tailored to your taste"}
+      />
       <Services>
         <section className="container p-5 py-20 grid md:grid-cols-2 max-w-6xl mx-auto gap-10 ">
           <div>
