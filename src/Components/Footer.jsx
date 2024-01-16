@@ -1,11 +1,27 @@
+//react
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  FaAngleDown,
+  FaInstagram,
+  FaFacebook,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState(null);
+
+  const handleClick = (id) => {
+    setIsOpen((open) => (open === id ? null : id));
+  };
+
   return (
     <footer className="bg-black text-white p-5 pt-12 py-7">
-      <div className="container flex flex-wrap flex-col md:flex-row justify-between gap-x-10 gap-y-8">
+      <div className="container flex-wrap flex-col md:flex-row justify-between gap-x-10 gap-y-8 hidden md:flex">
         <div className="max-w-md">
-          <h4 className="font-bold mb-5 text-2xl">Platinum Beam Concept Ltd</h4>
+          <h4 className="font-medium mb-5 text-2xl">
+            Platinum Beam Concept Ltd
+          </h4>
           <p className="text-lg">
             PBC Ltd is a premium cleaning service company committed to
             transforming traditional cleaning into a luxurious experience. We
@@ -15,44 +31,56 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="font-bold mb-5 text-2xl sm:whitespace-nowrap">
+          <h4 className="font-medium mb-5 text-2xl sm:whitespace-nowrap">
             Quick Links
           </h4>
           <p className="mb-5">
-            <Link to={"/"} className="text-base">
+            <Link to={"/"} className="text-base transition-all hover:underline">
               Home
             </Link>
           </p>
           <p className="mb-5">
-            <Link to={"/about"} className="text-base">
+            <Link
+              to={"/about"}
+              className="text-base transition-all hover:underline"
+            >
               About Us
             </Link>
           </p>
           <p className="mb-5">
-            <Link to={"/contact"} className="text-base">
+            <Link
+              to={"/contact"}
+              className="text-base transition-all hover:underline"
+            >
               Contact
             </Link>
           </p>
           <p className="mb-5">
-            <Link to={"/services"} className="text-base">
+            <Link
+              to={"/services"}
+              className="text-base transition-all hover:underline"
+            >
               Our Services
             </Link>
           </p>
         </div>
 
         <div>
-          <h4 className="font-bold mb-5 text-2xl sm:whitespace-nowrap">
+          <h4 className="font-medium mb-5 text-2xl sm:whitespace-nowrap">
             Services
           </h4>
           <p className="mb-5">
-            <Link to={"/book"} className="text-base">
+            <Link
+              to={"/book"}
+              className="text-base transition-all hover:underline"
+            >
               Book a service
             </Link>
           </p>
         </div>
 
         <div className="lg:min-w-fit">
-          <h4 className="font-bold mb-5 text-2xl sm:whitespace-nowrap">
+          <h4 className="font-medium mb-5 text-2xl sm:whitespace-nowrap">
             Contact Info
           </h4>
           <p className="text-lg mb-5">
@@ -62,20 +90,168 @@ const Footer = () => {
           <div className="flex items-center gap-5">
             <p>
               <a href="#">
-                <i className="fa-brands fa-instagram text-2xl"></i>
+                <FaInstagram className="text-2xl" />
               </a>
             </p>
             <p>
               <a href="#">
-                <i className="fa-brands fa-facebook text-2xl"></i>
+                <FaFacebook className="text-2xl" />
               </a>
             </p>
             <p>
               <a href="#">
-                <i className="fa-brands fa-x-twitter text-2xl"></i>
+                <FaXTwitter className="text-2xl" />
               </a>
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-5 md:hidden">
+        <div className="max-w-md">
+          <h4 className="font-medium mb-5 text-2xl">
+            Platinum Beam Concept Ltd
+          </h4>
+          <p className="text-lg mb-7">
+            PBC Ltd is a premium cleaning service company committed to
+            transforming traditional cleaning into a luxurious experience. We
+            offer support services that effectively and efficiently help
+            organizations achieve their strategic and operational goals.
+          </p>
+        </div>
+
+        <div>
+          <h4
+            className="font-medium text-2xl flex items-center gap-2"
+            onClick={() => handleClick("quick")}
+          >
+            Quick Links{" "}
+            <FaAngleDown
+              className={
+                isOpen === "quick"
+                  ? "text-lg transition-all rotate-180"
+                  : "text-lg transition-all"
+              }
+            />
+          </h4>
+          <div
+            className={
+              isOpen === "quick"
+                ? "max-h-[500px] overflow-hidden transition-all duration-300 mt-5"
+                : "max-h-0 overflow-hidden transition-all duration-300 mt-5"
+            }
+          >
+            <p className="mb-5">
+              <Link
+                to={"/"}
+                className="text-base transition-all hover:underline"
+              >
+                Home
+              </Link>
+            </p>
+            <p className="mb-5">
+              <Link
+                to={"/about"}
+                className="text-base transition-all hover:underline"
+              >
+                About Us
+              </Link>
+            </p>
+            <p className="mb-5">
+              <Link
+                to={"/contact"}
+                className="text-base transition-all hover:underline"
+              >
+                Contact
+              </Link>
+            </p>
+            <p className="mb-5">
+              <Link
+                to={"/services"}
+                className="text-base transition-all hover:underline"
+              >
+                Our Services
+              </Link>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h4
+            className="font-medium text-2xl flex items-center gap-2"
+            onClick={() => handleClick("services")}
+          >
+            Services{" "}
+            <FaAngleDown
+              className={
+                isOpen === "services"
+                  ? "text-lg transition-all rotate-180"
+                  : "text-lg transition-all"
+              }
+            />
+          </h4>
+          <div
+            className={
+              isOpen === "services"
+                ? "max-h-[500px] overflow-hidden transition-all duration-300 mt-5"
+                : "max-h-0 overflow-hidden transition-all duration-300 mt-5"
+            }
+          >
+            <p className="mb-5">
+              <Link
+                to={"/book"}
+                className="text-base transition-all hover:underline"
+              >
+                Book a service
+              </Link>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h4
+            className="font-medium text-2xl flex items-center gap-2"
+            onClick={() => handleClick("contact")}
+          >
+            Contact Info{" "}
+            <FaAngleDown
+              className={
+                isOpen === "contact"
+                  ? "text-lg transition-all rotate-180"
+                  : "text-lg transition-all"
+              }
+            />
+          </h4>
+          <div
+            className={
+              isOpen === "contact"
+                ? "max-h-[500px] overflow-hidden transition-all duration-300 mt-5"
+                : "max-h-0 overflow-hidden transition-all duration-300 mt-5"
+            }
+          >
+            <p className="text-lg mb-5">
+              Address: <br /> Lekki Phase 1, Lekki, Lagos 101245, NG
+            </p>
+            <p className="text-lg mb-5">08131014376</p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-5 mt-10">
+          <p>
+            <a href="#">
+              <FaInstagram className="text-2xl" />
+            </a>
+          </p>
+          <p>
+            <a href="#">
+              <FaFacebook className="text-2xl" />
+            </a>
+          </p>
+          <p>
+            <a href="#">
+              <FaXTwitter className="text-2xl" />
+            </a>
+          </p>
         </div>
       </div>
 
