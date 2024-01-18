@@ -14,10 +14,8 @@ import professional from "../assets/images/professional.png";
 import faq from "../assets/images/faq.png";
 
 //svgs
-import chipper from "../assets/svgs/chipper.svg";
-import dominos from "../assets/svgs/dominos.svg";
-import mtn from "../assets/svgs/mtn.svg";
-import piggyvest from "../assets/svgs/piggyvest.svg";
+import cmi from "../assets/svgs/cmi.svg";
+import issa from "../assets/svgs/issa.svg";
 import ellipse1 from "../assets/svgs/ellipse-1.svg";
 import ellipse3 from "../assets/svgs/ellipse-3.svg";
 
@@ -65,10 +63,8 @@ const Home = () => {
       <section className="container p-5 pt-20 md:pb-20">
         <p className="text-center text-secondary text-3xl mb-8">Trusted by</p>
         <div className="flex max-w-4xl mx-auto justify-evenly gap-7 flex-wrap items-center">
-          <img src={mtn} alt="mtn-logo" className="h-6 md:h-10" />
-          <img src={piggyvest} alt="piggyvest-logo" className="h-6 md:h-10" />
-          <img src={chipper} alt="chipper-logo" className="h-6 md:h-10" />
-          <img src={dominos} alt="dominos-logo" className="h-6 md:h-10" />
+          <img src={issa} alt="issa-logo" className="h-20 md:h-28" />
+          <img src={cmi} alt="cmi-logo" className="h-20 md:h-28" />
         </div>
       </section>
 
