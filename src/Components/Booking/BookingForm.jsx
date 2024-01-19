@@ -12,10 +12,23 @@ const BookingForm = () => {
     <>
       <Formik
         initialValues={{
-          name: "",
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
           email: "",
-          message: "",
+          address: "",
+          city: "",
+          state: "",
           cleaningService: [],
+          homeType: "",
+          homeTypeOther: "",
+          commercialType: "",
+          commercialTypeOther: "",
+          cleaningFrequency: "weekly",
+          cleaningMode: "",
+          noOfBathrooms: "",
+          noOfBedrooms: "",
+          noOfLivingRooms: "",
         }}
         validationSchema={Yup.object({
           firstName: Yup.string().required("Required"),
@@ -26,11 +39,42 @@ const BookingForm = () => {
             .required("Required"),
           address: Yup.string().required("Required"),
           city: Yup.string().required("Required"),
-          state: Yup.string().required("Required"),
-          cleaningFrequency: Yup.string().required(""),
+          state: Yup.string()
+            .required("Select a state")
+            .oneOf(
+              ["ekiti", "oyo", "lagos", "abeokuta"],
+              "Incorrect selection"
+            ),
+          cleaningService: Yup.array().min(
+            1,
+            "Select at least one cleaning service"
+          ),
+          homeType: Yup.string().when("cleaningService", {
+            is: (cleaningService) => cleaningService.includes("residential"),
+            then: () => Yup.string().required("Select an option"),
+          }),
+          homeTypeOther: Yup.string().when("homeType", {
+            is: "others",
+            then: () => Yup.string().required("Required"),
+          }),
+          commercialType: Yup.string().when("cleaningService", {
+            is: (cleaningService) => cleaningService.includes("commercial"),
+            then: () => Yup.string().required("Select an option"),
+          }),
+          commercialTypeOther: Yup.string().when("commercialType", {
+            is: "others",
+            then: () => Yup.string().required("Required"),
+          }),
+          cleaningFrequency: Yup.string()
+            .required("Select an option")
+            .oneOf(
+              ["weekly", "biweekly", "monthly", "once"],
+              "Incorrect selection"
+            ),
           cleaningMode: Yup.string(),
-          cleaningService: Yup.array(),
-          message: Yup.string().required("Required"),
+          noOfBathrooms: Yup.string(),
+          noOfBedrooms: Yup.string(),
+          noOfLivingRooms: Yup.string(),
         })}
         onSubmit={(values, { setSubmitting }) => {
           const toastID = toast.loading("Submitting...");
@@ -41,13 +85,13 @@ const BookingForm = () => {
             });
             setSubmitting(false);
             // resetForm();
-          }, 3000);
+          }, 200);
         }}
       >
-        {({ isSubmitting }) => (
+        {({ isSubmitting, values, setFieldValue }) => (
           <Form className="max-w-5xl mx-auto mb-20">
             <ContactInfo />
-            <ServiceInfo />
+            <ServiceInfo values={values} onFieldValue={setFieldValue} />
 
             <button
               type="submit"

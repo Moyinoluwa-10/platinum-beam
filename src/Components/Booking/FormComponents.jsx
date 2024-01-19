@@ -31,16 +31,13 @@ MyTextInput.propTypes = {
 };
 
 export const MyCheckbox = ({ children, ...props }) => {
-  const [field, meta] = useField({ ...props, type: "checkbox" });
+  const [field] = useField({ ...props, type: "checkbox" });
   return (
     <div>
       <label className="flex gap-2 items-center">
         <input type="checkbox" {...field} {...props} className="h-4 w-4" />
         {children}
       </label>
-      {meta.touched && meta.error ? (
-        <div className="text-red-500 text-sm">{meta.error}</div>
-      ) : null}
     </div>
   );
 };
@@ -50,16 +47,13 @@ MyCheckbox.propTypes = {
 };
 
 export const MyRadio = ({ children, ...props }) => {
-  const [field, meta] = useField({ ...props, type: "radio" });
+  const [field] = useField({ ...props, type: "radio" });
   return (
     <div>
       <label className="flex items-center gap-2">
         <input type="radio" {...field} {...props} className="h-4 w-4" />
         {children}
       </label>
-      {meta.touched && meta.error ? (
-        <div className="text-red-500 text-sm">{meta.error}</div>
-      ) : null}
     </div>
   );
 };

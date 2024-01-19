@@ -1,14 +1,24 @@
 // react
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoInfo } from "react-icons/go";
+import PropTypes from "prop-types";
 
 // components
 import CleaningService from "./CleaningService";
 import { MyRadio, MySelect, MyTextInput } from "./FormComponents";
 import services from "./services.json";
+import { ErrorMessage } from "formik";
+import { CommercialType, HomeType } from "./CleaningServiceType";
 
-export const ServiceInfo = () => {
+export const ServiceInfo = ({ values, onFieldValue }) => {
   const [isOpen, setIsOpen] = useState(null);
+
+  useEffect(() => {
+    if (values.homeType !== "others") onFieldValue("homeTypeOther", "");
+    if (values.commercialType !== "others")
+      onFieldValue("commercialTypeOther", "");
+    // eslint-disable-next-line
+  }, [values.commercialType, values.homeType]);
 
   return (
     <>
@@ -40,30 +50,19 @@ export const ServiceInfo = () => {
                   onOpen={setIsOpen}
                 />
               ))}
+              <div className="text-red-500 text-sm">
+                <ErrorMessage name="cleaningService" />
+              </div>
             </div>
           </div>
 
-          <div className="mb-10 flex flex-col gap-2">
-            <p className="text-xl mb-2 font-medium">Type of home</p>
-            <MyRadio name="homeType" value="duplex">
-              Duplex
-            </MyRadio>
-            <MyRadio name="homeType" value="airbnb">
-              Airbnb
-            </MyRadio>
-            <MyRadio name="homeType" value="apartment">
-              Apartment
-            </MyRadio>
-            <MyRadio name="homeType" value="bungalow">
-              Bungalow
-            </MyRadio>
-            <MyRadio name="homeType" value="selfcon">
-              Self Contain
-            </MyRadio>
-            <MyRadio name="homeType" value="others">
-              <input className="transition-all border border-black focus:border-2 focus:border-secondary  py-2 px-3 rounded-lg outline-none" />
-            </MyRadio>
-          </div>
+          {values.cleaningService.includes("residential") && (
+            <HomeType values={values} />
+          )}
+
+          {values.cleaningService.includes("commercial") && (
+            <CommercialType values={values} />
+          )}
         </div>
 
         <div>
@@ -77,42 +76,52 @@ export const ServiceInfo = () => {
             </MySelect>
           </div>
 
-          <div className="mb-10">
-            <p className="text-xl mb-2 font-medium">Mode of Cleaning</p>
-            <MyRadio name="cleaningMode" value="basic">
-              Basic Cleaning
-            </MyRadio>
-            <MyRadio name="cleaningMode" value="deep">
-              Deep Cleaning
-            </MyRadio>
-          </div>
+          {(values.cleaningService.includes("residential") ||
+            values.cleaningService.includes("commercial")) && (
+            <div className="mb-10">
+              <p className="text-xl mb-2 font-medium">Mode of Cleaning</p>
+              <MyRadio name="cleaningMode" value="basic">
+                Basic Cleaning
+              </MyRadio>
+              <MyRadio name="cleaningMode" value="deep">
+                Deep Cleaning
+              </MyRadio>
+            </div>
+          )}
 
-          <div className="flex flex-col gap-10">
-            <MyTextInput
-              label={"Number of bathrooms"}
-              name="noOfBathrooms"
-              type="number"
-              placeholder="1"
-            />
+          {values.cleaningService.includes("residential") && (
+            <div className="flex flex-col gap-10">
+              <MyTextInput
+                label={"Number of bathrooms"}
+                name="noOfBathrooms"
+                type="number"
+                placeholder="1"
+              />
 
-            <MyTextInput
-              label={"Number of bedrooms"}
-              name="noOfBedrooms"
-              type="number"
-              placeholder="1"
-            />
+              <MyTextInput
+                label={"Number of bedrooms"}
+                name="noOfBedrooms"
+                type="number"
+                placeholder="1"
+              />
 
-            <MyTextInput
-              label={"Number of Living rooms"}
-              name="noOfLivingRooms"
-              type="number"
-              placeholder="1"
-            />
-          </div>
+              <MyTextInput
+                label={"Number of Living rooms"}
+                name="noOfLivingRooms"
+                type="number"
+                placeholder="1"
+              />
+            </div>
+          )}
         </div>
       </div>
     </>
   );
+};
+
+ServiceInfo.propTypes = {
+  values: PropTypes.object,
+  onFieldValue: PropTypes.func,
 };
 
 export default ServiceInfo;

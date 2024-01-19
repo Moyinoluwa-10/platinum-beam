@@ -34,7 +34,7 @@ const ContactForm = () => {
                 <Field
                   name="name"
                   type="text"
-                  className="transition-all border border-black focus:border-2 focus:border-[#728ad3]  py-4 px-5 rounded-2xl w-full outline-none"
+                  className="transition-all border border-black focus:border-2 focus:border-secondary  py-4 px-5 rounded-2xl w-full outline-none"
                   placeholder="Your Name"
                 />
                 <div className="text-red-500 text-sm">
@@ -46,7 +46,7 @@ const ContactForm = () => {
                 <Field
                   name="email"
                   type="email"
-                  className="transition-all border border-black focus:border-2 focus:border-[#728ad3]  py-4 px-5 rounded-2xl w-full outline-none"
+                  className="transition-all border border-black focus:border-2 focus:border-secondary  py-4 px-5 rounded-2xl w-full outline-none"
                   placeholder="Email Address"
                 />
                 <div className="text-red-500 text-sm">
@@ -61,7 +61,7 @@ const ContactForm = () => {
                 as={"textarea"}
                 cols="30"
                 rows="10"
-                className="transition-all border border-black focus:border-2 focus:border-[#728ad3] py-4 px-5 rounded-2xl w-full outline-none resize-none"
+                className="transition-all border border-black focus:border-2 focus:border-secondary py-4 px-5 rounded-2xl w-full outline-none resize-none"
                 placeholder="Your Message"
               />
               <div className="text-red-500 text-sm">
