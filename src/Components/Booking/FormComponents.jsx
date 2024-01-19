@@ -1,4 +1,7 @@
+// react
 import PropTypes from "prop-types";
+
+// form
 import { useField } from "formik";
 
 export const MyTextInput = ({ label, ...props }) => {
@@ -6,16 +9,12 @@ export const MyTextInput = ({ label, ...props }) => {
   return (
     <div>
       {label && (
-        <label
-          htmlFor={props.id || props.name}
-          className="inline-block mb-2 font-medium"
-        >
+        <label htmlFor={props.name} className="inline-block mb-2 font-medium">
           {label}
         </label>
       )}
-
       <input
-        className="transition-all border border-black focus:border-2 focus:border-[#728ad3]  py-4 px-5 rounded-2xl w-full outline-none"
+        className="transition-all border border-black focus:border-2 focus:border-secondary  py-4 px-5 rounded-2xl w-full outline-none"
         {...field}
         {...props}
       />
@@ -28,20 +27,15 @@ export const MyTextInput = ({ label, ...props }) => {
 
 MyTextInput.propTypes = {
   label: PropTypes.string,
-  id: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 };
 
 export const MyCheckbox = ({ children, ...props }) => {
-  // React treats radios and checkbox inputs differently from other input types: select and textarea.
-  // Formik does this too! When you specify `type` to useField(), it will
-  // return the correct bag of props for you -- a `checked` prop will be included
-  // in `field` alongside `name`, `value`, `onChange`, and `onBlur`
   const [field, meta] = useField({ ...props, type: "checkbox" });
   return (
     <div>
-      <label className="checkbox-input">
-        <input type="checkbox" {...field} {...props} />
+      <label className="flex gap-2 items-center">
+        <input type="checkbox" {...field} {...props} className="h-4 w-4" />
         {children}
       </label>
       {meta.touched && meta.error ? (
@@ -52,7 +46,7 @@ export const MyCheckbox = ({ children, ...props }) => {
 };
 
 MyCheckbox.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export const MyRadio = ({ children, ...props }) => {
@@ -71,18 +65,18 @@ export const MyRadio = ({ children, ...props }) => {
 };
 
 MyRadio.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export const MySelect = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <div>
-      <label htmlFor={props.id || props.name}>{label}</label>
+      {label && <label htmlFor={props.name}>{label}</label>}
       <select
         {...field}
         {...props}
-        className="transition-all border border-black focus:border-2 focus:border-[#728ad3]  py-4 px-5 rounded-2xl w-full outline-none"
+        className="transition-all border border-black focus:border-2 focus:border-secondary  py-4 px-5 rounded-2xl w-full outline-none"
       />
       {meta.touched && meta.error ? (
         <div className="text-red-500 text-sm">{meta.error}</div>
@@ -93,6 +87,5 @@ export const MySelect = ({ label, ...props }) => {
 
 MySelect.propTypes = {
   label: PropTypes.string,
-  id: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 };

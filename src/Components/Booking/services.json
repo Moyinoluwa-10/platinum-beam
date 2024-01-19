@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Residential Cleaning",
+    "value": "residential",
+    "description": "This service is tailored to homeowners who wish to maintain a pristine living environment. It involves thorough cleaning of all areas of the home, including kitchens, bathrooms, living rooms, and bedrooms. Special attention is given to high-touch surfaces, corners, and hard-to-reach areas."
+  },
+  {
+    "title": "Commercial Cleaning",
+    "value": "commercial",
+    "description": "The focus is on creating a hygienic and organized workspace, which might include regular cleaning, deep cleaning, and maintenance services."
+  },
+  {
+    "title": "Post construction cleaning ",
+    "value": "construction",
+    "description": "This service caters to newly constructed or renovated spaces. It involves removing all traces of construction residue, such as dust, debris, and paint splatters, and preparing the space for occupancy."
+  },
+  {
+    "title": "Move In/ Move Out Cleaning",
+    "value": "moving",
+    "description": "This service is tailored for individuals or businesses transitioning to a new space. It is specially designed to ease the transition for both incoming and outgoing tenants, as well as property owners. This service ensures that rental properties are presented in their best light, making moving a smooth and pleasant experience."
+  },
+  {
+    "title": "Carpet Cleaning",
+    "value": "carpet",
+    "description": "Our eco-friendly and innovative carpet cleaning techniques ensure that your carpets are not just clean, but also maintain their texture and color, contributing to the overall health and beauty of your environment."
+  },
+  {
+    "title": "Horticulture",
+    "value": "horticulture",
+    "description": "This service includes garden cleanup, plant care, and landscape beautification, reflecting our holistic approach to cleanliness and aesthetics."
+  }
+]

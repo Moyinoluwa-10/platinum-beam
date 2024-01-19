@@ -2,6 +2,8 @@
 import { Formik, Form } from "formik";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
+
+// components
 import ContactInfo from "./ContactInfo";
 import ServiceInfo from "./ServiceInfo";
 
@@ -9,7 +11,12 @@ const BookingForm = () => {
   return (
     <>
       <Formik
-        initialValues={{ name: "", email: "", message: "" }}
+        initialValues={{
+          name: "",
+          email: "",
+          message: "",
+          cleaningService: [],
+        }}
         validationSchema={Yup.object({
           firstName: Yup.string().required("Required"),
           lastName: Yup.string().required("Required"),
@@ -22,9 +29,10 @@ const BookingForm = () => {
           state: Yup.string().required("Required"),
           cleaningFrequency: Yup.string().required(""),
           cleaningMode: Yup.string(),
+          cleaningService: Yup.array(),
           message: Yup.string().required("Required"),
         })}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
+        onSubmit={(values, { setSubmitting }) => {
           const toastID = toast.loading("Submitting...");
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
@@ -32,7 +40,7 @@ const BookingForm = () => {
               id: toastID,
             });
             setSubmitting(false);
-            resetForm();
+            // resetForm();
           }, 3000);
         }}
       >

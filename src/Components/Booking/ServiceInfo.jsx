@@ -1,8 +1,15 @@
-import { MyRadio, MySelect, MyTextInput } from "./FormComponents";
+// react
+import { useState } from "react";
 import { GoInfo } from "react-icons/go";
-import { MdOutlineCancel } from "react-icons/md";
 
-const ServiceInfo = () => {
+// components
+import CleaningService from "./CleaningService";
+import { MyRadio, MySelect, MyTextInput } from "./FormComponents";
+import services from "./services.json";
+
+export const ServiceInfo = () => {
+  const [isOpen, setIsOpen] = useState(null);
+
   return (
     <>
       <div className="mb-10 mt-20">
@@ -14,24 +21,25 @@ const ServiceInfo = () => {
 
       <div className="mb-8 grid md:grid-cols-2 gap-x-10 gap-y-8">
         <div>
-          <div>
-            <p>What type of cleaning service?</p>
-            <p className="text-xs">
-              Hint: Click on <GoInfo className="inline" /> to get more
-              information.
+          <div className="mb-10">
+            <p className="text-xl mb-2 font-medium">
+              What type of cleaning service?
             </p>
-            <div className="flex items-center">
-              <input type="checkbox" name="xyz" id="" />{" "}
-              <label htmlFor="">Residential Cleaning</label>
-              <GoInfo />
-            </div>
-            <div className="p-10 bg-white shadow-xl text-lg md:text-xl">
-              <MdOutlineCancel className="text-3xl ml-auto mb-5" />
-              This service is tailored to homeowners who wish to maintain a
-              pristine living environment. It involves thorough cleaning of all
-              areas of the home, including kitchens, bathrooms, living rooms,
-              and bedrooms. Special attention is given to high-touch surfaces,
-              corners, and hard-to-reach areas.
+            <p className="text-xs mb-5">
+              Hint: Click on <GoInfo className="inline text-secondary" /> to get
+              more information.
+            </p>
+
+            <div className="flex flex-col gap-2">
+              {services.map((service, i) => (
+                <CleaningService
+                  key={i}
+                  {...service}
+                  id={i + 1}
+                  isOpen={isOpen}
+                  onOpen={setIsOpen}
+                />
+              ))}
             </div>
           </div>
 
@@ -53,7 +61,7 @@ const ServiceInfo = () => {
               Self Contain
             </MyRadio>
             <MyRadio name="homeType" value="others">
-              <input className="transition-all border border-black focus:border-2 focus:border-[#728ad3]  py-2 px-3 rounded-lg outline-none" />
+              <input className="transition-all border border-black focus:border-2 focus:border-secondary  py-2 px-3 rounded-lg outline-none" />
             </MyRadio>
           </div>
         </div>
