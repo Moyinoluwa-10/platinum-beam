@@ -1,5 +1,10 @@
-import "./App.css";
+// react
 import { Routes, Route } from "react-router-dom";
+
+// styling
+import "./App.css";
+
+// components
 import About from "./Pages/About";
 import Booking from "./Pages/Booking";
 import Contact from "./Pages/Contact";
@@ -10,6 +15,7 @@ import Specialized from "./Pages/Specialized";
 import Horticulture from "./Pages/Horticulture";
 import ResidentialBasic from "./Pages/ResidentialBasic";
 import ResidentialDeep from "./Pages/ResidentialDeep";
+import Faqs from "./Pages/Faqs";
 
 function App() {
   return (
@@ -31,6 +37,7 @@ function App() {
         <Route path="/services/horticulture" element={<Horticulture />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Booking />} />
+        <Route path="/faqs" element={<Faqs />} />
       </Routes>
     </>
   );
