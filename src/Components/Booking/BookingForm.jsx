@@ -29,6 +29,8 @@ const BookingForm = () => {
           noOfBathrooms: "",
           noOfBedrooms: "",
           noOfLivingRooms: "",
+          date: "",
+          termsAndConditions: false,
         }}
         validationSchema={Yup.object({
           firstName: Yup.string().required("Required"),
@@ -71,10 +73,32 @@ const BookingForm = () => {
               ["weekly", "biweekly", "monthly", "once"],
               "Incorrect selection"
             ),
-          cleaningMode: Yup.string(),
-          noOfBathrooms: Yup.string(),
-          noOfBedrooms: Yup.string(),
-          noOfLivingRooms: Yup.string(),
+          cleaningMode: Yup.string().when("cleaningService", {
+            is: (cleaningService) =>
+              cleaningService.includes("residential") ||
+              cleaningService.includes("commercial"),
+            then: () =>
+              Yup.string()
+                .required("Required")
+                .oneOf(["basic", "deep"], "Incorrect selection"),
+          }),
+          noOfBathrooms: Yup.string().when("cleaningService", {
+            is: (cleaningService) => cleaningService.includes("residential"),
+            then: () => Yup.string().required("Required"),
+          }),
+          noOfBedrooms: Yup.string().when("cleaningService", {
+            is: (cleaningService) => cleaningService.includes("residential"),
+            then: () => Yup.string().required("Required"),
+          }),
+          noOfLivingRooms: Yup.string().when("cleaningService", {
+            is: (cleaningService) => cleaningService.includes("residential"),
+            then: () => Yup.string().required("Required"),
+          }),
+          date: Yup.string().required("Choose a date"),
+          termsAndConditions: Yup.boolean().oneOf(
+            [true],
+            "You must agree to the terms and conditions to submit the form"
+          ),
         })}
         onSubmit={(values, { setSubmitting }) => {
           const toastID = toast.loading("Submitting...");

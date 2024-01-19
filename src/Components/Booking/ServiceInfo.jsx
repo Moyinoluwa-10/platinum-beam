@@ -5,10 +5,12 @@ import PropTypes from "prop-types";
 
 // components
 import CleaningService from "./CleaningService";
-import { MyRadio, MySelect, MyTextInput } from "./FormComponents";
+import { MyCheckbox, MyRadio, MySelect, MyTextInput } from "./FormComponents";
 import services from "./services.json";
-import { ErrorMessage } from "formik";
 import { CommercialType, HomeType } from "./CleaningServiceType";
+
+// form
+import { ErrorMessage, Field } from "formik";
 
 export const ServiceInfo = ({ values, onFieldValue }) => {
   const [isOpen, setIsOpen] = useState(null);
@@ -86,6 +88,9 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
               <MyRadio name="cleaningMode" value="deep">
                 Deep Cleaning
               </MyRadio>
+              <div className="text-red-500 text-sm">
+                <ErrorMessage name="cleaningMode" />
+              </div>
             </div>
           )}
 
@@ -114,6 +119,28 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
             </div>
           )}
         </div>
+      </div>
+
+      <div className="mb-10">
+        <p className="text-xl mb-2 font-medium">
+          Which day works best for you?
+        </p>
+        <Field
+          type="date"
+          name="date"
+          className="transition-all border border-black focus:border-2 focus:border-secondary py-4 px-5 rounded-2xl w-full max-w-xs outline-none"
+        />
+        <div className="text-red-500 text-sm">
+          <ErrorMessage name="date" />
+        </div>
+      </div>
+
+      <MyCheckbox name="termsAndConditions">
+        By submitting this you are agreeing to our Terms & Conditions for any
+        services rendered
+      </MyCheckbox>
+      <div className="text-red-500 text-sm">
+        <ErrorMessage name="termsAndConditions" />
       </div>
     </>
   );

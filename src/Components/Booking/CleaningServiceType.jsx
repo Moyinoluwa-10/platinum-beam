@@ -1,6 +1,11 @@
-import { ErrorMessage, Field } from "formik";
-import { MyRadio } from "./FormComponents";
+// react
 import PropTypes from "prop-types";
+
+// components
+import { MyRadio } from "./FormComponents";
+
+// form
+import { ErrorMessage, Field } from "formik";
 
 export const CommercialType = ({ values }) => {
   return (
@@ -38,7 +43,7 @@ export const CommercialType = ({ values }) => {
 };
 
 CommercialType.propTypes = {
-  values: PropTypes.string,
+  values: PropTypes.object,
 };
 
 export const HomeType = ({ values }) => {
@@ -80,5 +85,5 @@ export const HomeType = ({ values }) => {
 };
 
 HomeType.propTypes = {
-  values: PropTypes.string,
+  values: PropTypes.object,
 };

@@ -70,7 +70,7 @@ export const MySelect = ({ label, ...props }) => {
       <select
         {...field}
         {...props}
-        className="transition-all border border-black focus:border-2 focus:border-secondary  py-4 px-5 rounded-2xl w-full outline-none"
+        className="transition-all border border-black focus:border-2 focus:border-secondary py-4 px-5 rounded-2xl w-full outline-none"
       />
       {meta.touched && meta.error ? (
         <div className="text-red-500 text-sm">{meta.error}</div>
