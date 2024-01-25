@@ -33,17 +33,17 @@ const Horticulture = () => {
             <img
               src={horticulture1}
               alt="horticulture"
-              className="w-full max-w-lg"
+              className="w-full max-w-lg rounded-xl"
             />
             <img
               src={horticulture2}
               alt="horticulture"
-              className="w-full max-w-lg"
+              className="w-full max-w-lg rounded-xl"
             />
             <img
               src={horticulture3}
               alt="horticulture"
-              className="w-full max-w-lg"
+              className="w-full max-w-lg rounded-xl"
             />
           </div>
 

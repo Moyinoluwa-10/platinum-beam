@@ -6,7 +6,7 @@ const ServiceItem = ({ img, title, description }) => {
     <>
       {title ? (
         <div>
-          <img src={img} alt="service-image" />
+          <img src={img} alt="service-image" className="rounded-xl" />
           <h4 className="text-secondary text-2xl md:text-3xl mb-2 font-semibold mt-6">
             {title}
           </h4>

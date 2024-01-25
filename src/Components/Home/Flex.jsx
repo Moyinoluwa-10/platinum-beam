@@ -6,7 +6,7 @@ const Flex = ({ img, name, description, linkAdd, linkText }) => {
   return (
     <section className="container p-5 py-16 flex flex-col lg:flex-row justify-between items-center gap-12">
       <div>
-        <img src={img} alt="image" />
+        <img src={img} alt="image" className="rounded-xl" />
       </div>
       <div className="lg:max-w-xl">
         <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-semibold">

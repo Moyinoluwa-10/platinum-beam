@@ -29,7 +29,7 @@ const About = () => {
         <img
           src={cleaning}
           alt="cleaning-image"
-          className="w-full max-w-xl mx-auto"
+          className="w-full max-w-xl mx-auto rounded-xl"
         />
       </section>
 
@@ -59,7 +59,7 @@ const About = () => {
             <img
               src={bunmi}
               alt="founder-image"
-              className="w-full max-w-[450px] xl:max-w-[640px]"
+              className="w-full max-w-[450px] xl:max-w-[640px] rounded-xl"
             />
           </div>
           <div className="lg:max-w-xl">

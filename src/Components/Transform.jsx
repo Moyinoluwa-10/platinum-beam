@@ -8,7 +8,7 @@ const Transform = () => {
   return (
     <section className="p-5 pt-5 md:pt-24 pb-24 container flex flex-col lg:flex-row gap-12 justify-between items-center">
       <div>
-        <img src={transform} alt="image" />
+        <img src={transform} alt="image" className="rounded-xl" />
       </div>
       <div className="lg:max-w-xl">
         <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-semibold lg:max-w-md">
