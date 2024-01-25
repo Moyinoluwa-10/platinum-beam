@@ -11,13 +11,13 @@ import Button from "../Components/Button";
 
 // images
 import professional from "../assets/images/professional.png";
-import faq from "../assets/images/faq.png";
 
 //svgs
 import cmi from "../assets/svgs/cmi.svg";
 import issa from "../assets/svgs/issa.svg";
 import ellipse1 from "../assets/svgs/ellipse-1.svg";
 import ellipse3 from "../assets/svgs/ellipse-3.svg";
+import Faqs from "../Components/Home/Faqs";
 
 const Home = () => {
   return (
@@ -104,15 +104,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Flex
-        img={faq}
-        name={"Frequently Asked Questions"}
-        description={
-          "Go through our most asked questions and clear all doubt in your mind about anything that keeps bothering you."
-        }
-        linkText={"Read more"}
-        linkAddress={"/faqs"}
-      />
+      <Faqs />
 
       <Transform />
 

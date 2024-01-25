@@ -9,15 +9,16 @@ const FaqItem = ({ question, answer, id, isActive, onToggle }) => {
         <p
           className={
             isActive === id
-              ? "text-primary font-semibold flex items-center justify-between gap-10 transition-all"
-              : "text-[#170F49] font-semibold flex items-center justify-between gap-10 transition-all"
+              ? "text-primary font-semibold flex items-center justify-between gap-10 transition-all cursor-pointer"
+              : "text-[#170F49] font-semibold flex items-center justify-between gap-10 transition-all cursor-pointer"
           }
+          onClick={() => onToggle(id)}
         >
           {question}{" "}
           {isActive === id ? (
-            <FaMinus className="cursor-pointer" onClick={() => onToggle(id)} />
+            <FaMinus className="cursor-pointer" />
           ) : (
-            <FaPlus className="cursor-pointer" onClick={() => onToggle(id)} />
+            <FaPlus className="cursor-pointer" />
           )}
         </p>
         <p
