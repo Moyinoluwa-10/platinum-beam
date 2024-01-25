@@ -11,46 +11,39 @@ import Button from "../Components/Button";
 
 // images
 import professional from "../assets/images/professional.png";
+import hero from "../assets/images/hero.png";
 
 //svgs
 import cmi from "../assets/svgs/cmi.svg";
 import issa from "../assets/svgs/issa.svg";
-import ellipse1 from "../assets/svgs/ellipse-1.svg";
-import ellipse3 from "../assets/svgs/ellipse-3.svg";
 import Faqs from "../Components/Home/Faqs";
 
 const Home = () => {
   return (
     <>
-      <section className="hero min-h-screen text-white flex flex-col overflow-hidden">
+      <section className="hero min-h-screen flex flex-col overflow-hidden">
         <Header />
-        <div className="container p-5 pt-12 pb-20 h-full flex-1 flex flex-col justify-end relative">
-          <img
-            src={ellipse1}
-            alt=""
-            className="w-[650px] absolute -left-10 sm:-left-20 md:-left-60 -bottom-48 z-0 rotate-45"
-          />
-          <img
-            src={ellipse1}
-            alt=""
-            className="w-[650px] absolute -left-10 sm:-left-20 md:-left-60 bottom-10 z-0"
-          />
-          <img
-            src={ellipse3}
-            alt=""
-            className="w-[650px] absolute left-10 bottom-0 z-0"
-          />
-          <h1 className="text-4xl md:text-5xl max-w-2xl mb-5 relative z-[1]">
-            Step into a World of Immaculate Luxury with Platinum Beam Concept
-            Ltd.
-          </h1>
-          <p className="text-xl md:text-2xl max-w-2xl mb-9 relative z-[1]">
-            It's not about routines; it's about transforming your space into a
-            haven of pristine beauty. Discover a cleaning service that cares
-            about the details as much as you do.
-          </p>
+        <div className="container p-5 pt-12 pb-20 h-full flex-1 flex justify-between items-center">
           <div>
-            <Button linkAddress={"/book"}>Book Now</Button>
+            <h4 className="text-secondary font-medium mb-3 text-2xl">
+              Cleaning Excellence, Beyond Compare!
+            </h4>
+            <h1 className="text-4xl md:text-5xl max-w-2xl mb-5 font-semibold">
+              Step into a World of Immaculate Luxury with Platinum Beam Concept
+              Ltd.
+            </h1>
+            <p className="text-xl md:text-2xl max-w-2xl mb-9 text-gray-600">
+              It's not about routines; it's about transforming your space into a
+              haven of pristine beauty. Discover a cleaning service that cares
+              about the details as much as you do.
+            </p>
+            <div>
+              <Button linkAddress={"/book"}>Book Now</Button>
+            </div>
+          </div>
+
+          <div>
+            <img src={hero} alt="" />
           </div>
         </div>
       </section>
