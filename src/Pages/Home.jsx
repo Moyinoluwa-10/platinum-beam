@@ -88,7 +88,7 @@ const Home = () => {
           giant, or a cozy residence, our skilled team ensures each space is
           treated with the utmost care and attention to detail.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-y-16 justify-between">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 lg:gap-y-16 justify-between">
           {services.map((service, i) => {
             return <ServiceItem key={i} {...service} />;
           })}
@@ -102,7 +102,7 @@ const Home = () => {
         <p className="text-xl md:text-2xl mb-10 text-center max-w-5xl mx-auto">
           Setting the Standard for Excellence
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-y-20 justify-evenly content-evenly items-center justify-items-end">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 md:gap-y-20 justify-evenly content-evenly items-center justify-items-end">
           {choices.map((choice, i) => {
             return <ChoiceItem key={i} {...choice} />;
           })}

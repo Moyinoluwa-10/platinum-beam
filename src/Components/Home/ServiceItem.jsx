@@ -1,7 +1,8 @@
 // react
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const ServiceItem = ({ img, title, description }) => {
+const ServiceItem = ({ img, title, description, linkAddress }) => {
   return (
     <>
       {title ? (
@@ -14,16 +15,13 @@ const ServiceItem = ({ img, title, description }) => {
             {description}
           </p>
           <p>
-            <a
-              href=""
-              className="text-primary text-xl md:text-2xl transition-all hover:underline"
-            >
-              Let's do this
-            </a>
+            <Link to={linkAddress} href="" className="service-link">
+              Learn more
+            </Link>
           </p>
         </div>
       ) : (
-        <div className="lg:block hidden"></div>
+        <div className="hidden lg:block xl:hidden"></div>
       )}
     </>
   );
@@ -33,6 +31,7 @@ ServiceItem.propTypes = {
   img: PropTypes.any,
   title: PropTypes.string,
   description: PropTypes.string,
+  linkAddress: PropTypes.string,
 };
 
 export default ServiceItem;

@@ -6,14 +6,20 @@ const ChoiceItem = ({ img, title, description }) => {
     <>
       {title ? (
         <div className="text-center">
-          <img src={img} alt="cleaning-service-logo" className="mx-auto" />
+          <div className="flex items-center justify-center bg-secondary w-24 h-24 rounded-full mx-auto">
+            <img
+              src={img}
+              alt="cleaning-service-logo"
+              className="mx-auto w-16 h-16"
+            />
+          </div>
           <h4 className="text-secondary text-2xl md:text-3xl my-2 font-semibold">
             {title}
           </h4>
           <p className="text-xl md:text-2xl max-w-5xl">{description}</p>
         </div>
       ) : (
-        <div className="lg:block hidden"></div>
+        <div className="hidden lg:block xl:hidden"></div>
       )}
     </>
   );
