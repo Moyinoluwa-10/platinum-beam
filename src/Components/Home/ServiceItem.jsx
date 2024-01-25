@@ -15,7 +15,11 @@ const ServiceItem = ({ img, title, description, linkAddress }) => {
             {description}
           </p>
           <p>
-            <Link to={linkAddress} href="" className="service-link">
+            <Link
+              to={linkAddress}
+              href=""
+              className="service-link text-xl md:text-2xl"
+            >
               Learn more
             </Link>
           </p>

@@ -2,12 +2,12 @@
 import Header from "../Components/Header";
 import Transform from "../Components/Transform";
 import Footer from "../Components/Footer";
-import { Link } from "react-router-dom";
 import ChoiceItem from "../Components/Home/ChoiceItem";
 import choices from "../Components/Home/choices";
 import ServiceItem from "../Components/Home/ServiceItem";
 import services from "../Components/Home/services";
 import Flex from "../Components/Home/Flex";
+import Button from "../Components/Button";
 
 // images
 import professional from "../assets/images/professional.png";
@@ -50,12 +50,7 @@ const Home = () => {
             about the details as much as you do.
           </p>
           <div>
-            <Link
-              to={"/book"}
-              className="uppercase py-3 px-12 md:px-7 md:py-4 bg-primary rounded-2xl text-white inline-block md:text-2xl relative z-[1]"
-            >
-              Book Now
-            </Link>
+            <Button linkAddress={"/book"}>Book Now</Button>
           </div>
         </div>
       </section>
@@ -75,7 +70,7 @@ const Home = () => {
           "Get in touch with us today to learn how our team can help you clean and de-clutter. Choose from any of our three cleaning plans designed to cater to your lifestyle."
         }
         linkText={"Book now"}
-        linkAdd={"/book"}
+        linkAddress={"/book"}
       />
 
       <section className="container p-5 py-5 md:pt-36 pb-36">
@@ -116,7 +111,7 @@ const Home = () => {
           "Go through our most asked questions and clear all doubt in your mind about anything that keeps bothering you."
         }
         linkText={"Read more"}
-        linkAdd={"/faqs"}
+        linkAddress={"/faqs"}
       />
 
       <Transform />

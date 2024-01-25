@@ -5,6 +5,9 @@ import { FaAngleDown } from "react-icons/fa6";
 // hamburger
 import { Sling as Hamburger } from "hamburger-react";
 
+// components
+import Button from "./Button";
+
 // images
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
@@ -84,13 +87,8 @@ const Header = () => {
           </li>
         </ul>
 
-        <div className="lg:block hidden">
-          <Link
-            to={"/book"}
-            className="uppercase py-2 px-4 bg-secondary rounded-2xl text-white inline-block"
-          >
-            Book Now
-          </Link>
+        <div className="lg:flex hidden">
+          <Button linkAddress={"/book"}>Book Now</Button>
         </div>
 
         <div className="block lg:hidden">

@@ -1,5 +1,5 @@
-// react
-import { Link } from "react-router-dom";
+// components
+import Button from "./Button";
 
 // images
 import transform from "../assets/images/transform.png";
@@ -20,12 +20,7 @@ const Transform = () => {
           to new heights of cleanliness and luxury.
         </p>
         <div>
-          <Link
-            to={"/book"}
-            className="uppercase py-3 px-12 md:px-7 md:py-4 bg-secondary rounded-2xl text-white inline-block"
-          >
-            Book Now
-          </Link>
+          <Button linkAddress={"/book"}>Book Now</Button>
         </div>
       </div>
     </section>

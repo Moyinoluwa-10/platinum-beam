@@ -70,16 +70,10 @@ const Residential = () => {
           </h3>
           <p className="text-xl mb-5">Enhance your cleaning experience </p>
           <div className="flex items-center justify-center gap-10 text-primary font-medium">
-            <Link
-              to={"./basic"}
-              className="uppercase transition-all hover:underline"
-            >
+            <Link to={"./basic"} className="uppercase service-link">
               Basic Cleaning
             </Link>
-            <Link
-              to={"./deep"}
-              className="uppercase transition-all hover:underline"
-            >
+            <Link to={"./deep"} className="uppercase service-link">
               Deep Cleaning
             </Link>
           </div>
