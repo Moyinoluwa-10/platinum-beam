@@ -76,17 +76,17 @@ const Footer = () => {
           </p>
           <p className="text-lg mb-5">08131014376</p>
           <div className="flex items-center gap-5">
-            <p>
+            <p className="relative transition-all duration-1000 hover:bottom-1">
               <a href="#">
                 <FaInstagram className="text-2xl" />
               </a>
             </p>
-            <p>
+            <p className="relative transition-all duration-1000 hover:bottom-1">
               <a href="#">
                 <FaFacebook className="text-2xl" />
               </a>
             </p>
-            <p>
+            <p className="relative transition-all duration-1000 hover:bottom-1">
               <a href="#">
                 <FaXTwitter className="text-2xl" />
               </a>
@@ -210,17 +210,17 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center gap-5 mt-10">
-          <p>
+          <p className="relative transition-all duration-1000 hover:bottom-1">
             <a href="#">
               <FaInstagram className="text-2xl" />
             </a>
           </p>
-          <p>
+          <p className="relative transition-all duration-1000 hover:bottom-1">
             <a href="#">
               <FaFacebook className="text-2xl" />
             </a>
           </p>
-          <p>
+          <p className="relative transition-all duration-1000 hover:bottom-1">
             <a href="#">
               <FaXTwitter className="text-2xl" />
             </a>
