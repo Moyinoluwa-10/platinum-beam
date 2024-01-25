@@ -35,31 +35,22 @@ const Footer = () => {
             Quick Links
           </h4>
           <p className="mb-5">
-            <Link to={"/"} className="text-base transition-all hover:underline">
+            <Link to={"/"} className="footer-link">
               Home
             </Link>
           </p>
           <p className="mb-5">
-            <Link
-              to={"/about"}
-              className="text-base transition-all hover:underline"
-            >
+            <Link to={"/about"} className="footer-link">
               About Us
             </Link>
           </p>
           <p className="mb-5">
-            <Link
-              to={"/contact"}
-              className="text-base transition-all hover:underline"
-            >
+            <Link to={"/contact"} className="footer-link">
               Contact
             </Link>
           </p>
           <p className="mb-5">
-            <Link
-              to={"/services"}
-              className="text-base transition-all hover:underline"
-            >
+            <Link to={"/services"} className="footer-link">
               Our Services
             </Link>
           </p>
@@ -70,10 +61,7 @@ const Footer = () => {
             Services
           </h4>
           <p className="mb-5">
-            <Link
-              to={"/book"}
-              className="text-base transition-all hover:underline"
-            >
+            <Link to={"/book"} className="footer-link">
               Book a service
             </Link>
           </p>
@@ -122,7 +110,7 @@ const Footer = () => {
 
         <div>
           <h4
-            className="font-medium text-2xl flex items-center gap-2"
+            className="font-medium text-2xl flex items-center gap-2 cursor-pointer"
             onClick={() => handleClick("quick")}
           >
             Quick Links{" "}
@@ -142,34 +130,22 @@ const Footer = () => {
             }
           >
             <p className="mb-5">
-              <Link
-                to={"/"}
-                className="text-base transition-all hover:underline"
-              >
+              <Link to={"/"} className="footer-link">
                 Home
               </Link>
             </p>
             <p className="mb-5">
-              <Link
-                to={"/about"}
-                className="text-base transition-all hover:underline"
-              >
+              <Link to={"/about"} className="footer-link">
                 About Us
               </Link>
             </p>
             <p className="mb-5">
-              <Link
-                to={"/contact"}
-                className="text-base transition-all hover:underline"
-              >
+              <Link to={"/contact"} className="footer-link">
                 Contact
               </Link>
             </p>
             <p className="mb-5">
-              <Link
-                to={"/services"}
-                className="text-base transition-all hover:underline"
-              >
+              <Link to={"/services"} className="footer-link">
                 Our Services
               </Link>
             </p>
@@ -178,7 +154,7 @@ const Footer = () => {
 
         <div>
           <h4
-            className="font-medium text-2xl flex items-center gap-2"
+            className="font-medium text-2xl flex items-center gap-2 cursor-pointer"
             onClick={() => handleClick("services")}
           >
             Services{" "}
@@ -198,10 +174,7 @@ const Footer = () => {
             }
           >
             <p className="mb-5">
-              <Link
-                to={"/book"}
-                className="text-base transition-all hover:underline"
-              >
+              <Link to={"/book"} className="footer-link">
                 Book a service
               </Link>
             </p>
@@ -210,7 +183,7 @@ const Footer = () => {
 
         <div>
           <h4
-            className="font-medium text-2xl flex items-center gap-2"
+            className="font-medium text-2xl flex items-center gap-2 cursor-pointer"
             onClick={() => handleClick("contact")}
           >
             Contact Info{" "}

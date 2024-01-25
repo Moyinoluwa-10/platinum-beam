@@ -32,8 +32,8 @@ const Header = () => {
               to={"/"}
               className={({ isActive }) =>
                 isActive
-                  ? "text-secondary hover:underline"
-                  : "transition-all hover:underline"
+                  ? "text-secondary before:bg-secondary nav-link"
+                  : "nav-link"
               }
             >
               Home
@@ -44,8 +44,8 @@ const Header = () => {
               to={"/about"}
               className={({ isActive }) =>
                 isActive
-                  ? "text-secondary hover:underline"
-                  : "transition-all hover:underline"
+                  ? "text-secondary before:bg-secondary nav-link"
+                  : "nav-link"
               }
             >
               About Us
@@ -75,8 +75,8 @@ const Header = () => {
               to={"/contact"}
               className={({ isActive }) =>
                 isActive
-                  ? "text-secondary hover:underline"
-                  : "transition-all hover:underline"
+                  ? "text-secondary before:bg-secondary nav-link"
+                  : "nav-link"
               }
             >
               Contact Us
