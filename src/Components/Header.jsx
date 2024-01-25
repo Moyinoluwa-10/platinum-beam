@@ -35,7 +35,7 @@ const Header = () => {
               to={"/"}
               className={({ isActive }) =>
                 isActive
-                  ? "text-secondary before:bg-secondary nav-link"
+                  ? "text-tertiary before:bg-tertiary nav-link"
                   : "nav-link"
               }
             >
@@ -47,7 +47,7 @@ const Header = () => {
               to={"/about"}
               className={({ isActive }) =>
                 isActive
-                  ? "text-secondary before:bg-secondary nav-link"
+                  ? "text-tertiary before:bg-tertiary nav-link"
                   : "nav-link"
               }
             >
@@ -78,7 +78,7 @@ const Header = () => {
               to={"/contact"}
               className={({ isActive }) =>
                 isActive
-                  ? "text-secondary before:bg-secondary nav-link"
+                  ? "text-tertiary before:bg-tertiary nav-link"
                   : "nav-link"
               }
             >
