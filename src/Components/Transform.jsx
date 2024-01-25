@@ -17,9 +17,7 @@ const Transform = () => {
         <p className="text-xl md:text-2xl mb-10">
           Ready to experience the Platinum Beam difference? Contact us today for
           a consultation and let's embark on the journey to elevate your space
-          to new heights of cleanliness and luxury. Get in touch with us today
-          to learn how our team can help you clean and de-clutter. Choose from
-          any of our three cleaning plans designed to cater to your lifestyle.
+          to new heights of cleanliness and luxury.
         </p>
         <div>
           <Link
