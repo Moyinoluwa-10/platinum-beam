@@ -11,6 +11,9 @@ export default {
       container: {
         center: true,
       },
+      fontFamily: {
+        "PT-Bold": "PT Sans Bold, sans-serif",
+      },
     },
   },
   plugins: [],
