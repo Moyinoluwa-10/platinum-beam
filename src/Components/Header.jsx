@@ -87,7 +87,7 @@ const Header = () => {
         <div className="lg:block hidden">
           <Link
             to={"/book"}
-            className="uppercase py-2 px-4 bg-primary rounded-2xl text-white inline-block"
+            className="uppercase py-2 px-4 bg-secondary rounded-2xl text-white inline-block"
           >
             Book Now
           </Link>

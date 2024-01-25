@@ -119,7 +119,7 @@ const BookingForm = () => {
 
             <button
               type="submit"
-              className="py-5 px-14 md:px-20 bg-primary disabled:bg-[#dda107] disabled:cursor-not-allowed rounded-2xl text-white block mt-10"
+              className="py-5 px-14 md:px-20 bg-secondary disabled:bg-gray-700 disabled:cursor-not-allowed rounded-2xl text-white block mt-10"
               disabled={isSubmitting}
             >
               Book Service

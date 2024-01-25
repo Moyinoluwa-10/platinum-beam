@@ -16,7 +16,7 @@ const Flex = ({ img, name, description, linkAdd, linkText }) => {
         <div>
           <Link
             to={linkAdd}
-            className="uppercase py-3 px-12 md:px-7 md:py-4 bg-primary rounded-2xl text-white inline-block"
+            className="uppercase py-3 px-12 md:px-7 md:py-4 bg-secondary rounded-2xl text-white inline-block"
           >
             {linkText}
           </Link>
