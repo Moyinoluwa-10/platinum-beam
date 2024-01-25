@@ -95,7 +95,7 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
           )}
 
           {values.cleaningService.includes("residential") && (
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 mb-10">
               <MyTextInput
                 label={"Number of bathrooms"}
                 name="noOfBathrooms"
@@ -118,20 +118,20 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
               />
             </div>
           )}
-        </div>
-      </div>
 
-      <div className="mb-10">
-        <p className="text-xl mb-2 font-medium">
-          Which day works best for you?
-        </p>
-        <Field
-          type="date"
-          name="date"
-          className="transition-all border border-black focus:border-2 focus:border-secondary py-4 px-5 rounded-2xl w-full max-w-xs outline-none"
-        />
-        <div className="text-red-500 text-sm">
-          <ErrorMessage name="date" />
+          <div className="mb-10">
+            <p className="text-xl mb-2 font-medium">
+              Which day works best for you?
+            </p>
+            <Field
+              type="date"
+              name="date"
+              className="transition-all border border-black focus:border-2 focus:border-secondary py-4 px-5 rounded-2xl w-full max-w-xs outline-none"
+            />
+            <div className="text-red-500 text-sm">
+              <ErrorMessage name="date" />
+            </div>
+          </div>
         </div>
       </div>
 
