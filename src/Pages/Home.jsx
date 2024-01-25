@@ -23,32 +23,32 @@ const Home = () => {
     <>
       <section className="hero min-h-screen flex flex-col overflow-hidden">
         <Header />
-        <div className="container p-5 pt-12 pb-20 h-full flex-1 flex justify-between items-center">
+        <div className="container p-5 pt-12 pb-20 h-full flex-1 flex flex-col lg:flex-row justify-between items-center gap-10">
           <div>
-            <h4 className="text-secondary font-medium mb-3 text-2xl">
+            <h4 className="text-secondary font-pt-bold mb-3 text-2xl">
               Cleaning Excellence, Beyond Compare!
             </h4>
-            <h1 className="text-4xl md:text-5xl max-w-2xl mb-5 font-semibold">
+            <h1 className="text-4xl md:text-5xl max-w-2xl mb-5 font-pt-bold">
               Step into a World of Immaculate Luxury with Platinum Beam Concept
               Ltd.
             </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mb-9 text-gray-600">
+            <p className="text-xl max-w-2xl mb-9 text-gray-600">
               It's not about routines; it's about transforming your space into a
               haven of pristine beauty. Discover a cleaning service that cares
               about the details as much as you do.
             </p>
-            <div>
+            <div className="text-2xl">
               <Button linkAddress={"/book"}>Book Now</Button>
             </div>
           </div>
 
           <div>
-            <img src={hero} alt="" />
+            <img src={hero} alt="hero-image" className="rounded-md w-full" />
           </div>
         </div>
       </section>
 
-      <section className="container p-5 pt-20 md:pb-20">
+      <section className="container p-5 pt-20 md:pt-5 md:pb-10">
         <p className="text-center text-secondary text-3xl mb-8">Trusted by</p>
         <div className="flex max-w-4xl mx-auto justify-evenly gap-7 flex-wrap items-center">
           <img src={issa} alt="issa-logo" className="h-20 md:h-28" />
@@ -66,8 +66,8 @@ const Home = () => {
         linkAddress={"/book"}
       />
 
-      <section className="container p-5 py-5 md:pt-36 pb-36">
-        <h3 className="text-secondary text-4xl md:text-6xl mb-6 font-bold text-center">
+      <section className="container p-5 py-5 md:pt-10 md:pb-20">
+        <h3 className="text-secondary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
           Our Services
         </h3>
         <p className="text-xl md:text-2xl mb-16 text-center max-w-5xl mx-auto">
@@ -84,13 +84,13 @@ const Home = () => {
       </section>
 
       <section className="container p-5 py-5 md:pt-10 pb-10">
-        <h3 className="text-secondary text-4xl md:text-5xl mb-5 font-semibold text-center">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-5 font-pt-bold text-center">
           Why Choose Us
         </h3>
         <p className="text-xl md:text-2xl mb-10 text-center max-w-5xl mx-auto">
           Setting the Standard for Excellence
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 md:gap-y-20 justify-evenly content-evenly items-center justify-items-end">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 md:gap-y-20 justify-evenly content-evenly justify-items-end">
           {choices.map((choice, i) => {
             return <ChoiceItem key={i} {...choice} />;
           })}

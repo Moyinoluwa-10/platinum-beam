@@ -11,11 +11,11 @@ const Flex = ({ img, name, description, linkAddress, linkText }) => {
         <img src={img} alt="image" className="rounded-xl" />
       </div>
       <div className="lg:max-w-xl">
-        <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-semibold">
+        <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-pt-bold">
           {name}
         </h3>
         <p className="text-xl md:text-2xl mb-10">{description}</p>
-        <div>
+        <div className="text-2xl">
           <Button linkAddress={linkAddress}>{linkText}</Button>
         </div>
       </div>

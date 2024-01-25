@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="bg-black text-white p-5 pt-12 py-7">
       <div className="container flex-wrap flex-col md:flex-row justify-between gap-x-10 gap-y-8 hidden md:flex">
         <div className="max-w-md">
-          <h4 className="font-medium mb-5 text-2xl">
+          <h4 className="font-pt-bold mb-5 text-2xl">
             Platinum Beam Concept Ltd
           </h4>
           <p className="text-lg">
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="font-medium mb-5 text-2xl sm:whitespace-nowrap">
+          <h4 className="font-pt-bold mb-5 text-2xl sm:whitespace-nowrap">
             Quick Links
           </h4>
           <p className="mb-5">
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="font-medium mb-5 text-2xl sm:whitespace-nowrap">
+          <h4 className="font-pt-bold mb-5 text-2xl sm:whitespace-nowrap">
             Services
           </h4>
           <p className="mb-5">
@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
         <div className="lg:min-w-fit">
-          <h4 className="font-medium mb-5 text-2xl sm:whitespace-nowrap">
+          <h4 className="font-pt-bold mb-5 text-2xl sm:whitespace-nowrap">
             Contact Info
           </h4>
           <p className="text-lg mb-5">
@@ -97,7 +97,7 @@ const Footer = () => {
 
       <div className="flex flex-col gap-5 md:hidden">
         <div className="max-w-md">
-          <h4 className="font-medium mb-5 text-2xl">
+          <h4 className="font-pt-bold mb-5 text-2xl">
             Platinum Beam Concept Ltd
           </h4>
           <p className="text-lg mb-7">
@@ -110,7 +110,7 @@ const Footer = () => {
 
         <div>
           <h4
-            className="font-medium text-2xl flex items-center gap-2 cursor-pointer"
+            className="font-pt-bold text-2xl flex items-center gap-2 cursor-pointer"
             onClick={() => handleClick("quick")}
           >
             Quick Links{" "}
@@ -154,7 +154,7 @@ const Footer = () => {
 
         <div>
           <h4
-            className="font-medium text-2xl flex items-center gap-2 cursor-pointer"
+            className="font-pt-bold text-2xl flex items-center gap-2 cursor-pointer"
             onClick={() => handleClick("services")}
           >
             Services{" "}
@@ -183,7 +183,7 @@ const Footer = () => {
 
         <div>
           <h4
-            className="font-medium text-2xl flex items-center gap-2 cursor-pointer"
+            className="font-pt-bold text-2xl flex items-center gap-2 cursor-pointer"
             onClick={() => handleClick("contact")}
           >
             Contact Info{" "}

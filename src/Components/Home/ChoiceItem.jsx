@@ -13,9 +13,7 @@ const ChoiceItem = ({ img, title, description }) => {
               className="mx-auto w-16 h-16"
             />
           </div>
-          <h4 className="text-secondary text-2xl md:text-3xl my-2 font-semibold">
-            {title}
-          </h4>
+          <h4 className="text-tertiary text-2xl my-2 font-pt-bold">{title}</h4>
           <p className="text-xl md:text-2xl max-w-5xl">{description}</p>
         </div>
       ) : (

@@ -11,13 +11,13 @@
 }
 
 @font-face {
-  font-family: "PT-Bold";
-  src: url(./assets/fonts/PT_Sans-Web-Bold.ttf) format("opentype");
+  font-family: "PT Sans Bold";
+  src: url(./assets/fonts/PT_Sans-Web-Bold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url(./assets/fonts/PT_Sans-Web-Regular.ttf) format("opentype");
+  src: url(./assets/fonts/PT_Sans-Web-Regular.ttf) format("truetype");
 }
 
 @tailwind base;
@@ -27,6 +27,10 @@
 @layer components {
   .nav-link {
     @apply text-black relative before:bg-black before:absolute before:h-[2px] before:block before:left-0 before:-bottom-[2px] before:w-0 hover:before:w-full before:transition-all before:duration-300;
+  }
+
+  .nav-link--2 {
+    @apply text-white relative before:bg-white before:absolute before:h-[2px] before:block before:left-0 before:-bottom-[2px] before:w-0 hover:before:w-full before:transition-all before:duration-300;
   }
 
   .footer-link {

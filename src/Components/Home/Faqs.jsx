@@ -23,7 +23,7 @@ const Faqs = () => {
           <img src={faq} alt="image" className="rounded-xl" />
         </div>
         <div className="lg:max-w-xl">
-          <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-semibold">
+          <h3 className="text-tertiary text-4xl md:text-5xl mb-4 font-pt-bold lg:max-w-lg">
             Frequently Asked Questions
           </h3>
 
@@ -46,7 +46,7 @@ const Faqs = () => {
           Go through our most asked questions and clear all doubt in your mind
           about anything that keeps bothering you.
         </p>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center text-2xl">
           <Button linkAddress={"/faqs"}>Read More</Button>
         </div>
       </div>

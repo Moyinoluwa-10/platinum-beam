@@ -12,7 +12,7 @@ export default {
         center: true,
       },
       fontFamily: {
-        "PT-Bold": "PT Sans Bold, sans-serif",
+        "pt-bold": "PT Sans Bold, sans-serif",
       },
     },
   },

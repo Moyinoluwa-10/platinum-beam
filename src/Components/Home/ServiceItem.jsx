@@ -8,12 +8,10 @@ const ServiceItem = ({ img, title, description, linkAddress }) => {
       {title ? (
         <div>
           <img src={img} alt="service-image" className="rounded-xl" />
-          <h4 className="text-secondary text-2xl md:text-3xl mb-2 font-semibold mt-6">
+          <h4 className="text-tertiary text-2xl mb-2 font-pt-bold mt-6">
             {title}
           </h4>
-          <p className="text-xl md:text-2xl mb-5 md:mb-8 max-w-5xl">
-            {description}
-          </p>
+          <p className="text-xl mb-4 max-w-5xl">{description}</p>
           <p>
             <Link
               to={linkAddress}

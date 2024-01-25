@@ -11,7 +11,7 @@ const Transform = () => {
         <img src={transform} alt="image" className="rounded-xl" />
       </div>
       <div className="lg:max-w-xl">
-        <h3 className="text-tertiary text-4xl md:text-5xl mb-4 font-semibold lg:max-w-md">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-4 font-pt-bold lg:max-w-md">
           Let's Transform Your Space
         </h3>
         <p className="text-xl md:text-2xl mb-10">
@@ -19,7 +19,7 @@ const Transform = () => {
           a consultation and let's embark on the journey to elevate your space
           to new heights of cleanliness and luxury.
         </p>
-        <div>
+        <div className="text-2xl">
           <Button linkAddress={"/book"}>Book Now</Button>
         </div>
       </div>

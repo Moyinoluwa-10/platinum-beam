@@ -9,23 +9,18 @@ const FaqItem = ({ question, answer, id, isActive, onToggle }) => {
         <p
           className={
             isActive === id
-              ? "text-primary font-semibold flex items-center justify-between gap-10 transition-all cursor-pointer"
-              : "text-[#170F49] font-semibold flex items-center justify-between gap-10 transition-all cursor-pointer"
+              ? "text-primary font-pt-bold flex items-center justify-between gap-10 transition-all cursor-pointer text-xl md:text-2xl"
+              : "text-[#170F49] font-pt-bold flex items-center justify-between gap-10 transition-all cursor-pointer text-xl md:text-2xl"
           }
           onClick={() => onToggle(id)}
         >
-          {question}{" "}
-          {isActive === id ? (
-            <FaMinus className="cursor-pointer" />
-          ) : (
-            <FaPlus className="cursor-pointer" />
-          )}
+          {question} {isActive === id ? <FaMinus /> : <FaPlus />}
         </p>
         <p
           className={
             isActive === id
-              ? "my-4 overflow-hidden max-h-[200px] transition-all duration-300 px-3 text-[#6F6C90]"
-              : "overflow-hidden max-h-0 transition-all duration-300 px-3 text-[#6F6C90]"
+              ? "my-4 overflow-hidden max-h-[200px] transition-all duration-300 px-3 text-[#6F6C90] text-lg"
+              : "overflow-hidden max-h-0 transition-all duration-300 px-3 text-[#6F6C90] text-lg"
           }
         >
           {answer}
