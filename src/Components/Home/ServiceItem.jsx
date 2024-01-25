@@ -1,29 +1,29 @@
 // react
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const ServiceItem = ({ img, title, description }) => {
+const ServiceItem = ({ img, title, description, linkAddress }) => {
   return (
     <>
       {title ? (
         <div>
-          <img src={img} alt="service-image" />
-          <h4 className="text-secondary text-2xl md:text-3xl mb-2 font-semibold mt-6">
+          <img src={img} alt="service-image" className="rounded-xl" />
+          <h4 className="text-tertiary text-2xl mb-2 font-pt-bold mt-6">
             {title}
           </h4>
-          <p className="text-xl md:text-2xl mb-5 md:mb-8 max-w-5xl">
-            {description}
-          </p>
+          <p className="text-xl mb-4 max-w-5xl">{description}</p>
           <p>
-            <a
+            <Link
+              to={linkAddress}
               href=""
-              className="text-primary text-xl md:text-2xl transition-all hover:underline"
+              className="service-link text-xl md:text-2xl"
             >
-              Let's do this
-            </a>
+              Learn more
+            </Link>
           </p>
         </div>
       ) : (
-        <div className="lg:block hidden"></div>
+        <div className="hidden lg:block xl:hidden"></div>
       )}
     </>
   );
@@ -33,6 +33,7 @@ ServiceItem.propTypes = {
   img: PropTypes.any,
   title: PropTypes.string,
   description: PropTypes.string,
+  linkAddress: PropTypes.string,
 };
 
 export default ServiceItem;

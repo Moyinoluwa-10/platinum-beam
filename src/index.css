@@ -1,6 +1,6 @@
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: Montserrat, sans-serif;
+  font-family: "PT Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -10,7 +10,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url(./assets/fonts/PT_Sans-Web-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(./assets/fonts/PT_Sans-Web-Regular.ttf) format("truetype");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .nav-link {
+    @apply text-black relative before:bg-black before:absolute before:h-[2px] before:block before:left-0 before:-bottom-[2px] before:w-0 hover:before:w-full before:transition-all before:duration-300;
+  }
+
+  .nav-link--2 {
+    @apply text-white relative before:bg-white before:absolute before:h-[2px] before:block before:left-0 before:-bottom-[2px] before:w-0 hover:before:w-full before:transition-all before:duration-300;
+  }
+
+  .footer-link {
+    @apply text-base text-white relative before:bg-white before:absolute before:h-[2px] before:block before:left-0 before:-bottom-[2px] before:w-0 hover:before:w-full before:transition-all before:duration-300;
+  }
+
+  .service-link {
+    @apply text-primary relative before:bg-primary before:absolute before:h-[2px] before:block before:left-0 before:-bottom-[2px] before:w-0 hover:before:w-full before:transition-all before:duration-300;
+  }
+
+  .btn-submit {
+  }
+}

@@ -33,7 +33,11 @@ const Specialized = () => {
 
           <div className="flex flex-wrap justify-center gap-10">
             <div className="max-w-450px lg:w-[450px] xl:w-[580px]">
-              <img src={category1} alt="category" className="w-full mb-5" />
+              <img
+                src={category1}
+                alt="category"
+                className="w-full mb-5 rounded-xl"
+              />
               <h2 className="text-2xl font-medium uppercase mb-5">
                 Post-construction cleaning
               </h2>
@@ -46,7 +50,11 @@ const Specialized = () => {
             </div>
 
             <div className="max-w-450px lg:w-[450px] xl:w-[580px]">
-              <img src={category2} alt="category" className="w-full mb-5" />
+              <img
+                src={category2}
+                alt="category"
+                className="w-full mb-5 rounded-xl"
+              />
               <h2 className="text-2xl font-medium uppercase mb-5">
                 Move in / move out
               </h2>
@@ -59,7 +67,11 @@ const Specialized = () => {
             </div>
 
             <div className="max-w-450px lg:max-w-none lg:w-[450px] xl:w-[580px]">
-              <img src={category3} alt="category" className="w-full mb-5" />
+              <img
+                src={category3}
+                alt="category"
+                className="w-full mb-5 rounded-xl"
+              />
               <h2 className="text-2xl font-medium uppercase mb-5">
                 Carpet cleaning
               </h2>
