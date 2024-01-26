@@ -1,3 +1,6 @@
+// react
+import PropTypes from "prop-types";
+
 // form
 import { Formik, Form } from "formik";
 import toast from "react-hot-toast";
@@ -7,7 +10,7 @@ import * as Yup from "yup";
 import ContactInfo from "./ContactInfo";
 import ServiceInfo from "./ServiceInfo";
 
-const BookingForm = () => {
+const BookingForm = ({ onSuccess }) => {
   return (
     <>
       <Formik
@@ -108,8 +111,9 @@ const BookingForm = () => {
               id: toastID,
             });
             setSubmitting(false);
+            onSuccess();
             // resetForm();
-          }, 200);
+          }, 2000);
         }}
       >
         {({ isSubmitting, values, setFieldValue }) => (
@@ -119,7 +123,7 @@ const BookingForm = () => {
 
             <button
               type="submit"
-              className="py-5 px-14 md:px-20 bg-secondary disabled:bg-gray-700 disabled:cursor-not-allowed rounded-2xl text-white block mt-10"
+              className="py-4 px-14 md:px-20 z-0 block overflow-hidden bg-secondary text-2xl  disabled:bg-gray-700 disabled:cursor-not-allowed mx-auto mt-10 rounded-md text-white relative border border-transparent hover:border-secondary hover:text-secondary transition-all duration-300 before:absolute before:block before:top-0 before:-left-[100%] before:w-full before:h-full before:bg-white before:-z-10 hover:before:left-0 before:transition-all before:duration-300"
               disabled={isSubmitting}
             >
               Book Service
@@ -129,6 +133,10 @@ const BookingForm = () => {
       </Formik>
     </>
   );
+};
+
+BookingForm.propTypes = {
+  onSuccess: PropTypes.func,
 };
 
 export default BookingForm;

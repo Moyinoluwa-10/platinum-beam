@@ -7,7 +7,11 @@ const ServiceItem = ({ img, title, description, linkAddress }) => {
     <>
       {title ? (
         <div>
-          <img src={img} alt="service-image" className="rounded-xl" />
+          <img
+            src={img}
+            alt="service-image"
+            className="rounded-xl sm:aspect-[280/210] md:aspect-[344/258] lg:aspect-[301/225] xl:aspect-[344/254]"
+          />
           <h4 className="text-tertiary text-2xl mb-2 font-pt-bold mt-6">
             {title}
           </h4>

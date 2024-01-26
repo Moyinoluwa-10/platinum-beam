@@ -11,7 +11,7 @@ const Flex = ({ img, name, description, linkAddress, linkText }) => {
         <img src={img} alt="image" className="rounded-xl" />
       </div>
       <div className="lg:max-w-xl">
-        <h3 className="text-secondary text-4xl md:text-5xl mb-4 font-pt-bold">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-4 font-pt-bold">
           {name}
         </h3>
         <p className="text-xl md:text-2xl mb-10">{description}</p>

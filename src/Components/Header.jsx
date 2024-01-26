@@ -58,16 +58,28 @@ const Header = () => {
             <div className="relative group cursor-pointer">
               <p>Services</p>
               <div className="hidden absolute left-0 shadow-2xl z-[5] group-hover:flex flex-col bg-white capitalize min-w-[250px] border border-gray-300 font-semibold">
-                <Link to={"/services/residential"} className="p-2 border-b">
+                <Link
+                  to={"/services/residential"}
+                  className="p-2 border-b hover:bg-gray-100"
+                >
                   Residential
                 </Link>
-                <Link to={"/services/commercial"} className="p-2 border-b">
+                <Link
+                  to={"/services/commercial"}
+                  className="p-2 border-b hover:bg-gray-100"
+                >
                   Commercial
                 </Link>
-                <Link to={"/services/specialized"} className="p-2 border-b">
+                <Link
+                  to={"/services/specialized"}
+                  className="p-2 border-b hover:bg-gray-100"
+                >
                   Specialized
                 </Link>
-                <Link to={"/services/horticulture"} className="p-2 border-b">
+                <Link
+                  to={"/services/horticulture"}
+                  className="p-2 border-b hover:bg-gray-100"
+                >
                   Horticulture & Landscape
                 </Link>
               </div>

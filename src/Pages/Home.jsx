@@ -10,7 +10,7 @@ import Flex from "../Components/Home/Flex";
 import Button from "../Components/Button";
 
 // images
-import professional from "../assets/images/professional.png";
+import professional from "../assets/images/professional.jpg";
 import hero from "../assets/images/hero.png";
 
 //svgs
@@ -49,7 +49,7 @@ const Home = () => {
       </section>
 
       <section className="container p-5 pt-20 md:pt-5 md:pb-10">
-        <p className="text-center text-secondary text-3xl mb-8">Trusted by</p>
+        <p className="text-center text-tertiary text-3xl mb-8">Trusted by</p>
         <div className="flex max-w-4xl mx-auto justify-evenly gap-7 flex-wrap items-center">
           <img src={issa} alt="issa-logo" className="h-20 md:h-28" />
           <img src={cmi} alt="cmi-logo" className="h-20 md:h-28" />
@@ -67,7 +67,7 @@ const Home = () => {
       />
 
       <section className="container p-5 py-5 md:pt-10 md:pb-20">
-        <h3 className="text-secondary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
           Our Services
         </h3>
         <p className="text-xl md:text-2xl mb-16 text-center max-w-5xl mx-auto">

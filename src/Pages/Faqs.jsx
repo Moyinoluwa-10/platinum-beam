@@ -9,7 +9,7 @@ import faqs from "../Components/Faqs/faqs.json";
 import FaqItem from "../Components/Faqs/FaqItem";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-services.png";
 
 const Faqs = () => {
   const [isActive, setIsActive] = useState(null);

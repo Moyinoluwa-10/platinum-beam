@@ -3,14 +3,14 @@ import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-services.png";
 
 const Commercial = () => {
   return (
     <>
       <Hero
         bgImg={bgImg}
-        pageTitle={"Commercial"}
+        pageTitle={"Commercial Cleaning"}
         pageText={"Basic and deep cleanings tailored to your taste"}
       />
 
@@ -31,7 +31,7 @@ const Commercial = () => {
 
         <section className="container p-5 py-20 grid md:grid-cols-2 max-w-6xl mx-auto gap-10">
           <div>
-            <h3 className="text-2xl font-medium mb-2 uppercase">
+            <h3 className="text-2xl font-pt-bold mb-2 uppercase">
               Common tasks completed
             </h3>
             <p className="text-xl">
@@ -49,7 +49,7 @@ const Commercial = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-medium mb-2 uppercase">
+            <h3 className="text-2xl font-pt-bold mb-2 uppercase">
               Deep cleaning
             </h3>
             <p className="text-xl">

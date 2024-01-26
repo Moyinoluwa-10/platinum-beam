@@ -8,7 +8,7 @@ import horticulture2 from "../assets/images/horticulture-2.png";
 import horticulture3 from "../assets/images/horticulture-3.png";
 
 // images
-import bgImg from "../assets/images/bg-2.png";
+import bgImg from "../assets/images/bg-horticulture.jpg";
 
 const Horticulture = () => {
   return (
@@ -47,7 +47,7 @@ const Horticulture = () => {
             />
           </div>
 
-          <h3 className="text-2xl font-semibold mb-4 text-center uppercase">
+          <h3 className="text-2xl font-pt-bold mb-4 text-center uppercase">
             Good things to know
           </h3>
 

@@ -16,6 +16,7 @@ import Horticulture from "./Pages/Horticulture";
 import ResidentialBasic from "./Pages/ResidentialBasic";
 import ResidentialDeep from "./Pages/ResidentialDeep";
 import Faqs from "./Pages/Faqs";
+import Error from "./Pages/Error";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Booking />} />
         <Route path="/faqs" element={<Faqs />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
   );

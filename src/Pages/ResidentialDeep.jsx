@@ -3,20 +3,20 @@ import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-services.png";
 
 const ResidentialDeep = () => {
   return (
     <>
       <Hero
         bgImg={bgImg}
-        pageTitle={"Residential"}
+        pageTitle={"Residential Cleaning"}
         pageText={"Basic and deep cleanings tailored to your taste"}
       />
 
       <Services>
         <section className="container p-5 py-20">
-          <h2 className="text-2xl font-semibold mb-10 text-center uppercase">
+          <h2 className="text-2xl font-pt-bold mb-10 text-center uppercase">
             Deep Cleaning
           </h2>
 
