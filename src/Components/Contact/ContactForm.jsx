@@ -3,7 +3,13 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
 
+// email
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
 const ContactForm = () => {
+  const form = useRef();
+
   return (
     <>
       <Formik
@@ -17,18 +23,44 @@ const ContactForm = () => {
         })}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           const toastID = toast.loading("Submitting...");
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            toast.success("Form submitted successfully", {
-              id: toastID,
-            });
-            setSubmitting(false);
-            resetForm();
-          }, 3000);
+
+          emailjs
+            .sendForm(
+              import.meta.env.VITE_EMAILJS_SERVICE_ID,
+              import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+              form.current,
+              import.meta.env.VITE_EMAILJS_API_KEY
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+                toast.success("Form submitted successfully", {
+                  id: toastID,
+                });
+                setSubmitting(false);
+                resetForm();
+              },
+              (error) => {
+                console.log(error.text);
+                toast.error("An error occurred", {
+                  id: toastID,
+                });
+                setSubmitting(false);
+              }
+            );
+
+          // setTimeout(() => {
+          //   alert(JSON.stringify(values, null, 2));
+          //   toast.success("Form submitted successfully", {
+          //     id: toastID,
+          //   });
+          //   setSubmitting(false);
+          //   resetForm();
+          // }, 3000);
         }}
       >
         {({ isSubmitting }) => (
-          <Form className="max-w-5xl mx-auto mb-20">
+          <Form className="max-w-5xl mx-auto mb-20" ref={form}>
             <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
               <div>
                 <Field
