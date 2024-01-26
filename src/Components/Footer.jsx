@@ -5,7 +5,7 @@ import {
   FaAngleDown,
   FaInstagram,
   FaFacebook,
-  FaXTwitter,
+  FaLinkedin,
 } from "react-icons/fa6";
 
 const Footer = () => {
@@ -77,18 +77,30 @@ const Footer = () => {
           <p className="text-lg mb-5">08131014376</p>
           <div className="flex items-center gap-5">
             <p className="relative transition-all duration-1000 hover:bottom-1">
-              <a href="#">
+              <a
+                href="https://www.instagram.com/platinumbeamconcept"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaInstagram className="text-2xl" />
               </a>
             </p>
             <p className="relative transition-all duration-1000 hover:bottom-1">
-              <a href="#">
+              <a
+                href="https://www.facebook.com/profile.php?id=100094608620510"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaFacebook className="text-2xl" />
               </a>
             </p>
             <p className="relative transition-all duration-1000 hover:bottom-1">
-              <a href="#">
-                <FaXTwitter className="text-2xl" />
+              <a
+                href="https://www.linkedin.com/company/platinum-beam-concept-limited/about/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin className="text-2xl" />
               </a>
             </p>
           </div>
@@ -211,18 +223,30 @@ const Footer = () => {
 
         <div className="flex items-center gap-5 mt-10">
           <p className="relative transition-all duration-1000 hover:bottom-1">
-            <a href="#">
+            <a
+              href="https://www.instagram.com/platinumbeamconcept"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaInstagram className="text-2xl" />
             </a>
           </p>
           <p className="relative transition-all duration-1000 hover:bottom-1">
-            <a href="#">
+            <a
+              href="https://www.facebook.com/profile.php?id=100094608620510"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaFacebook className="text-2xl" />
             </a>
           </p>
           <p className="relative transition-all duration-1000 hover:bottom-1">
-            <a href="#">
-              <FaXTwitter className="text-2xl" />
+            <a
+              href="https://www.linkedin.com/company/platinum-beam-concept-limited/about/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin className="text-2xl" />
             </a>
           </p>
         </div>
