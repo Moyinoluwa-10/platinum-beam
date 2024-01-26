@@ -72,9 +72,19 @@ const Footer = () => {
             Contact Info
           </h4>
           <p className="text-lg mb-5">
-            Address: <br /> Lekki Phase 1, Lekki, Lagos 101245, NG
+            Address: <br /> Block A2, Plot 12B, Fajuyi Estate, Off Ilawe Road,
+            Ado Ekiti
           </p>
-          <p className="text-lg mb-5">08131014376</p>
+          <p className="text-lg mb-5">
+            <a href="mailto:infoplatinumbeam@gmail.com" className="footer-link">
+              infoplatinumbeam@gmail.com
+            </a>
+          </p>
+          <p className="text-lg mb-5">
+            <a href="tel:09131704005" className="footer-link">
+              09131704005
+            </a>
+          </p>
           <div className="flex items-center gap-5">
             <p className="relative transition-all duration-1000 hover:bottom-1">
               <a
