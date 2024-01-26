@@ -5,7 +5,7 @@ const ContactInfo = () => {
   return (
     <>
       <div className="mb-10">
-        <h2 className="uppercase font-medium text-2xl mb-1">
+        <h2 className="uppercase font-pt-bold text-2xl mb-1">
           Your contact information
         </h2>
         <hr />

@@ -25,7 +25,7 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
   return (
     <>
       <div className="mb-10 mt-20">
-        <h2 className="uppercase font-medium text-2xl mb-1">
+        <h2 className="uppercase font-pt-bold text-2xl mb-1">
           Cleaning service information
         </h2>
         <hr />
