@@ -7,11 +7,11 @@ import members from "../Components/About/members";
 
 // images
 import about from "../assets/images/about.png";
-import about1 from "../assets/images/about-1.png";
-import about2 from "../assets/images/about-2.png";
-import about3 from "../assets/images/about-3.png";
-import about4 from "../assets/images/about-4.png";
-import about5 from "../assets/images/about-5.png";
+import about1 from "../assets/images/about-1.jpg";
+import about2 from "../assets/images/about-2.jpg";
+import about3 from "../assets/images/about-3.jpg";
+import about4 from "../assets/images/about-4.jpg";
+import about5 from "../assets/images/about-5.jpg";
 import about6 from "../assets/images/about-6.png";
 import bunmi from "../assets/images/bunmi.png";
 import bgImg from "../assets/images/bg-services.png";
