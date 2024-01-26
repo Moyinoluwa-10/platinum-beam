@@ -10,7 +10,7 @@ import Flex from "../Components/Home/Flex";
 import Button from "../Components/Button";
 
 // images
-import professional from "../assets/images/professional.png";
+import professional from "../assets/images/professional.jpg";
 import hero from "../assets/images/hero.png";
 
 //svgs
