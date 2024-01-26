@@ -8,7 +8,7 @@ import category2 from "../assets/images/category-2.png";
 import category3 from "../assets/images/category-3.png";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-services.png";
 
 const Specialized = () => {
   return (

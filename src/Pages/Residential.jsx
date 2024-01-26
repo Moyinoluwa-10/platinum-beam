@@ -6,7 +6,7 @@ import Services from "../Components/Services/Services";
 import Hero from "../Components/Hero";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-services.png";
 
 const Residential = () => {
   return (

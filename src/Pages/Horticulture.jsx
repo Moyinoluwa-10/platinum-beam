@@ -8,7 +8,7 @@ import horticulture2 from "../assets/images/horticulture-2.png";
 import horticulture3 from "../assets/images/horticulture-3.png";
 
 // images
-import bgImg from "../assets/images/bg-2.png";
+import bgImg from "../assets/images/bg-horticulture.jpg";
 
 const Horticulture = () => {
   return (

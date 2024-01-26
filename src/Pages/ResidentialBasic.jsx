@@ -3,7 +3,7 @@ import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-services.png";
 
 const ResidentialBasic = () => {
   return (

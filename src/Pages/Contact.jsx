@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 import ContactForm from "../Components/Contact/ContactForm";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-contact.png";
 
 // svgs
 import whatsapp from "../assets/svgs/whatsapp.svg";

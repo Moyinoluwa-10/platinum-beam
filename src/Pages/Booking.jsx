@@ -3,7 +3,7 @@ import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
 
 // images
-import bgImg from "../assets/images/bg-1.png";
+import bgImg from "../assets/images/bg-book.jpg";
 
 const Booking = () => {
   return (
