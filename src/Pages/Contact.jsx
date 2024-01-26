@@ -23,7 +23,7 @@ const Contact = () => {
       />
 
       <section className="container p-5 py-24">
-        <h3 className="text-secondary text-4xl md:text-5xl font-semibold text-center mb-12">
+        <h3 className="text-tertiary text-4xl md:text-5xl font-pt-bold text-center mb-12">
           Contact us via
         </h3>
 
@@ -45,8 +45,8 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="p-5 py-10 md:py-16 container">
-        <h3 className="text-secondary text-4xl md:text-5xl mb-20 font-semibold text-center">
+      <section className="p-5 container">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-20 font-pt-bold text-center">
           Send Us a Message <br /> Get in Touch
         </h3>
 
