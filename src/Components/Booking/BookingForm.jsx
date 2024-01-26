@@ -1,3 +1,6 @@
+// react
+import PropTypes from "prop-types";
+
 // form
 import { Formik, Form } from "formik";
 import toast from "react-hot-toast";
@@ -7,7 +10,7 @@ import * as Yup from "yup";
 import ContactInfo from "./ContactInfo";
 import ServiceInfo from "./ServiceInfo";
 
-const BookingForm = () => {
+const BookingForm = ({ onSuccess }) => {
   return (
     <>
       <Formik
@@ -108,8 +111,9 @@ const BookingForm = () => {
               id: toastID,
             });
             setSubmitting(false);
+            onSuccess();
             // resetForm();
-          }, 200);
+          }, 2000);
         }}
       >
         {({ isSubmitting, values, setFieldValue }) => (
@@ -129,6 +133,10 @@ const BookingForm = () => {
       </Formik>
     </>
   );
+};
+
+BookingForm.propTypes = {
+  onSuccess: PropTypes.func,
 };
 
 export default BookingForm;
