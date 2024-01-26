@@ -106,7 +106,7 @@ const BookingForm = ({ onSuccess }) => {
         onSubmit={(values, { setSubmitting }) => {
           const toastID = toast.loading("Submitting...");
           setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
+            // alert(JSON.stringify(values, null, 2));
             toast.success("Form submitted successfully", {
               id: toastID,
             });
