@@ -16,11 +16,11 @@ const About = () => {
     <>
       <Hero bgImg={bgImg} />
 
-      <section className="container p-5 py-5 md:pt-28 pb-36">
-        <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-semibold text-center">
+      <section className="container p-5 py-5 md:pt-20 pb-32">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
           Helping you flourish every day.
         </h3>
-        <p className="text-xl md:text-2xl mb-16 text-center max-w-5xl mx-auto">
+        <p className="text-xl md:text-2xl lg:text-3xl mb-16 text-center max-w-5xl mx-auto">
           Our journey from a humble start to a leading luxury cleaning service
           provider is marked by an unwavering pursuit of excellence. Our
           commitment to efficiency, eco-friendly practices, and sustainable
@@ -33,8 +33,8 @@ const About = () => {
         />
       </section>
 
-      <section className="container p-5 py-5 md:pt-16 pb-36">
-        <p className="text-xl md:text-2xl text-center max-w-5xl mx-auto mb-10">
+      <section className="container p-5 py-5 md:pt-10 pb-36">
+        <p className="text-xl md:text-2xl lg:text-3xl text-center max-w-5xl mx-auto mb-10">
           We're not just a cleaning service provider, we're educators and
           innovators. Our training and consultancy services aim to empower the
           next generation of cleaning professionals, sharing our knowledge and
@@ -51,7 +51,7 @@ const About = () => {
       </section>
 
       <section className="container p-5 py-5 md:py-0">
-        <h3 className="text-tertiary text-4xl md:text-5xl mb-10 md:mb-16 font-semibold text-center">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-10 md:mb-20 font-pt-bold text-center">
           Meet the faces behind the brand
         </h3>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
@@ -72,11 +72,11 @@ const About = () => {
         </div>
       </section>
 
-      <section className="container p-5 py-5 pb-16 md:pt-20 md:pb-10">
-        <h3 className="text-tertiary text-4xl md:text-5xl mb-10 font-semibold text-center">
+      <section className="container p-5 py-5 pb-16 md:pt-24 md:pb-10">
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-16 font-pt-bold text-center">
           Other faces to see
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-10 gap-y-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center justify-items-center gap-x-10 gap-y-16 max-w-7xl mx-auto">
           {members.map((member, i) => {
             return <MemberItem key={i} {...member} />;
           })}

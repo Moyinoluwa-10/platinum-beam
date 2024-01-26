@@ -1,3 +1,4 @@
+// images
 import emmanuel from "../../assets/images/emmanuel.png";
 import ireti from "../../assets/images/ireti.png";
 import ladyT from "../../assets/images/lady-t.png";
