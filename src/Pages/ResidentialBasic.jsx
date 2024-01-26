@@ -16,13 +16,13 @@ const ResidentialBasic = () => {
 
       <Services>
         <section className="container p-5 py-20">
-          <h2 className="text-2xl font-semibold mb-10 text-center uppercase">
+          <h2 className="text-2xl font-pt-bold mb-10 text-center uppercase">
             Basic Cleaning
           </h2>
 
           <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-10">
             <div>
-              <h3 className="text-2xl font-medium mb-2 uppercase">Bathroom</h3>
+              <h3 className="text-2xl font-pt-bold mb-2 uppercase">Bathroom</h3>
               <p className="text-xl">
                 Light ﬁxtures dusted. <br />
                 Doors and trim dusted, spot cleaned. <br />
@@ -48,7 +48,7 @@ const ResidentialBasic = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-medium mb-2 uppercase">Kitchen</h3>
+              <h3 className="text-2xl font-pt-bold mb-2 uppercase">Kitchen</h3>
               <p className="text-xl">
                 Light ﬁxtures dusted. <br />
                 Doors and trim dusted, spot cleaned. <br />
@@ -74,7 +74,7 @@ const ResidentialBasic = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-medium mb-2 uppercase">Bedrooms</h3>
+              <h3 className="text-2xl font-pt-bold mb-2 uppercase">Bedrooms</h3>
               <p className="text-xl">
                 Light ﬁxtures dusted. <br />
                 Baseboards dusted and scrubbed. <br />

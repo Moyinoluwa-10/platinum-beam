@@ -47,7 +47,7 @@ const Horticulture = () => {
             />
           </div>
 
-          <h3 className="text-2xl font-semibold mb-4 text-center uppercase">
+          <h3 className="text-2xl font-pt-bold mb-4 text-center uppercase">
             Good things to know
           </h3>
 

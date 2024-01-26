@@ -31,7 +31,7 @@ const Commercial = () => {
 
         <section className="container p-5 py-20 grid md:grid-cols-2 max-w-6xl mx-auto gap-10">
           <div>
-            <h3 className="text-2xl font-medium mb-2 uppercase">
+            <h3 className="text-2xl font-pt-bold mb-2 uppercase">
               Common tasks completed
             </h3>
             <p className="text-xl">
@@ -49,7 +49,7 @@ const Commercial = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-medium mb-2 uppercase">
+            <h3 className="text-2xl font-pt-bold mb-2 uppercase">
               Deep cleaning
             </h3>
             <p className="text-xl">

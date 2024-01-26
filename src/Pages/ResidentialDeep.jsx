@@ -16,7 +16,7 @@ const ResidentialDeep = () => {
 
       <Services>
         <section className="container p-5 py-20">
-          <h2 className="text-2xl font-semibold mb-10 text-center uppercase">
+          <h2 className="text-2xl font-pt-bold mb-10 text-center uppercase">
             Deep Cleaning
           </h2>
 

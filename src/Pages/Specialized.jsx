@@ -25,20 +25,20 @@ const Specialized = () => {
         <section className="container p-5 py-20">
           <div className="flex justify-center items-center gap-5 mb-10 text-center">
             <div className="bg-black h-[1px] w-full hidden md:block"></div>
-            <h3 className="text-2xl font-semibold uppercase md:whitespace-nowrap">
+            <h3 className="text-2xl font-pt-bold uppercase md:whitespace-nowrap">
               Explore our categories
             </h3>
             <div className="bg-black h-[1px] w-full hidden md:block"></div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="flex flex-wrap justify-center gap-10 gap-y-14">
             <div className="max-w-450px lg:w-[450px] xl:w-[580px]">
               <img
                 src={category1}
                 alt="category"
                 className="w-full mb-5 rounded-xl"
               />
-              <h2 className="text-2xl font-medium uppercase mb-5">
+              <h2 className="text-2xl font-pt-bold uppercase mb-2">
                 Post-construction cleaning
               </h2>
               <p className="text-xl">
@@ -55,7 +55,7 @@ const Specialized = () => {
                 alt="category"
                 className="w-full mb-5 rounded-xl"
               />
-              <h2 className="text-2xl font-medium uppercase mb-5">
+              <h2 className="text-2xl font-pt-bold uppercase mb-2">
                 Move in / move out
               </h2>
               <p className="text-xl">
@@ -72,7 +72,7 @@ const Specialized = () => {
                 alt="category"
                 className="w-full mb-5 rounded-xl"
               />
-              <h2 className="text-2xl font-medium uppercase mb-5">
+              <h2 className="text-2xl font-pt-bold uppercase mb-2">
                 Carpet cleaning
               </h2>
               <p className="text-xl">
