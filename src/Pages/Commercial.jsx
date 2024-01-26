@@ -10,7 +10,7 @@ const Commercial = () => {
     <>
       <Hero
         bgImg={bgImg}
-        pageTitle={"Commercial"}
+        pageTitle={"Commercial Cleaning"}
         pageText={"Basic and deep cleanings tailored to your taste"}
       />
 

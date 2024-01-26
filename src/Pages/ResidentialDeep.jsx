@@ -10,7 +10,7 @@ const ResidentialDeep = () => {
     <>
       <Hero
         bgImg={bgImg}
-        pageTitle={"Residential"}
+        pageTitle={"Residential Cleaning"}
         pageText={"Basic and deep cleanings tailored to your taste"}
       />
 
