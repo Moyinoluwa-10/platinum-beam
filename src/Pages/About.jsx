@@ -6,8 +6,7 @@ import MemberItem from "../Components/About/MemberItem";
 import members from "../Components/About/members";
 
 // images
-import about1 from "../assets/images/about-1.png";
-import about2 from "../assets/images/about-2.png";
+import about from "../assets/images/about.png";
 import bunmi from "../assets/images/bunmi.png";
 import bgImg from "../assets/images/bg-4.png";
 
@@ -16,7 +15,7 @@ const About = () => {
     <>
       <Hero bgImg={bgImg} />
 
-      <section className="container p-5 py-5 md:pt-20 pb-32">
+      <section className="container p-5 pt-16 md:pt-20 md:pb-32">
         <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
           Helping you flourish every day.
         </h3>
@@ -26,11 +25,38 @@ const About = () => {
           commitment to efficiency, eco-friendly practices, and sustainable
           cleaning solutions sets us apart in the cleaning industry.
         </p>
-        <img
-          src={about1}
-          alt="cleaning-image"
-          className="w-full max-w-5xl mx-auto rounded-xl"
-        />
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
+          <img
+            src={bunmi}
+            alt="cleaning"
+            className=" rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px]"
+          />
+          <img
+            src={bunmi}
+            alt="cleaning"
+            className="rounded-es-[66px] rounded-ee-[66px] hidden md:block"
+          />
+          <img
+            src={bunmi}
+            alt="cleaning"
+            className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] Md:rounded-se-[66px]"
+          />
+          <img
+            src={bunmi}
+            alt="cleaning"
+            className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] md:rounded-se-[66px]"
+          />
+          <img
+            src={bunmi}
+            alt="cleaning"
+            className="rounded-ss-[66px] rounded-se-[66px] hidden md:block"
+          />
+          <img
+            src={bunmi}
+            alt="cleaning"
+            className="rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px]"
+          />
+        </div>
       </section>
 
       <section className="container p-5 py-5 md:pt-10 pb-36">
@@ -44,7 +70,7 @@ const About = () => {
           cleaning services sector.
         </p>
         <img
-          src={about2}
+          src={about}
           alt="cleaning-image"
           className="w-full max-w-xl mx-auto"
         />
