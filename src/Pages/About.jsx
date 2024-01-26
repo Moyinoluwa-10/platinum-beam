@@ -8,7 +8,7 @@ import members from "../Components/About/members";
 // images
 import about from "../assets/images/about.png";
 import bunmi from "../assets/images/bunmi.png";
-import bgImg from "../assets/images/bg-4.png";
+import bgImg from "../assets/images/bg-services.png";
 
 const About = () => {
   return (
