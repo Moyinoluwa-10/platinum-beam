@@ -7,6 +7,12 @@ import members from "../Components/About/members";
 
 // images
 import about from "../assets/images/about.png";
+import about1 from "../assets/images/about-1.png";
+import about2 from "../assets/images/about-2.png";
+import about3 from "../assets/images/about-3.png";
+import about4 from "../assets/images/about-4.png";
+import about5 from "../assets/images/about-5.png";
+import about6 from "../assets/images/about-6.png";
 import bunmi from "../assets/images/bunmi.png";
 import bgImg from "../assets/images/bg-services.png";
 
@@ -27,32 +33,32 @@ const About = () => {
         </p>
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
           <img
-            src={bunmi}
+            src={about1}
             alt="cleaning"
             className=" rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px]"
           />
           <img
-            src={bunmi}
+            src={about2}
             alt="cleaning"
             className="rounded-es-[66px] rounded-ee-[66px] hidden md:block"
           />
           <img
-            src={bunmi}
+            src={about3}
             alt="cleaning"
             className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] Md:rounded-se-[66px]"
           />
           <img
-            src={bunmi}
+            src={about4}
             alt="cleaning"
             className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] md:rounded-se-[66px]"
           />
           <img
-            src={bunmi}
+            src={about5}
             alt="cleaning"
             className="rounded-ss-[66px] rounded-se-[66px] hidden md:block"
           />
           <img
-            src={bunmi}
+            src={about6}
             alt="cleaning"
             className="rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px]"
           />
