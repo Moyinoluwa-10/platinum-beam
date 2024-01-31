@@ -31,26 +31,27 @@ function fetchData() {
 }
 
 async function saveDataToExcel(data) {
-  const workbook = new ExcelJS.Workbook();
-  const worksheet = workbook.addWorksheet('FormData')
+  try {
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('FormData')
 
     // Define columns in the Excel sheet
-  worksheet.columns = [
-    { header: 'ID', key: 'id', width: 10 },
-    { header: 'Data', key: 'data', width: 30 },
-    // Add more columns as needed
-  ];
+    worksheet.columns = [
+      { header: 'ID', key: 'id', width: 10 },
+      { header: 'Data', key: 'data', width: 30 },
+      // Add more columns as needed
+    ];
 
-   // Add rows to the Excel sheet
-  data.forEach((row) => {
-    worksheet.addRow(row);
-  });
+    // Add rows to the Excel sheet
+    data.forEach((row) => {
+      worksheet.addRow(row);
+    });
 
-  try {
     await workbook.xlsx.writeFile('FormData.xlsx');
     console.log('Excel file saved');
   } catch (error) {
     console.error('Failed to save Excel file:', error);
+    throw new Error('Failed to save Excel file');
   }
 }
 
@@ -67,7 +68,7 @@ app.post('/submit-form', (req, res) => {
   db.run(sql, formData, function(err) {
     if (err) {
       console.error(err.message);
-      return res.status(500).send(err.message);
+      return res.status(500).send('Failed to save form data: ' + err.message);
     }
     console.log(`A row has been inserted with rowid ${this.lastID}`);
     res.status(200).send('Form data saved successfully');
