@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const sqlite3 = require('sqlite3').verbose();
+const ExcelJS = require('exceljs');
 const cors = require('cors');
 
 const app = express();
@@ -17,6 +18,41 @@ let db = new sqlite3.Database('./mydb.sqlite', (err) => {
   }
   console.log('Connected to the SQLite database.');
 });
+
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    db.all("SELECT * FROM form_data", [], (err, rows) => {
+      if(err) {
+        reject(err);
+      }
+      resolve(rows);
+    });
+  });
+}
+
+async function saveDataToExcel(data) {
+  const workbook = new ExcelJS.Workbook();
+  const worksheet = workbook.addWorksheet('FormData')
+
+    // Define columns in the Excel sheet
+  worksheet.columns = [
+    { header: 'ID', key: 'id', width: 10 },
+    { header: 'Data', key: 'data', width: 30 },
+    // Add more columns as needed
+  ];
+
+   // Add rows to the Excel sheet
+  data.forEach((row) => {
+    worksheet.addRow(row);
+  });
+
+  try {
+    await workbook.xlsx.writeFile('FormData.xlsx');
+    console.log('Excel file saved');
+  } catch (error) {
+    console.error('Failed to save Excel file:', error);
+  }
+}
 
 // Create table (if it doesn't exist)
 db.run(`CREATE TABLE IF NOT EXISTS form_data(
@@ -48,3 +84,8 @@ process.on('SIGINT', () => {
     process.exit(0);
   });
 });
+
+fetchData()
+  .then(saveDataToExcel)
+  .catch(console.error)
+  .finally(() => db.close());
