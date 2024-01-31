@@ -6,6 +6,9 @@ import { Formik, Form } from "formik";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
 
+// axios
+import axios from 'axios';
+
 // components
 import ContactInfo from "./ContactInfo";
 import ServiceInfo from "./ServiceInfo";
@@ -105,15 +108,20 @@ const BookingForm = ({ onSuccess }) => {
         })}
         onSubmit={(values, { setSubmitting }) => {
           const toastID = toast.loading("Submitting...");
-          setTimeout(() => {
-            // alert(JSON.stringify(values, null, 2));
-            toast.success("Form submitted successfully", {
-              id: toastID,
-            });
-            setSubmitting(false);
-            onSuccess();
-            // resetForm();
-          }, 2000);
+          axios.post('http://localhost:3000/submit-form', values)
+            .then(response => {
+              toast.success("Form submitted successfully", {
+                id: toastID,
+              });
+              setSubmitting(false);
+              onSuccess();
+            })
+            .catch(error => {
+              toast.error("Error submitting form", {
+                id: toastID,
+              });
+              setSubmitting(false)
+            })
         }}
       >
         {({ isSubmitting, values, setFieldValue }) => (
