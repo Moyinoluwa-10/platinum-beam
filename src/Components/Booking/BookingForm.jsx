@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import * as Yup from "yup";
 
 // axios
-import axios from 'axios';
+import axios from "axios";
 
 // components
 import ContactInfo from "./ContactInfo";
@@ -90,17 +90,28 @@ const BookingForm = ({ onSuccess }) => {
           }),
           noOfBathrooms: Yup.string().when("cleaningService", {
             is: (cleaningService) => cleaningService.includes("residential"),
-            then: () => Yup.string().required("Required"),
+            then: () =>
+              Yup.number()
+                .positive("Value must be greater than zero")
+                .required("Required"),
           }),
           noOfBedrooms: Yup.string().when("cleaningService", {
             is: (cleaningService) => cleaningService.includes("residential"),
-            then: () => Yup.string().required("Required"),
+            then: () =>
+              Yup.number()
+                .positive("Value must be greater than zero")
+                .required("Required"),
           }),
           noOfLivingRooms: Yup.string().when("cleaningService", {
             is: (cleaningService) => cleaningService.includes("residential"),
-            then: () => Yup.string().required("Required"),
+            then: () =>
+              Yup.number()
+                .positive("Value must be greater than zero")
+                .required("Required"),
           }),
-          date: Yup.string().required("Choose a date"),
+          date: Yup.date()
+            .min(new Date(), "Value must be a future date")
+            .required("Choose a date"),
           termsAndConditions: Yup.boolean().oneOf(
             [true],
             "You must agree to the terms and conditions to submit the form"
@@ -108,20 +119,21 @@ const BookingForm = ({ onSuccess }) => {
         })}
         onSubmit={(values, { setSubmitting }) => {
           const toastID = toast.loading("Submitting...");
-          axios.post('http://localhost:3000/submit-form', values)
-            .then(response => {
+          axios
+            .post("http://localhost:3000/submit-form", values)
+            .then((response) => {
               toast.success("Form submitted successfully", {
                 id: toastID,
               });
               setSubmitting(false);
               onSuccess();
             })
-            .catch(error => {
+            .catch((error) => {
               toast.error("Error submitting form", {
                 id: toastID,
               });
-              setSubmitting(false)
-            })
+              setSubmitting(false);
+            });
         }}
       >
         {({ isSubmitting, values, setFieldValue }) => (
