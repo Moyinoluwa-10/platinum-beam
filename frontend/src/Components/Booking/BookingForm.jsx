@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import * as Yup from "yup";
 
 // axios
-import axios from 'axios';
+import axios from "axios";
 
 // components
 import ContactInfo from "./ContactInfo";
@@ -25,7 +25,7 @@ const BookingForm = ({ onSuccess }) => {
           address: "",
           city: "",
           state: "",
-          cleaningService: [],
+          cleaningService: "",
           homeType: "",
           homeTypeOther: "",
           commercialType: "",
@@ -53,12 +53,9 @@ const BookingForm = ({ onSuccess }) => {
               ["ekiti", "oyo", "lagos", "abeokuta"],
               "Incorrect selection"
             ),
-          cleaningService: Yup.array().min(
-            1,
-            "Select at least one cleaning service"
-          ),
+          cleaningService: Yup.string().required("Required"),
           homeType: Yup.string().when("cleaningService", {
-            is: (cleaningService) => cleaningService.includes("residential"),
+            is: "residential",
             then: () => Yup.string().required("Select an option"),
           }),
           homeTypeOther: Yup.string().when("homeType", {
@@ -66,7 +63,7 @@ const BookingForm = ({ onSuccess }) => {
             then: () => Yup.string().required("Required"),
           }),
           commercialType: Yup.string().when("cleaningService", {
-            is: (cleaningService) => cleaningService.includes("commercial"),
+            is: "commercial",
             then: () => Yup.string().required("Select an option"),
           }),
           commercialTypeOther: Yup.string().when("commercialType", {
@@ -81,26 +78,37 @@ const BookingForm = ({ onSuccess }) => {
             ),
           cleaningMode: Yup.string().when("cleaningService", {
             is: (cleaningService) =>
-              cleaningService.includes("residential") ||
-              cleaningService.includes("commercial"),
+              cleaningService === "residential" ||
+              cleaningService === "commercial",
             then: () =>
               Yup.string()
                 .required("Required")
                 .oneOf(["basic", "deep"], "Incorrect selection"),
           }),
           noOfBathrooms: Yup.string().when("cleaningService", {
-            is: (cleaningService) => cleaningService.includes("residential"),
-            then: () => Yup.string().required("Required"),
+            is: "residential",
+            then: () =>
+              Yup.number()
+                .positive("Value must be greater than zero")
+                .required("Required"),
           }),
           noOfBedrooms: Yup.string().when("cleaningService", {
-            is: (cleaningService) => cleaningService.includes("residential"),
-            then: () => Yup.string().required("Required"),
+            is: "residential",
+            then: () =>
+              Yup.number()
+                .positive("Value must be greater than zero")
+                .required("Required"),
           }),
           noOfLivingRooms: Yup.string().when("cleaningService", {
-            is: (cleaningService) => cleaningService.includes("residential"),
-            then: () => Yup.string().required("Required"),
+            is: "residential",
+            then: () =>
+              Yup.number()
+                .positive("Value must be greater than zero")
+                .required("Required"),
           }),
-          date: Yup.string().required("Choose a date"),
+          date: Yup.date()
+            .min(new Date(), "Value must be a future date")
+            .required("Choose a date"),
           termsAndConditions: Yup.boolean().oneOf(
             [true],
             "You must agree to the terms and conditions to submit the form"
@@ -108,20 +116,21 @@ const BookingForm = ({ onSuccess }) => {
         })}
         onSubmit={(values, { setSubmitting }) => {
           const toastID = toast.loading("Submitting...");
-          axios.post('http://localhost:3000/submit-form', values)
-            .then(response => {
+          axios
+            .post(`${import.meta.env.VITE_API_URL}/submit-form`, values)
+            .then((response) => {
               toast.success("Form submitted successfully", {
                 id: toastID,
               });
               setSubmitting(false);
               onSuccess();
             })
-            .catch(error => {
+            .catch((error) => {
               toast.error("Error submitting form", {
                 id: toastID,
               });
-              setSubmitting(false)
-            })
+              setSubmitting(false);
+            });
         }}
       >
         {({ isSubmitting, values, setFieldValue }) => (

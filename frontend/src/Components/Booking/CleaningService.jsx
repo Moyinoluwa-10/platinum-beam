@@ -4,14 +4,14 @@ import { GoInfo } from "react-icons/go";
 import { MdOutlineCancel } from "react-icons/md";
 
 // components
-import { MyCheckbox } from "./FormComponents";
+import { MyRadio } from "./FormComponents";
 
 const CleaningService = ({ title, value, description, id, isOpen, onOpen }) => {
   return (
     <div className="flex items-center gap-2 relative">
-      <MyCheckbox name="cleaningService" value={value}>
+      <MyRadio name="cleaningService" value={value}>
         {title}
-      </MyCheckbox>
+      </MyRadio>
       <GoInfo onClick={() => onOpen(id)} className={"cursor-pointer"} />
       {isOpen === id && (
         <p className="p-5 bg-white shadow-xl rounded-md border border-gray-400 absolute top-0 left-0 z-[5] max-w-lg">

@@ -4,6 +4,7 @@ import Transform from "../Components/Transform";
 import Footer from "../Components/Footer";
 import MemberItem from "../Components/About/MemberItem";
 import members from "../Components/About/members";
+// import HeroAnimation from "../Components/About/HeroAnimation";
 
 // images
 import about from "../assets/images/about.png";
@@ -20,6 +21,7 @@ const About = () => {
   return (
     <>
       <Hero bgImg={bgImg} />
+      {/* <HeroAnimation /> */}
 
       <section className="container p-5 pt-16 md:pt-20 md:pb-32">
         <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
@@ -35,32 +37,32 @@ const About = () => {
           <img
             src={about1}
             alt="cleaning"
-            className=" rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px]"
+            className=" rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px] aspect-[16/12]"
           />
           <img
             src={about2}
             alt="cleaning"
-            className="rounded-es-[66px] rounded-ee-[66px] hidden md:block"
+            className="rounded-es-[66px] rounded-ee-[66px] hidden md:block aspect-[16/12]"
           />
           <img
             src={about3}
             alt="cleaning"
-            className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] Md:rounded-se-[66px]"
+            className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] Md:rounded-se-[66px] aspect-[16/12]"
           />
           <img
             src={about4}
             alt="cleaning"
-            className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] md:rounded-se-[66px]"
+            className="rounded-es-[40px] rounded-se-[40px] md:rounded-es-[66px] md:rounded-se-[66px] aspect-[16/12]"
           />
           <img
             src={about5}
             alt="cleaning"
-            className="rounded-ss-[66px] rounded-se-[66px] hidden md:block"
+            className="rounded-ss-[66px] rounded-se-[66px] hidden md:block aspect-[16/12]"
           />
           <img
             src={about6}
             alt="cleaning"
-            className="rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px]"
+            className="rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px] aspect-[16/12]"
           />
         </div>
       </section>

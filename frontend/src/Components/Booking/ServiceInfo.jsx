@@ -101,6 +101,7 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
                 name="noOfBathrooms"
                 type="number"
                 placeholder="1"
+                min="1"
               />
 
               <MyTextInput
@@ -108,6 +109,7 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
                 name="noOfBedrooms"
                 type="number"
                 placeholder="1"
+                min="1"
               />
 
               <MyTextInput
@@ -115,6 +117,7 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
                 name="noOfLivingRooms"
                 type="number"
                 placeholder="1"
+                min="1"
               />
             </div>
           )}

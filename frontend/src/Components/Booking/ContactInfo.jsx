@@ -26,8 +26,6 @@ const ContactInfo = () => {
       </div>
 
       <div className="mb-8 grid md:grid-cols-2 gap-x-10 gap-y-8">
-        <MyTextInput name="city" type="text" placeholder="City" />
-
         <div>
           <MySelect name="state">
             <option value="">State</option>
@@ -40,6 +38,8 @@ const ContactInfo = () => {
             We are only available in the states listed above.
           </p>
         </div>
+
+        <MyTextInput name="city" type="text" placeholder="City" />
       </div>
     </>
   );
