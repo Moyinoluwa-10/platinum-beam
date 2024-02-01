@@ -3,11 +3,11 @@ const sendEmail = require("./sendEmail");
 
 const mail = {
   from: NODEMAILER_FROM,
-  to: NODEMAILER_FROM,
-  subject: "Booking Confirmation",
+  subject: "Contact",
 };
 
-const sendBookingClientEmail = async () => {
+const sendBookingClientEmail = async ({ email }) => {
+  mail.to = email;
   mail.html = `<!DOCTYPE html>
   <html lang="en">
     <head>
@@ -41,7 +41,7 @@ const sendBookingClientEmail = async () => {
             "
           >
             <p style="font-size: 16px; color: #333">
-            Thank you for contacting us. This is an automated response confirming the receipt of your ticket. Our team will get back to you as soon as possible. 
+            Thank you for contacting us. This is an automated response confirming your submission. Our team will get back to you as soon as possible. 
             </p>
           </div>
   

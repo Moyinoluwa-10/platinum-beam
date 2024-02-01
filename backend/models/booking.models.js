@@ -53,7 +53,7 @@ const BookingSchema = new mongoose.Schema(
     cleaningMode: {
       type: String,
       enum: {
-        values: ["basic", "deep"],
+        values: ["", "basic", "deep"],
         message: "{VALUE} is not supported",
       },
     },

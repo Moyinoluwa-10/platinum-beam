@@ -3,10 +3,11 @@ const sendEmail = require("./sendEmail");
 
 const mail = {
   from: NODEMAILER_FROM,
+  to: NODEMAILER_FROM,
   subject: "Contact",
 };
 
-const sendBookingClientEmail = async () => {
+const sendBookingClientEmail = async ({ name, email, message }) => {
   mail.html = `<!DOCTYPE html>
   <html lang="en">
     <head>
@@ -39,9 +40,16 @@ const sendBookingClientEmail = async () => {
               margin-top: 20px;
             "
           >
-            <p style="font-size: 16px; color: #333">
-            Thank you for filling out the form
-            </p>
+          <p style="font-size: 16px; color: #333">
+          Hello Platinum Beam, <br />
+          The contact form was just filled with information. Here are the
+          details: <br /><br />
+          <b>Name:</b>${name}<br />
+          <b>Email Address:</b> ${email} <br />
+          <b>Message:</b> ${message} <br /><br />
+
+          Please go ahead and contact the person.
+          </p>
           </div>
   
           <div style="margin-top: 40px">

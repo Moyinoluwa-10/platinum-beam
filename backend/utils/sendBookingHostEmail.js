@@ -7,7 +7,7 @@ const mail = {
   subject: "Booking Confirmation",
 };
 
-const sendBookingClientEmail = async () => {
+const sendBookingClientEmail = async ({ data }) => {
   mail.html = `<!DOCTYPE html>
   <html lang="en">
     <head>
@@ -41,7 +41,12 @@ const sendBookingClientEmail = async () => {
             "
           >
             <p style="font-size: 16px; color: #333">
-            Thank you for filling out the form
+            Hello Platinum Beam, <br />
+            The booking form was just filled with information. Here are the
+            details: <br /><br />
+            <b>Message:</b> ${data} <br /><br />
+
+            Please go ahead and contact the person.
             </p>
           </div>
   

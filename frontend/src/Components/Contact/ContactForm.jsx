@@ -21,7 +21,7 @@ const ContactForm = () => {
         onSubmit={(values, { setSubmitting, resetForm }) => {
           const toastID = toast.loading("Submitting...");
           axios
-            .post(`${import.meta.env.VITE_API_URL}/submit-form`, values)
+            .post(`${import.meta.env.VITE_API_URL}/api/v1/contact`, values)
             // eslint-disable-next-line
             .then((response) => {
               resetForm();
