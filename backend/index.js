@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+const { sendMail } = require("./controller/mail");
+
 const xl = require("excel4node");
 const wb = new xl.Workbook();
 const ws = wb.addWorksheet("Worksheet Name");
@@ -23,16 +25,20 @@ const formDataSchema = new mongoose.Schema({
 
 const FormData = mongoose.model("FormData", formDataSchema);
 
-app.post("/submit-form", async (req, res) => {
-  try {
-    const formData = new FormData({ data: JSON.stringify(req.body) });
-    await formData.save();
-    res.status(200).send("Form data saved successfully");
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Failed to save form data: " + error.message);
-  }
-});
+// app.post("/submit-form", async (req, res) => {
+//   try {
+//     const formData = new FormData({ data: JSON.stringify(req.body) });
+//     // await formData.save();
+//     // res.status(200).send("Form data saved successfully");
+//     await sendMail();
+//     res.status(200).send("Email sent successfully");
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send("Failed to save form data: " + error.message);
+//   }
+// });
+
+app.post("/submit-form", sendMail);
 
 const data = [
   {

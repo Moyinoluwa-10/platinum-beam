@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Email Template</title>
-  </head>
-  <body>
-    <div
+const nodemailer = require("nodemailer");
+require("dotenv").config();
+
+const sendMail = async (req, res, next) => {
+  try {
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json({
+        status: false,
+        message: "Please fill all the fields",
+      });
+    }
+
+    // Set up the nodemailer transport
+    const transporter = nodemailer.createTransport({
+      service: process.env.SERVICE,
+      host: process.env.HOST,
+      port: process.env.PORT,
+      secure: false,
+      auth: {
+        user: process.env.USER,
+        pass: process.env.PASS,
+      },
+    });
+
+    // Set up the email options
+    const mailOptions = {
+      from: process.env.USER,
+      to: process.env.USER,
+      subject: `Mail from ${name}`,
+      html: `
+      <div
       style="
         background-color: #f2f5f8;
         padding: 30px 20px;
@@ -34,9 +58,9 @@
             Hello Platinum Beam, <br />
             The contact form was just filled with information. Here are the
             details: <br /><br />
-            <b>Name:</b>{{name}}<br />
-            <b>Email Address:</b> {{email}} <br />
-            <b>Message:</b> {{message}} <br /><br />
+            <b>Name:</b>${name}}<br />
+            <b>Email Address:</b> ${email}} <br />
+            <b>Message:</b> ${message}} <br /><br />
 
             Please go ahead and contact the person.
           </p>
@@ -88,5 +112,23 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+        `,
+    };
+
+    // Send the email
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        res.status(500).json({ status: false, message: "Email not sent" });
+        console.log(error);
+      } else {
+        res.json({ status: true, message: "Email sent successfully" });
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = {
+  sendMail,
+};
