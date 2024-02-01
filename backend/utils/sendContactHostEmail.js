@@ -13,7 +13,7 @@ const sendBookingClientEmail = async ({ name, email, message }) => {
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Email Template</title>
+      <title>Email Templatee</title>
     </head>
     <body>
       <div
