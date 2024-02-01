@@ -114,17 +114,20 @@ const BookingForm = ({ onSuccess }) => {
             "You must agree to the terms and conditions to submit the form"
           ),
         })}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
           const toastID = toast.loading("Submitting...");
           axios
-            .post(`${import.meta.env.VITE_API_URL}/submit-form`, values)
+            .post(`${import.meta.env.VITE_API_URL}/api/v1/book`, values)
+            // eslint-disable-next-line
             .then((response) => {
               toast.success("Form submitted successfully", {
                 id: toastID,
               });
               setSubmitting(false);
+              resetForm();
               onSuccess();
             })
+            // eslint-disable-next-line
             .catch((error) => {
               toast.error("Error submitting form", {
                 id: toastID,

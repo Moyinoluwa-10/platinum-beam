@@ -10,23 +10,19 @@
       style="
         background-color: #f2f5f8;
         padding: 30px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         font-family: sans-serif;
       "
     >
-      <div style="width: 600px">
-        <header>
+      <div style="width: 600px; max-width: 100%; margin: 0 auto">
+        <div>
           <img
             src="https://platinum-beam.vercel.app/logo.png"
             alt="logo"
             style="width: 80px; height: 80px"
           />
-        </header>
+        </div>
 
-        <main
+        <div
           style="
             border-radius: 4px;
             padding: 25px;
@@ -38,15 +34,15 @@
             Hello Platinum Beam, <br />
             The contact form was just filled with information. Here are the
             details: <br /><br />
-            <b>Name:</b> John Smith <br />
-            <b>Email Address:</b> johnsmith@gmail.com <br />
-            <b>Message:</b> I would like to talk to you. <br /><br />
+            <b>Name:</b>{{name}}<br />
+            <b>Email Address:</b> {{email}} <br />
+            <b>Message:</b> {{message}} <br /><br />
 
             Please go ahead and contact the person.
           </p>
-        </main>
+        </div>
 
-        <footer style="margin-top: 40px">
+        <div style="margin-top: 40px">
           <p style="font-size: 14px; color: #333">
             Block A2, Plot 12B, Fajuyi Estate, Off Ilawe Road, Ado Ekiti
           </p>
@@ -65,26 +61,31 @@
               style="width: 30px; height: 30px"
             />
 
-            <div style="display: flex; align-items: center; gap: 10px">
-              <a href="https://www.instagram.com/platinumbeamconcept"
+            <div style="margin-left: auto">
+              <a
+                href="https://www.instagram.com/platinumbeamconcept"
+                style="margin-left: 10px"
                 ><img
-                  src="https://platinum-beam.vercel.app//instagram.svg"
+                  src="https://platinum-beam.vercel.app/instagram.png"
                   alt="instagram-logo"
               /></a>
-              <a href="https://www.facebook.com/profile.php?id=100094608620510"
+              <a
+                href="https://www.facebook.com/profile.php?id=100094608620510"
+                style="margin-left: 10px"
                 ><img
-                  src="https://platinum-beam.vercel.app//facebook.svg"
+                  src="https://platinum-beam.vercel.app/facebook.png"
                   alt="facebook-logo"
               /></a>
               <a
                 href="https://www.linkedin.com/company/platinum-beam-concept-limited/about/"
+                style="margin-left: 10px"
                 ><img
-                  src="https://platinum-beam.vercel.app//linkedIn.svg"
+                  src="https://platinum-beam.vercel.app/linkedIn.png"
                   alt="linkedIn-logo"
               /></a>
             </div>
           </div>
-        </footer>
+        </div>
       </div>
     </div>
   </body>
