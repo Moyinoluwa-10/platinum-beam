@@ -139,8 +139,16 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
       </div>
 
       <MyCheckbox name="termsAndConditions">
-        By submitting this you are agreeing to our Terms & Conditions for any
-        services rendered
+        By submitting this you are agreeing to our{" "}
+        <a
+          href="https://docs.google.com/document/d/1pRYjpajTvqUlqqqi_dW5wvUu97twEEVDeZlaumKdoVY/edit?usp=drivesdk"
+          className="text-secondary"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Terms & Conditions
+        </a>{" "}
+        for any services rendered
       </MyCheckbox>
       <div className="text-red-500 text-sm">
         <ErrorMessage name="termsAndConditions" />

@@ -50,8 +50,8 @@ const Footer = () => {
             </Link>
           </p>
           <p className="mb-5">
-            <Link to={"/services"} className="footer-link">
-              Our Services
+            <Link to={"/faqs"} className="footer-link">
+              FAQs
             </Link>
           </p>
         </div>
@@ -167,8 +167,8 @@ const Footer = () => {
               </Link>
             </p>
             <p className="mb-5">
-              <Link to={"/services"} className="footer-link">
-                Our Services
+              <Link to={"/faqs"} className="footer-link">
+                FAQs
               </Link>
             </p>
           </div>

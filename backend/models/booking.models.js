@@ -25,7 +25,7 @@ const BookingSchema = new mongoose.Schema(
     state: {
       type: String,
       enum: {
-        values: ["ekiti", "oyo", "lagos", "abeokuta"],
+        values: ["ekiti", "oyo", "lagos", "ogun"],
         message: "{VALUE} is not supported",
       },
       required: true,
