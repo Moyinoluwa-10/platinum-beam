@@ -1,10 +1,10 @@
 // components
-import Hero from "../Components/Hero";
+// import Hero from "../Components/Hero";
 import Transform from "../Components/Transform";
 import Footer from "../Components/Footer";
 import MemberItem from "../Components/About/MemberItem";
 import members from "../Components/About/members";
-// import HeroAnimation from "../Components/About/HeroAnimation";
+import HeroAnimation from "../Components/About/HeroAnimation";
 
 // images
 import about from "../assets/images/about.png";
@@ -15,13 +15,13 @@ import about4 from "../assets/images/about-4.jpg";
 import about5 from "../assets/images/about-5.jpg";
 import about6 from "../assets/images/about-6.png";
 import bunmi from "../assets/images/bunmi.png";
-import bgImg from "../assets/images/bg-services.png";
+// import bgImg from "../assets/images/bg-services.png";
 
 const About = () => {
   return (
     <>
-      <Hero bgImg={bgImg} />
-      {/* <HeroAnimation /> */}
+      {/* <Hero bgImg={bgImg} /> */}
+      <HeroAnimation />
 
       <section className="container p-5 pt-16 md:pt-20 md:pb-32">
         <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center">

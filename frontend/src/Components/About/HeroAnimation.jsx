@@ -1,94 +1,62 @@
 // animation
 import { motion } from "framer-motion";
 
+// components
+import Header from "../Header";
+
 // images
-import bgImg1 from "../../assets/images/bg-services.png";
-// import bgImg2 from "../../assets/images/bg-contact.png";
-// import bgImg3 from "../../assets/images/bg-services.png";
-// import bgImg4 from "../../assets/images/bg-services.png";
+import bgImg1 from "../../assets/images/bg-about-1.jpg";
+import bgImg2 from "../../assets/images/bg-about-2.jpg";
+import bgImg3 from "../../assets/images/bg-about-3.jpg";
 
 const HeroAnimation = () => {
   return (
     <>
-      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative h-screen overflow-hidden">
+        <div className="absolute top-0 left-0 w-full">
+          <Header />
+        </div>
+        <div className="absolute left-0 top-0 z-[0] bg-gray-200 w-full h-full"></div>
         <motion.div
-          initial={{
-            width: "10px",
-            height: "10px",
-          }}
-          // animate={{
-          //   opacity: 1,
-          //   scale: 1,
-          // }}
-          animate={{
-            scale: [0, 400, 400, 1],
-            // width: "100%",
-            // height: "100%",
-            width: [null, null, null, "100%"],
-            height: [null, null, null, "100%"],
-            // width: ["10%", "80%", "80%", "100%"],
-            // height: ["10%", "80%", "80%", "100%"],
-            // height: ["10px", "50px", "50px", "100px"],
-            borderRadius: ["50%", "50%", "0%", "0%"],
-          }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
           transition={{
-            // ease: "easeInOut",
-            ease: "linear",
-            times: [0, 0.5, 0.99, 1],
-            duration: 5,
-            delay: 0,
+            ease: "easeInOut",
+            duration: 1,
           }}
-          className="relative overflow-hidden z-[1] bg-red-400 mx-auto"
-          style={{ backgroundImage: `url(${bgImg1})` }}
+          className="absolute left-0 z-[1] w-full h-full bg-cover bg-repeat bg-center"
+          style={{
+            backgroundImage: `url(${bgImg3})`,
+          }}
         ></motion.div>
-        {/* <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.5,
-            borderRadius: "100%",
-            width: "10px",
-            height: "10px",
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 1,
           }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            borderRadius: "0%",
-            width: "100%",
-            height: "500px",
+          className="absolute left-0 z-[2] w-full h-full bg-cover bg-repeat bg-center"
+          style={{
+            backgroundImage: `url(${bgImg2})`,
           }}
-          transition={{ ease: "linear", duration: 2, delay: 2 }}
-          className="relative overflow-hidden mx-auto bottom-[500px] z-[2]"
-        >
-          <div
-            className="h-[500px] w-full bg-cover bg-green-400"
-            style={{ backgroundImage: `url(${bgImg2})` }}
-          ></div>
-        </motion.div> */}
+        ></motion.div>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 2,
+          }}
+          className="absolute left-0 z-[3] w-full h-full bg-cover bg-repeat bg-center "
+          style={{
+            backgroundImage: `url(${bgImg1})`,
+          }}
+        ></motion.div>
       </div>
     </>
-    // <div
-    //   style={{
-    //     position: "relative",
-    //     width: "100vw",
-    //     height: "100vh",
-    //     overflow: "hidden",
-    //   }}
-    // >
-    //   <motion.div
-    //     style={{
-    //       position: "absolute",
-    //       top: "50%",
-    //       left: "50%",
-    //       width: "100px",
-    //       height: "100px",
-    //       borderRadius: "50%",
-    //       backgroundColor: "blue",
-    //     }}
-    //     initial={{ scale: 0, borderRadius: "50%" }}
-    //     animate={{ scale: [0, 1], borderRadius: ["50%", "0%"] }}
-    //     transition={{ duration: 2 }}
-    //   />
-    // </div>
   );
 };
 
