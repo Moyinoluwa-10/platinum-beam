@@ -1,7 +1,7 @@
 // components
 import Hero from "../Components/Hero";
-import ScrollToTop from "../Components/ScrollToTop";
 import Services from "../Components/Services/Services";
+import PageChange from "../hooks/PageChange";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
@@ -9,7 +9,7 @@ import bgImg from "../assets/images/bg-services.png";
 const ResidentialBasic = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="Basic Cleaning - Platinum Beam" />
 
       <Hero
         bgImg={bgImg}

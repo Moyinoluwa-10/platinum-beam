@@ -2,7 +2,7 @@
 import Button from "../Components/Button";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 // images
 import error from "../assets/images/404.png";
@@ -10,7 +10,7 @@ import error from "../assets/images/404.png";
 const Error = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="404 | Page Not Found - Platinum Beam" />
 
       <section className="bg-[#EDBD3D14]">
         <Header />

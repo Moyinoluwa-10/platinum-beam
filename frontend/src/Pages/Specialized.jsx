@@ -1,7 +1,7 @@
 // components
 import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 // images
 import category1 from "../assets/images/category-1.png";
@@ -14,7 +14,7 @@ import bgImg from "../assets/images/bg-services.png";
 const Specialized = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="Specialized Cleaning - Platinum Beam" />
 
       <Hero
         bgImg={bgImg}

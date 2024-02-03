@@ -7,7 +7,7 @@ import Hero from "../Components/Hero";
 import Transform from "../Components/Transform";
 import faqs from "../Components/Faqs/faqs.json";
 import FaqItem from "../Components/Faqs/FaqItem";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
@@ -21,7 +21,7 @@ const Faqs = () => {
 
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="FAQs - Platinum Beam" />
 
       <Hero bgImg={bgImg} pageTitle={"Frequently Asked Questions"} />
       <section className="container p-5">

@@ -2,7 +2,7 @@
 import Hero from "../Components/Hero";
 import Footer from "../Components/Footer";
 import ContactForm from "../Components/Contact/ContactForm";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 // images
 import bgImg from "../assets/images/bg-contact.png";
@@ -15,7 +15,7 @@ import location from "../assets/svgs/location.svg";
 const Contact = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="Contact Us - Platinum Beam" />
 
       <Hero
         bgImg={bgImg}

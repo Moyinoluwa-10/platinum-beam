@@ -1,6 +1,6 @@
 // react
 import { Link } from "react-router-dom";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 // components
 import Services from "../Components/Services/Services";
@@ -12,7 +12,7 @@ import bgImg from "../assets/images/bg-services.png";
 const Residential = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="Residential Cleaning - Platinum Beam" />
 
       <Hero
         bgImg={bgImg}

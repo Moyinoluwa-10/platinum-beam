@@ -8,7 +8,7 @@ import ServiceItem from "../Components/Home/ServiceItem";
 import services from "../Components/Home/services";
 import Flex from "../Components/Home/Flex";
 import Button from "../Components/Button";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 // images
 import professional from "../assets/images/professional.jpg";
@@ -22,7 +22,7 @@ import Faqs from "../Components/Home/Faqs";
 const Home = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="Platinum Beam" />
 
       <section className="hero min-h-screen flex flex-col overflow-hidden">
         <Header />

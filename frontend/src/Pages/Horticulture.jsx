@@ -1,7 +1,7 @@
 // components
 import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 // images
 import horticulture1 from "../assets/images/horticulture-1.png";
@@ -14,7 +14,7 @@ import bgImg from "../assets/images/bg-horticulture.jpg";
 const Horticulture = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="Horticulture & Landscape - Platinum Beam" />
 
       <Hero
         bgImg={bgImg}

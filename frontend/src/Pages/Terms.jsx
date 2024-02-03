@@ -1,12 +1,12 @@
 // components
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import ScrollToTop from "../Components/ScrollToTop";
+import PageChange from "../hooks/PageChange";
 
 const Terms = () => {
   return (
     <>
-      <ScrollToTop />
+      <PageChange pageTitle="Terms and Conditions - Platinum Beam" />
 
       <Header />
       <main className="container mt-20 mb-36">
