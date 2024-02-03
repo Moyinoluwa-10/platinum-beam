@@ -44,65 +44,35 @@ const sendBookingClientEmail = async ({ data }) => {
           <b>City:</b> ${data.city} <br />
           <b>State:</b> ${data.state} <br />
           <b>Cleaning Service:</b> ${data.cleaningService} <br />
-          ${data.name && <>Name: ${data.xyz}</>}
+          ${data.homeType && `<b>Home Type:</b> ${data.homeType} <br />`}
           ${
-            data.homeType && (
-              <>
-                <b>Home Type:</b> ${data.homeType} <br />
-              </>
-            )
+            data.homeTypeOther &&
+            `<b>Home Type (others):</b> ${data.homeTypeOther} <br />`
           }
           ${
-            data.homeTypeOther && (
-              <>
-                <b>Home Type (Other):</b> ${data.homeTypeOther} <br />
-              </>
-            )
+            data.commercialType &&
+            `<b>Commercial Type:</b> ${data.commercialType} <br />`
           }
           ${
-            data.commercialType && (
-              <>
-                <b>Commercial Type:</b> ${data.commercialType} <br />
-              </>
-            )
-          }
-          ${
-            data.commercialTypeOther && (
-              <>
-                <b>Commercial Type (Other):</b> ${data.commercialTypeOther}{" "}
-                <br />
-              </>
-            )
+            data.commercialTypeOther &&
+            `<b>Commercial Type (others):</b> ${data.commercialTypeOther}<br />`
           }
           <b>Cleaning Frequency:</b> ${data.cleaningFrequency} <br />
           ${
-            data.cleaningMode && (
-              <>
-                <b>Cleaning Mode:</b> ${data.cleaningMode}
-                <br />
-              </>
-            )
+            data.cleaningMode &&
+            `<b>Cleaning Mode:</b> ${data.cleaningMode}<br />`
           } 
           ${
-            data.noOfBathrooms && (
-              <>
-                <b>Number of Bathrooms:</b> ${data.noOfBathrooms} <br />
-              </>
-            )
+            data.noOfBathrooms &&
+            `<b>Number of Bathrooms:</b> ${data.noOfBathrooms} <br />`
           }
           ${
-            data.noOfBedrooms && (
-              <>
-                <b>Number of Bedrooms:</b> ${data.noOfBedrooms} <br />
-              </>
-            )
+            data.noOfBedrooms &&
+            `<b>Number of Bedrooms:</b> ${data.noOfBedrooms} <br />`
           }
           ${
-            data.noOfLivingRooms && (
-              <>
-                <b>Number of Living Rooms:</b>${data.noOfLivingRooms} <br />
-              </>
-            )
+            data.noOfLivingRooms &&
+            `<b>Number of Living Rooms:</b>${data.noOfLivingRooms} <br />`
           } 
           <b>Booked Date:</b> ${data.date}<br /><br />
 
