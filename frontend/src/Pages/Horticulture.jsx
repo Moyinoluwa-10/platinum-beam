@@ -1,6 +1,7 @@
 // components
 import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
+import ScrollToTop from "../Components/ScrollToTop";
 
 // images
 import horticulture1 from "../assets/images/horticulture-1.png";
@@ -13,6 +14,8 @@ import bgImg from "../assets/images/bg-horticulture.jpg";
 const Horticulture = () => {
   return (
     <>
+      <ScrollToTop />
+
       <Hero
         bgImg={bgImg}
         pageTitle={"Horticulture & Landscape"}

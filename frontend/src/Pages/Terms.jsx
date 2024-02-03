@@ -1,10 +1,13 @@
 // components
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const Terms = () => {
   return (
     <>
+      <ScrollToTop />
+
       <Header />
       <main className="container mt-20 mb-36">
         <h1 className="text-4xl text-tertiary font-pt-bold mb-5">

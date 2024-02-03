@@ -1,5 +1,6 @@
 // components
 import Hero from "../Components/Hero";
+import ScrollToTop from "../Components/ScrollToTop";
 import Services from "../Components/Services/Services";
 
 // images
@@ -8,6 +9,8 @@ import bgImg from "../assets/images/bg-services.png";
 const ResidentialDeep = () => {
   return (
     <>
+      <ScrollToTop />
+
       <Hero
         bgImg={bgImg}
         pageTitle={"Residential Cleaning"}

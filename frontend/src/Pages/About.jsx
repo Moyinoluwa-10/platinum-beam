@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import MemberItem from "../Components/About/MemberItem";
 import members from "../Components/About/members";
 import HeroAnimation from "../Components/About/HeroAnimation";
+import ScrollToTop from "../Components/ScrollToTop";
 
 // images
 import about from "../assets/images/about.png";
@@ -20,6 +21,7 @@ import bunmi from "../assets/images/bunmi.png";
 const About = () => {
   return (
     <>
+      <ScrollToTop />
       {/* <Hero bgImg={bgImg} /> */}
       <HeroAnimation />
 
