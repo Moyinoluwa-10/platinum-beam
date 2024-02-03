@@ -15,6 +15,7 @@ function PageChange({ pageTitle }) {
     return () => {
       document.title = prevTitle;
     };
+    // eslint-disable-next-line
   }, [routePath]);
 
   return <></>;
