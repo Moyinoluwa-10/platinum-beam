@@ -1,5 +1,6 @@
 // react
 import { Link } from "react-router-dom";
+import PageChange from "../hooks/PageChange";
 
 // components
 import Services from "../Components/Services/Services";
@@ -11,6 +12,8 @@ import bgImg from "../assets/images/bg-services.png";
 const Residential = () => {
   return (
     <>
+      <PageChange pageTitle="Residential Cleaning - Platinum Beam" />
+
       <Hero
         bgImg={bgImg}
         pageTitle={"Residential Cleaning"}

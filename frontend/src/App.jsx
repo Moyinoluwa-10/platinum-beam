@@ -17,6 +17,7 @@ import ResidentialBasic from "./Pages/ResidentialBasic";
 import ResidentialDeep from "./Pages/ResidentialDeep";
 import Faqs from "./Pages/Faqs";
 import Error from "./Pages/Error";
+import Terms from "./Pages/Terms";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Booking />} />
         <Route path="/faqs" element={<Faqs />} />
+        <Route path="/terms-and-conditions" element={<Terms />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>

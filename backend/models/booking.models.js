@@ -10,6 +10,10 @@ const BookingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    phoneNumber: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,
@@ -25,16 +29,12 @@ const BookingSchema = new mongoose.Schema(
     state: {
       type: String,
       enum: {
-        values: ["ekiti", "oyo", "lagos", "abeokuta"],
+        values: ["ekiti", "oyo", "lagos", "ogun"],
         message: "{VALUE} is not supported",
       },
       required: true,
     },
     cleaningService: {
-      type: String,
-      required: true,
-    },
-    email: {
       type: String,
       required: true,
     },

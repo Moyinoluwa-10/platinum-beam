@@ -8,6 +8,7 @@ import ServiceItem from "../Components/Home/ServiceItem";
 import services from "../Components/Home/services";
 import Flex from "../Components/Home/Flex";
 import Button from "../Components/Button";
+import PageChange from "../hooks/PageChange";
 
 // images
 import professional from "../assets/images/professional.jpg";
@@ -21,6 +22,8 @@ import Faqs from "../Components/Home/Faqs";
 const Home = () => {
   return (
     <>
+      <PageChange pageTitle="Platinum Beam" />
+
       <section className="hero min-h-screen flex flex-col overflow-hidden">
         <Header />
         <div className="container p-5 pt-12 pb-20 h-full flex-1 flex flex-col lg:flex-row justify-between items-center gap-10">

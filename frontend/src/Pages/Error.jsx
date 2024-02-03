@@ -2,6 +2,7 @@
 import Button from "../Components/Button";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
+import PageChange from "../hooks/PageChange";
 
 // images
 import error from "../assets/images/404.png";
@@ -9,6 +10,8 @@ import error from "../assets/images/404.png";
 const Error = () => {
   return (
     <>
+      <PageChange pageTitle="404 | Page Not Found - Platinum Beam" />
+
       <section className="bg-[#EDBD3D14]">
         <Header />
         <div className="container p-5 py-24 flex flex-col lg:flex-row justify-between items-center gap-12">

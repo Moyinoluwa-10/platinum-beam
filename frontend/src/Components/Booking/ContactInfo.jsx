@@ -32,7 +32,7 @@ const ContactInfo = () => {
             <option value="ekiti">Ekiti</option>
             <option value="oyo">Oyo</option>
             <option value="lagos">Lagos</option>
-            <option value="abeokuta">Abeokuta</option>
+            <option value="ogun">Ogun</option>
           </MySelect>
           <p className="text-xs">
             We are only available in the states listed above.

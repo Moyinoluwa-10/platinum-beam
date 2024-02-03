@@ -1,8 +1,12 @@
+// react
 import { useState } from "react";
+
+// components
 import BookingForm from "../Components/Booking/BookingForm";
 import BookingSuccess from "../Components/Booking/BookingSuccess";
 import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
+import PageChange from "../hooks/PageChange";
 
 // images
 import bgImg from "../assets/images/bg-book.jpg";
@@ -15,6 +19,8 @@ const Booking = () => {
 
   return (
     <>
+      <PageChange pageTitle="Booking - Platinum Beam" />
+
       <Hero bgImg={bgImg}>
         <div className="max-w-2xl bg-[#FFFFFFE5] text-black px-8 md:px-20 p-5 mx-auto">
           {isSuccess ? (

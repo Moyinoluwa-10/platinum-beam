@@ -1,5 +1,6 @@
 // react
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { GoInfo } from "react-icons/go";
 import PropTypes from "prop-types";
 
@@ -139,8 +140,15 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
       </div>
 
       <MyCheckbox name="termsAndConditions">
-        By submitting this you are agreeing to our Terms & Conditions for any
-        services rendered
+        By submitting this you are agreeing to our{" "}
+        <Link
+          to={"/terms-and-conditions"}
+          className="text-secondary"
+          target="_blank"
+        >
+          Terms & Conditions
+        </Link>{" "}
+        for any services rendered
       </MyCheckbox>
       <div className="text-red-500 text-sm">
         <ErrorMessage name="termsAndConditions" />

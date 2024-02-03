@@ -1,6 +1,7 @@
 // components
 import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
+import PageChange from "../hooks/PageChange";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
@@ -8,6 +9,8 @@ import bgImg from "../assets/images/bg-services.png";
 const ResidentialDeep = () => {
   return (
     <>
+      <PageChange pageTitle="Deep Cleaning - Platinum Beam" />
+
       <Hero
         bgImg={bgImg}
         pageTitle={"Residential Cleaning"}
