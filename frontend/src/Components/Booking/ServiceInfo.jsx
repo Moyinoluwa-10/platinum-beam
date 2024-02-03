@@ -1,5 +1,6 @@
 // react
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { GoInfo } from "react-icons/go";
 import PropTypes from "prop-types";
 
@@ -140,14 +141,13 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
 
       <MyCheckbox name="termsAndConditions">
         By submitting this you are agreeing to our{" "}
-        <a
-          href="https://docs.google.com/document/d/1pRYjpajTvqUlqqqi_dW5wvUu97twEEVDeZlaumKdoVY/edit?usp=drivesdk"
+        <Link
+          to={"/terms-and-conditions"}
           className="text-secondary"
           target="_blank"
-          rel="noreferrer"
         >
           Terms & Conditions
-        </a>{" "}
+        </Link>{" "}
         for any services rendered
       </MyCheckbox>
       <div className="text-red-500 text-sm">
