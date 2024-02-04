@@ -4,7 +4,7 @@ const sendEmail = require("./sendEmail");
 const mail = {
   from: NODEMAILER_FROM,
   to: NODEMAILER_FROM,
-  subject: "Contact",
+  subject: "Inquiry Confirmation",
 };
 
 const sendBookingClientEmail = async ({ name, email, message }) => {
