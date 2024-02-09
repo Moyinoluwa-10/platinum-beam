@@ -8,6 +8,10 @@ import {
   FaLinkedin,
 } from "react-icons/fa6";
 
+//svgs
+import cmi from "../assets/svgs/cmi.svg";
+import issa from "../assets/svgs/issa.svg";
+
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(null);
 
@@ -22,12 +26,17 @@ const Footer = () => {
           <h4 className="font-pt-bold mb-5 text-2xl">
             Platinum Beam Concept Ltd
           </h4>
-          <p className="text-lg">
+          <p className="text-lg mb-5">
             PBC Ltd is a premium cleaning service company committed to
             transforming traditional cleaning into a luxurious experience. We
             offer support services that effectively and efficiently help
             organizations achieve their strategic and operational goals.
           </p>
+          <p className="text-2xl mb-2">Associated With</p>
+          <div className="flex gap-7 flex-wrap items-center">
+            <img src={issa} alt="issa-logo" className="h-20" />
+            <img src={cmi} alt="cmi-logo" className="h-20" />
+          </div>
         </div>
 
         <div>
@@ -128,6 +137,11 @@ const Footer = () => {
             offer support services that effectively and efficiently help
             organizations achieve their strategic and operational goals.
           </p>
+          <p className="text-2xl mb-2">Associated With</p>
+          <div className="flex gap-7 flex-wrap items-center">
+            <img src={issa} alt="issa-logo" className="h-20" />
+            <img src={cmi} alt="cmi-logo" className="h-20" />
+          </div>
         </div>
 
         <div>
