@@ -5,6 +5,8 @@ import PageChange from "../hooks/PageChange";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
+import residential1 from "../assets/images/residential-1.png";
+import residential2 from "../assets/images/residential-2.png";
 
 const Commercial = () => {
   return (
@@ -14,53 +16,50 @@ const Commercial = () => {
       <Hero
         bgImg={bgImg}
         pageTitle={"Commercial Cleaning"}
-        pageText={"Basic and deep cleanings tailored to your taste"}
+        pageText={
+          "Transform Your Workspace with Our Premier Commercial Cleaning Service"
+        }
       />
 
       <Services>
         <section className="container p-5 py-20 max-w-6xl mx-auto">
-          <p className="text-center md:text-xl text-2xl">
-            Designed for business spaces. This service ensures that offices,
-            retail spaces, and other commercial premises are not just clean, but
-            also presentable and conducive to productivity. The focus is on
-            creating a hygienic and organized workspace, which might include
-            regular cleaning, deep cleaning, and maintenance services. We pay
-            attention to detail, ensuring every aspect of the space reflects
-            professionalism and operational excellence.
+          <p className="text-center text-xl md:text-2xl">
+            Welcome to the next level of workspace enhancement. At Platinum Beam
+            Concept, we're not just a cleaning company. We aim to elevate your
+            business environment to the pinnacle of professionalism and
+            operational excellence. Our Commercial Cleaning service is
+            meticulously designed for businesses that aspire to look their best
+            and be their best.
           </p>
         </section>
 
         <hr className="max-w-6xl mx-auto border-1" />
 
-        <section className="container p-5 py-20 grid md:grid-cols-2 max-w-6xl mx-auto gap-10">
-          <div>
-            <h3 className="text-2xl font-pt-bold mb-2 uppercase">
-              Common tasks completed
-            </h3>
-            <p className="text-xl">
-              Dust & wipe down all surfaces throughout building (including
-              entrances, offices & all other areas). <br />
-              Clean & disinfect all staff & client bathrooms. <br />
-              Disinfect & clean kitchen, if applicable. <br />
-              Sweep, vacuum & wash floors throughout the building. <br />
-              Spot wash any noticeable mess on walls, doors etc. <br />
-              Windex any fingerprints on windows/doors. <br />
-              Plus any other essentials we feel are necessary to make your
-              offices shine. <br />
-              The cleaning task list will be customized to your space.
+        <section className="container p-5 pt-20 pb-10">
+          <div className="flex flex-col lg:flex-row-reverse gap-12 justify-between items-center mb-20">
+            <div>
+              <img src={residential1} alt="image" className="rounded-xl" />
+            </div>
+            <p className="lg:max-w-xl text-xl md:text-2xl">
+              We understand that every business is unique, with its challenges
+              and expectations. That's why our service is as flexible as it is
+              thorough. Whether you're a bustling startup or a seasoned
+              corporation, we curate our cleaning strategies to fit your needs.
+              This ensures that your workspace not only shines but also supports
+              the well-being and efficiency of your team.
             </p>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-pt-bold mb-2 uppercase">
-              Deep cleaning
-            </h3>
-            <p className="text-xl">
-              Clean interior windows (remove window stickers). <br />
-              Carpet cleaning available by request. <br />
-              Wipe down computer chairs/desk legs. <br />
-              Deep kitchen clean. <br />
-              Baseboards/casings & doors.
+          <div className="flex flex-col lg:flex-row gap-12 justify-between items-center">
+            <div>
+              <img src={residential2} alt="image" className="rounded-xl" />
+            </div>
+            <p className="lg:max-w-xl text-xl md:text-2xl">
+              By choosing us, you are opting for a clean and inspired workspace.
+              You are making a statement of excellence to your clients and
+              providing a nurturing environment for your employees. Our
+              commitment to quality, sustainability, and tailored solutions sets
+              us apart as leaders in commercial cleaning.
             </p>
           </div>
         </section>
