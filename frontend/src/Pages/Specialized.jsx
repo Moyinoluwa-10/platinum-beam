@@ -24,6 +24,16 @@ const Specialized = () => {
         }
       />
 
+      <section className="container p-5 pt-20 max-w-6xl mx-auto">
+        <p className="text-center text-xl md:text-2xl">
+          At Platinum Beam Concept, we offer specialized cleaning services to
+          cater to your specific cleaning needs. We understand that different
+          cleaning tasks require unique attention and expertise, so we have
+          honed our skills in post-construction, carpet, and move-in/out
+          cleaning.
+        </p>
+      </section>
+
       <Services>
         <section className="container p-5 py-20">
           <div className="flex justify-center items-center gap-5 mb-10 text-center">
@@ -45,10 +55,11 @@ const Specialized = () => {
                 Post-construction cleaning
               </h2>
               <p className="text-xl">
-                This service caters to newly constructed or renovated spaces. It
-                involves removing all traces of construction residue, such as
-                dust, debris, and paint splatters, and preparing the space for
-                occupancy.
+                Our Post-Construction Cleaning service ensures that your newly
+                constructed or renovated space is transformed from a
+                construction site to a clean and inviting environment. We
+                meticulously remove all traces of construction, leaving no
+                surface, nook, or cranny dusty, unpolished, or unclean.
               </p>
             </div>
 
@@ -62,10 +73,10 @@ const Specialized = () => {
                 Move in / move out
               </h2>
               <p className="text-xl">
-                This service is tailored for individuals or businesses
-                transitioning to a new space. It is specially designed to ease
-                the transition for both incoming and outgoing tenants, as well
-                as property owners.
+                Moving can be stressful, but our Move-In/Out Cleaning service
+                ensures that the cleaning part is taken care of. We take care of
+                every detail, from deep cleaning kitchens and bathrooms to
+                ensuring all living areas are spotless and welcoming.
               </p>
             </div>
 
@@ -79,10 +90,11 @@ const Specialized = () => {
                 Carpet cleaning
               </h2>
               <p className="text-xl">
-                This service caters to newly constructed or renovated spaces. It
-                involves removing all traces of construction residue, such as
-                dust, debris, and paint splatters, and preparing the space for
-                occupancy.
+                With our Carpet Cleaning service, we go beyond surface cleaning
+                to revive your carpets. We use eco-friendly solutions and
+                advanced cleaning techniques to clean your carpets deep and
+                remove stains, dirt, and allergens. Clean carpets contribute to
+                a healthier and more beautiful space.
               </p>
             </div>
           </div>
