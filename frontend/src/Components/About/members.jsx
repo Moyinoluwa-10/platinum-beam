@@ -8,7 +8,7 @@ import omotolani from "../../assets/images/omotolani.png";
 const members = [
   {
     img: ladyT,
-    name: "Lady T",
+    name: "Oluwatobi Adewuyi",
     position: "Management Consultant",
   },
   {
