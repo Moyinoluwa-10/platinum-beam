@@ -5,8 +5,8 @@ import PageChange from "../hooks/PageChange";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
-import residential1 from "../assets/images/residential-1.png";
-import residential2 from "../assets/images/residential-2.png";
+import commercial1 from "../assets/images/commercial-1.png";
+import commercial2 from "../assets/images/commercial-2.png";
 
 const Commercial = () => {
   return (
@@ -38,7 +38,7 @@ const Commercial = () => {
         <section className="container p-5 pt-20 pb-10">
           <div className="flex flex-col lg:flex-row-reverse gap-12 justify-between items-center mb-20">
             <div>
-              <img src={residential1} alt="image" className="rounded-xl" />
+              <img src={commercial1} alt="image" className="rounded-xl" />
             </div>
             <p className="lg:max-w-xl text-xl md:text-2xl">
               We understand that every business is unique, with its challenges
@@ -52,7 +52,7 @@ const Commercial = () => {
 
           <div className="flex flex-col lg:flex-row gap-12 justify-between items-center">
             <div>
-              <img src={residential2} alt="image" className="rounded-xl" />
+              <img src={commercial2} alt="image" className="rounded-xl" />
             </div>
             <p className="lg:max-w-xl text-xl md:text-2xl">
               By choosing us, you are opting for a clean and inspired workspace.
