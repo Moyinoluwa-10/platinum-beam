@@ -25,11 +25,14 @@ const Horticulture = () => {
       <Services>
         <section className="container p-5 py-20 max-w-6xl mx-auto ">
           <p className="text-center text-xl md:text-2xl mb-16">
-            In this unique offering, we provide garden and landscape maintenance
-            services, ensuring that outdoor spaces are as well-groomed and
-            aesthetically pleasing as the interiors. This service includes
-            garden cleanup, plant care, and landscape beautification, reflecting
-            our holistic approach to cleanliness and aesthetics.
+            Platinum Beam Concept is a company passionate about transforming
+            indoor and outdoor spaces into luxurious and beautiful areas. We
+            offer Horticulture and Landscape services that are carefully crafted
+            to enhance the natural beauty of your outdoor spaces while promoting
+            environmental sustainability. Our team believes every garden, yard,
+            and outdoor area is a canvas waiting to be transformed into a
+            masterpiece of nature's beauty, perfectly blending with human
+            creativity.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mb-20">
@@ -50,15 +53,15 @@ const Horticulture = () => {
             />
           </div>
 
-          <h3 className="text-2xl font-pt-bold mb-4 text-center uppercase">
-            Good things to know
-          </h3>
-
           <p className="text-center text-xl md:text-2xl">
-            Reliable & friendly staff. Insured, bonded & criminal record checks
-            on all staff. Cleaning services are a tax write-off. No contract
-            required. Commercial clients are invoiced monthly. Easy payment
-            options. We provide the supplies & equipment.
+            When you choose Platinum Beam Concept for your horticulture and
+            landscape needs, you partner with experts who are just as passionate
+            about the beauty and health of your outdoor spaces. Our team is
+            committed to quality, detail, and sustainability, which ensures that
+            your gardens and landscapes are visually stunning, ecologically
+            sound, and easy to maintain. Let us help you transform your outdoor
+            areas into beautiful, functional, and sustainable extensions of your
+            living space.
           </p>
         </section>
       </Services>

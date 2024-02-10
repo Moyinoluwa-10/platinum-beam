@@ -6,7 +6,7 @@ import ChoiceItem from "../Components/Home/ChoiceItem";
 import choices from "../Components/Home/choices";
 import ServiceItem from "../Components/Home/ServiceItem";
 import services from "../Components/Home/services";
-import Flex from "../Components/Home/Flex";
+import Professional from "../Components/Home/Professional";
 import Button from "../Components/Button";
 import PageChange from "../hooks/PageChange";
 
@@ -15,8 +15,6 @@ import professional from "../assets/images/professional.jpg";
 import hero from "../assets/images/hero.png";
 
 //svgs
-import cmi from "../assets/svgs/cmi.svg";
-import issa from "../assets/svgs/issa.svg";
 import Faqs from "../Components/Home/Faqs";
 
 const Home = () => {
@@ -51,15 +49,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="container p-5 pt-20 md:pt-5 md:pb-10">
-        <p className="text-center text-tertiary text-3xl mb-8">Trusted by</p>
-        <div className="flex max-w-4xl mx-auto justify-evenly gap-7 flex-wrap items-center">
-          <img src={issa} alt="issa-logo" className="h-20 md:h-28" />
-          <img src={cmi} alt="cmi-logo" className="h-20 md:h-28" />
-        </div>
-      </section>
-
-      <Flex
+      <Professional
         img={professional}
         name={"Professional Cleaning Services"}
         description={

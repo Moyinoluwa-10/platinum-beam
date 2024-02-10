@@ -1,5 +1,4 @@
 // react
-import { Link } from "react-router-dom";
 import PageChange from "../hooks/PageChange";
 
 // components
@@ -8,6 +7,9 @@ import Hero from "../Components/Hero";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
+import residential1 from "../assets/images/residential-1.png";
+import residential2 from "../assets/images/residential-2.png";
+import residential3 from "../assets/images/residential-3.png";
 
 const Residential = () => {
   return (
@@ -17,73 +19,57 @@ const Residential = () => {
       <Hero
         bgImg={bgImg}
         pageTitle={"Residential Cleaning"}
-        pageText={"Basic and deep cleanings tailored to your taste"}
+        pageText={
+          "Welcome to the new chapter of home living, where every corner radiates comfort and luxury. "
+        }
       />
 
-      <Services>
-        <section className="container p-5 py-20 grid md:grid-cols-2 max-w-6xl mx-auto gap-10 ">
+      <section className="container p-5 pt-20 pb-10">
+        <h3 className="text-3xl md:text-4xl font-pt-bold text-center mb-20">
+          Residential Cleaning
+        </h3>
+        <div className="flex flex-col lg:flex-row-reverse gap-12 justify-between items-center mb-20">
           <div>
-            <h3 className="text-2xl font-pt-bold mb-2 uppercase">Kitchen</h3>
-            <p className="text-xl">
-              Wipe down table legs, chairs, barstools. <br />
-              Wipe down cabinet exterior. <br />
-              Wash under sink by garbage.
-            </p>
+            <img src={residential1} alt="image" className="rounded-xl" />
           </div>
+          <p className="lg:max-w-xl text-xl md:text-2xl">
+            Welcome to the new chapter of home living, where every corner
+            radiates comfort and luxury. Your home is your sanctuary, where life
+            unfolds and memories are made. At Platinum Beam Concept, we
+            understand this and offer Residential Cleaning services designed
+            with the homeowner in mind. Our unique service brings a level of
+            care and luxury that is unmatched in the industry.
+          </p>
+        </div>
 
+        <div className="flex flex-col lg:flex-row gap-12 justify-between items-center mb-20">
           <div>
-            <h3 className="text-2xl font-pt-bold mb-2 uppercase">Bedroom</h3>
-            <p className="text-xl">
-              Quick tidy & pick up. <br />
-              Dust all surfaces throughout home. <br />
-              Make beds.
-            </p>
+            <img src={residential2} alt="image" className="rounded-xl" />
           </div>
+          <p className="lg:max-w-xl text-xl md:text-2xl">
+            We believe in a cleaning service that reflects the individuality of
+            your home. Our team focuses on every detail, ensuring that every
+            inch of your space is attended to meticulously. Our eco-friendly
+            products leave your home spotless, safe, and harmonious, providing a
+            pristine and positively charged environment.
+          </p>
+        </div>
 
+        <div className="flex flex-col lg:flex-row-reverse gap-12 justify-between items-center">
           <div>
-            <h3 className="text-2xl font-pt-bold mb-2 uppercase">Bathroom</h3>
-            <p className="text-xl">
-              Wipe-wash-polish sinks, tub/shower. <br />
-              Wipe-wash-polish toilets, base & bowl. <br />
-              Clean mirrors. <br />
-              Wipe down cabinet exterior. <br />
-              Polish all chrome surfaces. <br />
-              Wipe down baseboards.
-            </p>
+            <img src={residential3} alt="image" className="rounded-xl" />
           </div>
+          <p className="lg:max-w-xl text-xl md:text-2xl">
+            Choosing Platinum Beam Concept's Residential Cleaning service means
+            investing in the beauty of your home, your family's health, and your
+            peace of mind. We are committed to providing a luxury cleaning
+            experience that exceeds your expectations in every aspect of home
+            cleaning.
+          </p>
+        </div>
+      </section>
 
-          <div>
-            <h3 className="text-2xl font-pt-bold mb-2 uppercase">
-              Entire home
-            </h3>
-            <p className="text-xl">
-              Quick tidy & pick up dust all surfaces throughout home. <br />
-              Wet wipe all surfaces throughout home. <br />
-              Sanitize door knobs & light switches. <br />
-              Empty all garbage. <br />
-              Sweep/Vacuum & wash all floors. <br /> <br />
-              PLUS: <br />
-              Wipe down windowsills. <br />
-              Spot wash interior windows.
-            </p>
-          </div>
-        </section>
-
-        <section className="container p-5 py-10 text-center">
-          <h3 className="text-2xl font-pt-bold mb-1 uppercase">
-            Cleaning options
-          </h3>
-          <p className="text-xl mb-5">Enhance your cleaning experience </p>
-          <div className="flex items-center justify-center gap-10 text-primary font-pt-bold">
-            <Link to={"./basic"} className="uppercase service-link text-xl">
-              Basic Cleaning
-            </Link>
-            <Link to={"./deep"} className="uppercase service-link text-xl">
-              Deep Cleaning
-            </Link>
-          </div>
-        </section>
-      </Services>
+      <Services></Services>
     </>
   );
 };

@@ -96,9 +96,22 @@ const About = () => {
           </div>
           <div className="lg:max-w-xl">
             <p className="text-xl md:text-2xl mb-10">
-              <span className="text-tertiary">Bunmi Obanise</span> founded
-              Platinum Beam Concept Limited to offer her valuable contribution
-              towards the enhancement and growth of the cleaning industry.
+              <a
+                className="text-tertiary"
+                href="https://bunmiobanise.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Bunmi Obanise
+              </a>{" "}
+              founded Platinum Beam Concept Ltd. She is a connoisseur of
+              transformative spaces and advocate for the art of sophistication
+              in our daily lives. Her commitment is about more than just
+              aesthetics; it's a mission to inspire and influence a lifestyle
+              that cherishes excellence, leadership, and balance. At Platinum
+              Beam Concept, they don't just clean; They Enhance, Elevate, and
+              Transform. Join her in redefining what it means to live and work
+              in spaces that not only look pristine but feel truly luxurious.
             </p>
           </div>
         </div>

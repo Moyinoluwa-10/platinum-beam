@@ -14,6 +14,7 @@ import Header from "../Header";
 import bgImg1 from "../../assets/images/bg-about-1.jpg";
 import bgImg2 from "../../assets/images/bg-about-2.jpg";
 import bgImg3 from "../../assets/images/bg-about-3.jpg";
+import bgImg4 from "../../assets/images/bg-about-4.jpg";
 
 const HeroAnimation = () => {
   return (
@@ -32,7 +33,7 @@ const HeroAnimation = () => {
             <div
               className="w-full h-full bg-cover bg-no-repeat bg-center"
               style={{
-                backgroundImage: `url(${bgImg3})`,
+                backgroundImage: `url(${bgImg1})`,
               }}
             ></div>
           </SwiperSlide>
@@ -48,7 +49,15 @@ const HeroAnimation = () => {
             <div
               className="w-full h-full bg-cover bg-no-repeat bg-center"
               style={{
-                backgroundImage: `url(${bgImg1})`,
+                backgroundImage: `url(${bgImg3})`,
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="w-full h-full bg-cover bg-no-repeat bg-center"
+              style={{
+                backgroundImage: `url(${bgImg4})`,
               }}
             ></div>
           </SwiperSlide>
