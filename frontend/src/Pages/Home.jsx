@@ -6,7 +6,7 @@ import ChoiceItem from "../Components/Home/ChoiceItem";
 import choices from "../Components/Home/choices";
 import ServiceItem from "../Components/Home/ServiceItem";
 import services from "../Components/Home/services";
-import Flex from "../Components/Home/Flex";
+import Professional from "../Components/Home/Professional";
 import Button from "../Components/Button";
 import PageChange from "../hooks/PageChange";
 
@@ -49,7 +49,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Flex
+      <Professional
         img={professional}
         name={"Professional Cleaning Services"}
         description={

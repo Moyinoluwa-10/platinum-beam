@@ -27,12 +27,10 @@ const Booking = () => {
             <p className="text-2xl">Form submitted successfully</p>
           ) : (
             <>
-              <h3 className="font-pt-bold text-3xl md:text-4xl mb-5">
-                Get a Quote
-              </h3>
               <p className="text-2xl">
-                Complete the form and a quote will be emailed to you in the next
-                2 business days.
+                Simply click on the Book Now button and follow the lead to get a
+                quote, schedule in your cleaning visit and enjoy your clean
+                home.
               </p>
             </>
           )}
