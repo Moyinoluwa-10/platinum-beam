@@ -8,10 +8,6 @@ import {
   FaLinkedin,
 } from "react-icons/fa6";
 
-//svgs
-import cmi from "../assets/svgs/cmi.svg";
-import issa from "../assets/svgs/issa.svg";
-
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(null);
 
@@ -32,11 +28,6 @@ const Footer = () => {
             offer support services that effectively and efficiently help
             organizations achieve their strategic and operational goals.
           </p>
-          <p className="text-2xl mb-2">Associated With</p>
-          <div className="flex gap-7 flex-wrap items-center">
-            <img src={issa} alt="issa-logo" className="h-20" />
-            <img src={cmi} alt="cmi-logo" className="h-20" />
-          </div>
         </div>
 
         <div>
@@ -69,6 +60,26 @@ const Footer = () => {
           <h4 className="font-pt-bold mb-5 text-2xl sm:whitespace-nowrap">
             Services
           </h4>
+          <p className="mb-5">
+            <Link to={"/services/residential"} className="footer-link">
+              Residential
+            </Link>
+          </p>
+          <p className="mb-5">
+            <Link to={"/services/commercial"} className="footer-link">
+              Commercial
+            </Link>
+          </p>
+          <p className="mb-5">
+            <Link to={"/services/specialized"} className="footer-link">
+              Specialized
+            </Link>
+          </p>
+          <p className="mb-5">
+            <Link to={"/services/horticulture"} className="footer-link">
+              Horticulture/Landscape
+            </Link>
+          </p>
           <p className="mb-5">
             <Link to={"/book"} className="footer-link">
               Book a service
@@ -137,11 +148,6 @@ const Footer = () => {
             offer support services that effectively and efficiently help
             organizations achieve their strategic and operational goals.
           </p>
-          <p className="text-2xl mb-2">Associated With</p>
-          <div className="flex gap-7 flex-wrap items-center">
-            <img src={issa} alt="issa-logo" className="h-20" />
-            <img src={cmi} alt="cmi-logo" className="h-20" />
-          </div>
         </div>
 
         <div>
@@ -209,6 +215,26 @@ const Footer = () => {
                 : "max-h-0 overflow-hidden transition-all duration-300 mt-5"
             }
           >
+            <p className="mb-5">
+              <Link to={"/services/residential"} className="footer-link">
+                Residential
+              </Link>
+            </p>
+            <p className="mb-5">
+              <Link to={"/services/commercial"} className="footer-link">
+                Commercial
+              </Link>
+            </p>
+            <p className="mb-5">
+              <Link to={"/services/specialized"} className="footer-link">
+                Specialized
+              </Link>
+            </p>
+            <p className="mb-5">
+              <Link to={"/services/horticulture"} className="footer-link">
+                Horticulture/Landscape
+              </Link>
+            </p>
             <p className="mb-5">
               <Link to={"/book"} className="footer-link">
                 Book a service

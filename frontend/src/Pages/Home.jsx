@@ -11,11 +11,12 @@ import Button from "../Components/Button";
 import PageChange from "../hooks/PageChange";
 
 // images
-import professional from "../assets/images/professional.jpg";
 import hero from "../assets/images/hero.png";
 
 //svgs
 import Faqs from "../Components/Home/Faqs";
+import cmi from "../assets/svgs/cmi.svg";
+import issa from "../assets/svgs/issa.svg";
 
 const Home = () => {
   return (
@@ -27,16 +28,18 @@ const Home = () => {
         <div className="container p-5 pt-12 pb-20 h-full flex-1 flex flex-col lg:flex-row justify-between items-center gap-10">
           <div>
             <h4 className="text-secondary font-pt-bold mb-3 text-2xl">
-              Cleaning Excellence, Beyond Compare!
+              Welcome to Platinum Beam Concept.
             </h4>
             <h1 className="text-4xl md:text-5xl max-w-2xl mb-5 font-pt-bold">
-              Step into a World of Immaculate Luxury with Platinum Beam Concept
-              Ltd.
+              Transform Spaces, Elevate Lives.
             </h1>
             <p className="text-xl max-w-2xl mb-9 text-gray-600">
-              It's not about routines; it's about transforming your space into a
-              haven of pristine beauty. Discover a cleaning service that cares
-              about the details as much as you do.
+              At Platinum Beam Concept, we redefine the essence of cleaning by
+              transforming everyday chores into luxury experiences. Our goal is
+              to enhance the quality of spaces and lives by tailoring our
+              services to meet the unique needs of our clients. Discover a
+              cleaning service that cares about its clients' well-being,
+              aesthetics, and safety.
             </p>
             <div className="text-2xl">
               <Button linkAddress={"/book"}>Book Now</Button>
@@ -49,15 +52,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Professional
-        img={professional}
-        name={"Professional Cleaning Services"}
-        description={
-          "Get in touch with us today to learn how our team can help you clean and de-clutter. Choose from any of our three cleaning plans designed to cater to your lifestyle."
-        }
-        linkText={"Book now"}
-        linkAddress={"/book"}
-      />
+      <Professional />
 
       <section className="container p-5 py-5 md:pt-10 md:pb-20">
         <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
@@ -93,6 +88,14 @@ const Home = () => {
       <Faqs />
 
       <Transform />
+
+      <section className="container p-5 pb-20 flex flex-col gap-2 items-center ">
+        <p className="text-2xl">Associated With</p>
+        <div className="flex gap-7 flex-wrap items-center">
+          <img src={issa} alt="issa-logo" className="h-20 md:h-24" />
+          <img src={cmi} alt="cmi-logo" className="h-20 md:h-24" />
+        </div>
+      </section>
 
       <Footer />
     </>
