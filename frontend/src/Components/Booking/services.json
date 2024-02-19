@@ -2,31 +2,31 @@
   {
     "title": "Residential Cleaning",
     "value": "residential",
-    "description": "This service is tailored to homeowners who wish to maintain a pristine living environment. It involves thorough cleaning of all areas of the home, including kitchens, bathrooms, living rooms, and bedrooms. Special attention is given to high-touch surfaces, corners, and hard-to-reach areas."
+    "description": "This offering caters to homeowners desiring a spotless living space. It encompasses meticulous cleaning of every corner of the house, spanning kitchens, bathrooms, living rooms, and bedrooms."
   },
   {
     "title": "Commercial Cleaning",
     "value": "commercial",
-    "description": "The focus is on creating a hygienic and organized workspace, which might include regular cleaning, deep cleaning, and maintenance services."
+    "description": "Our emphasis lies in establishing a hygienic and well-ordered workspace, encompassing regular cleaning, deep cleaning, and maintenance provisions. We meticulously attend to every detail, ensuring a space that radiates professionalism and operational prowess."
   },
   {
     "title": "Post construction cleaning ",
     "value": "construction",
-    "description": "This service caters to newly constructed or renovated spaces. It involves removing all traces of construction residue, such as dust, debris, and paint splatters, and preparing the space for occupancy."
+    "description": "This service is designed for newly constructed or renovated areas. It entails the elimination of all construction residues, including dust, debris, and paint splatters, while preparing the space for immediate occupancy."
   },
   {
     "title": "Move In/ Move Out Cleaning",
     "value": "moving",
-    "description": "This service is tailored for individuals or businesses transitioning to a new space. It is specially designed to ease the transition for both incoming and outgoing tenants, as well as property owners. This service ensures that rental properties are presented in their best light, making moving a smooth and pleasant experience."
+    "description": "This service is customized for individuals or businesses moving into or out of a space. Specifically crafted to facilitate the transition for both incoming and outgoing occupants, as well as property owners, it guarantees rental properties are showcased in optimal condition, ensuring a seamless and enjoyable moving experience."
   },
   {
     "title": "Carpet Cleaning",
     "value": "carpet",
-    "description": "Our eco-friendly and innovative carpet cleaning techniques ensure that your carpets are not just clean, but also maintain their texture and color, contributing to the overall health and beauty of your environment."
+    "description": "Our environmentally conscious and cutting-edge carpet cleaning methods guarantee not only cleanliness but also preserve the texture and color of your carpets, enhancing the overall health and aesthetics of your surroundings."
   },
   {
     "title": "Horticulture",
     "value": "horticulture",
-    "description": "This service includes garden cleanup, plant care, and landscape beautification, reflecting our holistic approach to cleanliness and aesthetics."
+    "description": "In this distinctive service, we deliver garden and landscape maintenance solutions, ensuring outdoor spaces are meticulously groomed to match the aesthetic appeal of the interiors."
   }
 ]
