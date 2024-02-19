@@ -22,14 +22,16 @@ const About = () => {
       <PageChange pageTitle="About Us - Platinum Beam" />
       <HeroAnimation />
       <section className="container p-5 pt-16 md:pt-20 md:pb-32">
-        <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center">
-          Helping you flourish every day.
+        <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center max-w-4xl mx-auto">
+          Welcome to Platinum Beam, where we transform spaces and elevate lives.
         </h3>
         <p className="text-xl md:text-2xl lg:text-3xl mb-16 text-center max-w-5xl mx-auto">
-          Our journey from a humble start to a leading luxury cleaning service
-          provider is marked by an unwavering pursuit of excellence. Our
+          Platinum Beam Concept, a cleaning service based in Nigeria, has
+          undergone a remarkable transformation from its humble beginnings to
+          becoming a leading luxury cleaning service provider. Our journey is
+          characterized by an unwavering pursuit of excellence, marked by our
           commitment to efficiency, eco-friendly practices, and sustainable
-          cleaning solutions sets us apart in the cleaning industry.
+          cleaning solutions, setting us apart in the cleaning industry.
         </p>
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
           <img
@@ -65,8 +67,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="container p-5 py-5 md:pt-10 pb-36">
-        <p className="text-xl md:text-2xl lg:text-3xl text-center max-w-5xl mx-auto mb-10">
+      <section className="container p-5 py-5 md:pt-10 pb-36 flex flex-col lg:flex-row items-center justify-between gap-10">
+        <p className="text-xl md:text-2xl lg:text-3xl max-w-2xl mx-auto mb-10">
           We're not just a cleaning service provider, we're educators and
           innovators. Our training and consultancy services aim to empower the
           next generation of cleaning professionals, sharing our knowledge and

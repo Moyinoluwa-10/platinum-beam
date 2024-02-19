@@ -1,34 +1,36 @@
-// react
-import PropTypes from "prop-types";
-
 // components
 import Button from "../Button";
 
-const Professional = ({ img, name, description, linkAddress, linkText }) => {
+// images
+import professional from "../../assets/images/professional.jpg";
+
+const Professional = () => {
   return (
     <section className="container p-5 py-16 flex flex-col lg:flex-row justify-between items-center gap-12">
       <div>
-        <img src={img} alt="image" className="rounded-xl lg:max-h-[420px]" />
+        <img
+          src={professional}
+          alt="image"
+          className="rounded-xl lg:max-h-[420px]"
+        />
       </div>
       <div className="lg:max-w-xl">
         <h3 className="text-tertiary text-4xl md:text-5xl mb-4 font-pt-bold">
-          {name}
+          Professional Cleaning Services
         </h3>
-        <p className="text-xl md:text-2xl mb-10">{description}</p>
+        <p className="text-xl md:text-2xl mb-10">
+          Our expertise goes beyond traditional cleaning to include a broader
+          range of professional services that meet the unique needs of our
+          clients and the industry at large. We value the significance of
+          cleanliness and, therefore, offer luxurious cleaning services. You can
+          choose from our cleaning plans tailored to meet your preferences.
+        </p>
         <div className="text-2xl">
-          <Button linkAddress={linkAddress}>{linkText}</Button>
+          <Button linkAddress={"/book"}>Book Now</Button>
         </div>
       </div>
     </section>
   );
-};
-
-Professional.propTypes = {
-  img: PropTypes.any.isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  linkAddress: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired,
 };
 
 export default Professional;
