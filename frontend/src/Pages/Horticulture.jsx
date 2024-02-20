@@ -2,6 +2,7 @@
 import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 // images
 import horticulture1 from "../assets/images/horticulture-1.png";
@@ -15,6 +16,7 @@ const Horticulture = () => {
   return (
     <>
       <PageChange pageTitle="Horticulture & Landscape - Platinum Beam" />
+      <Transition />
 
       <Hero
         bgImg={bgImg}

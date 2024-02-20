@@ -2,6 +2,7 @@
 import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
@@ -10,6 +11,7 @@ const ResidentialBasic = () => {
   return (
     <>
       <PageChange pageTitle="Basic Cleaning - Platinum Beam" />
+      <Transition />
 
       <Hero
         bgImg={bgImg}

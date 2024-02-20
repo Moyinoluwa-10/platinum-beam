@@ -5,6 +5,7 @@ import MemberItem from "../Components/About/MemberItem";
 import members from "../Components/About/members";
 import HeroAnimation from "../Components/About/HeroAnimation";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 // images
 import about from "../assets/images/about.png";
@@ -16,24 +17,47 @@ import about5 from "../assets/images/about-5.jpg";
 import about6 from "../assets/images/about-6.png";
 import bunmi from "../assets/images/bunmi.png";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const About = () => {
   return (
     <>
       <PageChange pageTitle="About Us - Platinum Beam" />
+      <Transition />
+
       <HeroAnimation />
       <section className="container p-5 pt-16 md:pt-20 md:pb-32">
-        <h3 className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center max-w-4xl mx-auto">
+        <motion.h3
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-tertiary text-4xl md:text-5xl mb-6 font-pt-bold text-center max-w-4xl mx-auto"
+        >
           Welcome to Platinum Beam, where we transform spaces and elevate lives.
-        </h3>
-        <p className="text-xl md:text-2xl lg:text-3xl mb-16 text-center max-w-5xl mx-auto">
+        </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-xl md:text-2xl lg:text-3xl mb-16 text-center max-w-5xl mx-auto"
+        >
           Platinum Beam Concept, a cleaning service based in Nigeria, has
           undergone a remarkable transformation from its humble beginnings to
           becoming a leading luxury cleaning service provider. Our journey is
           characterized by an unwavering pursuit of excellence, marked by our
           commitment to efficiency, eco-friendly practices, and sustainable
           cleaning solutions, setting us apart in the cleaning industry.
-        </p>
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 mb-10"
+        >
           <img
             src={about1}
             alt="cleaning"
@@ -64,10 +88,16 @@ const About = () => {
             alt="cleaning"
             className="rounded-ss-[40px] rounded-ee-[40px] md:rounded-ss-[66px] md:rounded-ee-[66px] aspect-[16/12]"
           />
-        </div>
+        </motion.div>
       </section>
 
-      <section className="container p-5 py-5 md:pt-10 pb-36 flex flex-col lg:flex-row items-center justify-between gap-10">
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="container p-5 py-5 md:pt-10 pb-36 flex flex-col lg:flex-row items-center justify-between gap-10"
+      >
         <p className="text-xl md:text-2xl lg:text-3xl max-w-2xl mx-auto mb-10">
           We're not just a cleaning service provider, we're educators and
           innovators. Our training and consultancy services aim to empower the
@@ -82,9 +112,15 @@ const About = () => {
           alt="cleaning-image"
           className="w-full max-w-xl mx-auto"
         />
-      </section>
+      </motion.section>
 
-      <section className="container p-5 py-5 md:py-0">
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="container p-5 py-5 md:py-0"
+      >
         <h3 className="text-tertiary text-4xl md:text-5xl mb-10 md:mb-20 font-pt-bold text-center">
           Meet the faces behind the brand
         </h3>
@@ -117,9 +153,15 @@ const About = () => {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="container p-5 py-5 pb-16 md:pt-24 md:pb-10">
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="container p-5 py-5 pb-16 md:pt-24 md:pb-10"
+      >
         <h3 className="text-tertiary text-4xl md:text-5xl mb-16 font-pt-bold text-center">
           Other faces to see
         </h3>
@@ -128,7 +170,7 @@ const About = () => {
             return <MemberItem key={i} {...member} />;
           })}
         </div>
-      </section>
+      </motion.section>
 
       <Transform />
       <Footer />

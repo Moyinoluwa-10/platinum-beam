@@ -8,6 +8,7 @@ import Transform from "../Components/Transform";
 import faqs from "../Components/Faqs/faqs.json";
 import FaqItem from "../Components/Faqs/FaqItem";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 // images
 import bgImg from "../assets/images/bg-services.png";
@@ -22,6 +23,7 @@ const Faqs = () => {
   return (
     <>
       <PageChange pageTitle="FAQs - Platinum Beam" />
+      <Transition />
 
       <Hero bgImg={bgImg} pageTitle={"Frequently Asked Questions"} />
       <section className="container p-5">

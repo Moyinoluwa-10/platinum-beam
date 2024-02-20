@@ -9,6 +9,9 @@ import faqs from "./faqs.json";
 // images
 import faq from "../../assets/images/faq.png";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const Faqs = () => {
   const [isActive, setIsActive] = useState(null);
 
@@ -17,7 +20,13 @@ const Faqs = () => {
   };
 
   return (
-    <section className="container p-5 py-16">
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="container p-5 py-16"
+    >
       <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
         <div>
           <img src={faq} alt="image" className="rounded-xl" />
@@ -50,7 +59,7 @@ const Faqs = () => {
           <Button linkAddress={"/faqs"}>Read More</Button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

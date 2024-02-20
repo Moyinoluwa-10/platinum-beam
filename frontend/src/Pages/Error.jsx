@@ -3,6 +3,7 @@ import Button from "../Components/Button";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 // images
 import error from "../assets/images/404.png";
@@ -11,6 +12,7 @@ const Error = () => {
   return (
     <>
       <PageChange pageTitle="404 | Page Not Found - Platinum Beam" />
+      <Transition />
 
       <section className="bg-[#EDBD3D14]">
         <Header />

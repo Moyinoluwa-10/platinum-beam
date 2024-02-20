@@ -4,9 +4,18 @@ import Button from "../Button";
 // images
 import professional from "../../assets/images/professional.jpg";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const Professional = () => {
   return (
-    <section className="container p-5 py-16 flex flex-col lg:flex-row justify-between items-center gap-12">
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="container p-5 py-16 flex flex-col lg:flex-row justify-between items-center gap-12"
+    >
       <div>
         <img
           src={professional}
@@ -29,7 +38,7 @@ const Professional = () => {
           <Button linkAddress={"/book"}>Book Now</Button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
