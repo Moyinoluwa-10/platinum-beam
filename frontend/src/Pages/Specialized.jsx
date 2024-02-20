@@ -2,6 +2,7 @@
 import Hero from "../Components/Hero";
 import Services from "../Components/Services/Services";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 // images
 import category1 from "../assets/images/category-1.png";
@@ -15,6 +16,7 @@ const Specialized = () => {
   return (
     <>
       <PageChange pageTitle="Specialized Cleaning - Platinum Beam" />
+      <Transition />
 
       <Hero
         bgImg={bgImg}

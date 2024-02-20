@@ -4,9 +4,18 @@ import Button from "./Button";
 // images
 import transform from "../assets/images/transform.png";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const Transform = () => {
   return (
-    <section className="p-5 pt-5 md:pt-24 pb-24 container flex flex-col lg:flex-row gap-12 justify-between items-center">
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="p-5 pt-5 md:pt-24 pb-24 container flex flex-col lg:flex-row gap-12 justify-between items-center"
+    >
       <div>
         <img src={transform} alt="image" className="rounded-xl" />
       </div>
@@ -23,7 +32,7 @@ const Transform = () => {
           <Button linkAddress={"/book"}>Book Now</Button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -2,11 +2,13 @@
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 const Terms = () => {
   return (
     <>
       <PageChange pageTitle="Terms and Conditions - Platinum Beam" />
+      <Transition />
 
       <Header />
       <main className="container mt-20 mb-36">

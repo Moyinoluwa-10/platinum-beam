@@ -3,6 +3,7 @@ import Hero from "../Components/Hero";
 import Footer from "../Components/Footer";
 import ContactForm from "../Components/Contact/ContactForm";
 import PageChange from "../hooks/PageChange";
+import Transition from "../hooks/Transition";
 
 // images
 import bgImg from "../assets/images/bg-contact.png";
@@ -16,6 +17,7 @@ const Contact = () => {
   return (
     <>
       <PageChange pageTitle="Contact Us - Platinum Beam" />
+      <Transition />
 
       <Hero
         bgImg={bgImg}

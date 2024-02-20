@@ -1,5 +1,5 @@
 // react
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // styling
 import "./App.css";
@@ -19,31 +19,41 @@ import Faqs from "./Pages/Faqs";
 import Error from "./Pages/Error";
 import Terms from "./Pages/Terms";
 
+// framer-motion
+import { AnimatePresence } from "framer-motion";
+
 function App() {
+
+
+  const location = useLocation();
+
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services/residential" element={<Residential />} />
-        <Route
-          path="/services/residential/basic"
-          element={<ResidentialBasic />}
-        />
-        <Route
-          path="/services/residential/deep"
-          element={<ResidentialDeep />}
-        />
-        <Route path="/services/commercial" element={<Commercial />} />
-        <Route path="/services/specialized" element={<Specialized />} />
-        <Route path="/services/horticulture" element={<Horticulture />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/book" element={<Booking />} />
-        <Route path="/faqs" element={<Faqs />} />
-        <Route path="/terms-and-conditions" element={<Terms />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services/residential" element={<Residential />} />
+          <Route
+            path="/services/residential/basic"
+            element={<ResidentialBasic />}
+          />
+          <Route
+            path="/services/residential/deep"
+            element={<ResidentialDeep />}
+          />
+          <Route path="/services/commercial" element={<Commercial />} />
+          <Route path="/services/specialized" element={<Specialized />} />
+          <Route path="/services/horticulture" element={<Horticulture />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/book" element={<Booking />} />
+          <Route path="/faqs" element={<Faqs />} />
+          <Route path="/terms-and-conditions" element={<Terms />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </AnimatePresence>
     </>
+  
   );
 }
 
