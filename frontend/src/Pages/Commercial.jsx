@@ -9,6 +9,9 @@ import bgImg from "../assets/images/bg-services.png";
 import commercial1 from "../assets/images/commercial-1.png";
 import commercial2 from "../assets/images/commercial-2.png";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const Commercial = () => {
   return (
     <>
@@ -25,20 +28,32 @@ const Commercial = () => {
 
       <Services>
         <section className="container p-5 py-20 max-w-6xl mx-auto">
-          <p className="text-center text-xl md:text-2xl">
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center text-xl md:text-2xl"
+          >
             Welcome to the next level of workspace enhancement. At Platinum Beam
             Concept, we're not just a cleaning company. We aim to elevate your
             business environment to the pinnacle of professionalism and
             operational excellence. Our Commercial Cleaning service is
             meticulously designed for businesses that aspire to look their best
             and be their best.
-          </p>
+          </motion.p>
         </section>
 
         <hr className="max-w-6xl mx-auto border-1" />
 
         <section className="container p-5 pt-20 pb-10">
-          <div className="flex flex-col lg:flex-row-reverse gap-12 justify-between items-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col lg:flex-row-reverse gap-12 justify-between items-center mb-20"
+          >
             <div>
               <img src={commercial1} alt="image" className="rounded-xl" />
             </div>
@@ -50,9 +65,15 @@ const Commercial = () => {
               This ensures that your workspace not only shines but also supports
               the well-being and efficiency of your team.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col lg:flex-row gap-12 justify-between items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col lg:flex-row gap-12 justify-between items-center"
+          >
             <div>
               <img src={commercial2} alt="image" className="rounded-xl" />
             </div>
@@ -63,7 +84,7 @@ const Commercial = () => {
               commitment to quality, sustainability, and tailored solutions sets
               us apart as leaders in commercial cleaning.
             </p>
-          </div>
+          </motion.div>
         </section>
       </Services>
     </>

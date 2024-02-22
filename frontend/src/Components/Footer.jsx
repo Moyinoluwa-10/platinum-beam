@@ -277,7 +277,7 @@ const Footer = () => {
                 : "max-h-0 overflow-hidden transition-all duration-300 mt-5"
             }
           >
-            <p className=" text-lg mb-5">
+            <p className="mb-5">
               Address: <br /> Block A2, Plot 12B, Fajuyi Estate, Off Ilawe Road,
               Ado Ekiti
             </p>

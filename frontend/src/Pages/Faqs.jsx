@@ -13,6 +13,9 @@ import Transition from "../hooks/Transition";
 // images
 import bgImg from "../assets/images/bg-services.png";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const Faqs = () => {
   const [isActive, setIsActive] = useState(null);
 
@@ -26,13 +29,25 @@ const Faqs = () => {
       <Transition />
 
       <Hero bgImg={bgImg} pageTitle={"Frequently Asked Questions"} />
-      <section className="container p-5">
-        <p className="text-2xl md:text-4xl mb-20">
+      <section className="container p-5 mt-10">
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl mb-20"
+        >
           Below you’ll find answers to the questions we get asked the most about
           booking a service.
-        </p>
+        </motion.p>
 
-        <div className="max-w-4xl mx-auto py-10 px-3 md:px-20 shadow-xl rounded-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto py-10 px-3 md:px-20 shadow-xl rounded-xl"
+        >
           {faqs.map((faq, i) => (
             <FaqItem
               key={i}
@@ -42,7 +57,7 @@ const Faqs = () => {
               onToggle={handleToggle}
             />
           ))}
-        </div>
+        </motion.div>
       </section>
       <Transform />
       <Footer />

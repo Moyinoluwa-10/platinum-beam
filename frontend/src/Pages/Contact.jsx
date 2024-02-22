@@ -15,6 +15,9 @@ import instagram from "../assets/svgs/instagram.svg";
 import facebook from "../assets/svgs/facebook.svg";
 import linkedin from "../assets/svgs/linkedin.svg";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const Contact = () => {
   return (
     <>
@@ -30,11 +33,23 @@ const Contact = () => {
       />
 
       <section className="container p-5 py-24">
-        <h3 className="text-tertiary text-4xl md:text-5xl font-pt-bold text-center mb-12">
+        <motion.h3
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-tertiary text-4xl md:text-5xl font-pt-bold text-center mb-12"
+        >
           Contact us via
-        </h3>
+        </motion.h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 text-center max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 text-center max-w-7xl mx-auto"
+        >
           <div className="flex flex-col place-items-center gap-5 md:gap-8 max-w-xs ">
             <img src={whatsapp} alt="whatsapp-logo" />
             <p className="text-xl md:text-2xl">09131704005</p>
@@ -72,16 +87,22 @@ const Contact = () => {
             </div>
             <p className="text-xl md:text-2xl">Social media links</p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      <section className="p-5 container">
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="p-5 container"
+      >
         <h3 className="text-tertiary text-4xl md:text-5xl mb-20 font-pt-bold text-center">
           Send Us a Message <br /> Get in Touch
         </h3>
 
         <ContactForm />
-      </section>
+      </motion.section>
 
       <Footer />
     </>
