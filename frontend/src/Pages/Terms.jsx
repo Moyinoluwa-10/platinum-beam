@@ -11,7 +11,7 @@ const Terms = () => {
       <Transition />
 
       <Header />
-      <main className="container mt-20 mb-36">
+      <main className="container mt-20 mb-36 p-5">
         <h1 className="text-4xl text-tertiary font-pt-bold mb-5">
           Terms and Conditions
         </h1>

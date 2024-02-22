@@ -140,15 +140,17 @@ export const ServiceInfo = ({ values, onFieldValue }) => {
       </div>
 
       <MyCheckbox name="termsAndConditions">
-        By submitting this you are agreeing to our{" "}
-        <Link
-          to={"/terms-and-conditions"}
-          className="text-secondary"
-          target="_blank"
-        >
-          Terms & Conditions
-        </Link>{" "}
-        for any services rendered
+        <p>
+          By submitting this you are agreeing to our{" "}
+          <Link
+            to={"/terms-and-conditions"}
+            className="text-secondary inline"
+            target="_blank"
+          >
+            Terms & Conditions
+          </Link>{" "}
+          for any services rendered
+        </p>
       </MyCheckbox>
       <div className="text-red-500 text-sm">
         <ErrorMessage name="termsAndConditions" />

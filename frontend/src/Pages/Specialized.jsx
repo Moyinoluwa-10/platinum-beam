@@ -12,6 +12,9 @@ import category3 from "../assets/images/category-3.png";
 // images
 import bgImg from "../assets/images/bg-services.png";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 const Specialized = () => {
   return (
     <>
@@ -26,27 +29,45 @@ const Specialized = () => {
         }
       />
 
-      <section className="container p-5 pt-20 max-w-6xl mx-auto">
-        <p className="text-center text-xl md:text-2xl">
-          At Platinum Beam Concept, we offer specialized cleaning services to
-          cater to your specific cleaning needs. We understand that different
-          cleaning tasks require unique attention and expertise, so we have
-          honed our skills in post-construction, carpet, and move-in/out
-          cleaning.
-        </p>
-      </section>
-
       <Services>
+        <section className="container p-5 pt-20 max-w-6xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center text-xl md:text-2xl"
+          >
+            At Platinum Beam Concept, we offer specialized cleaning services to
+            cater to your specific cleaning needs. We understand that different
+            cleaning tasks require unique attention and expertise, so we have
+            honed our skills in post-construction, carpet, and move-in/out
+            cleaning.
+          </motion.p>
+        </section>
+
         <section className="container p-5 py-20">
-          <div className="flex justify-center items-center gap-5 mb-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex justify-center items-center gap-5 mb-20 text-center"
+          >
             <div className="bg-black h-[1px] w-full hidden md:block"></div>
             <h3 className="text-2xl font-pt-bold uppercase md:whitespace-nowrap">
               Explore our categories
             </h3>
             <div className="bg-black h-[1px] w-full hidden md:block"></div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-10 gap-y-14">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-10 gap-y-14"
+          >
             <div className="max-w-450px lg:w-[450px] xl:w-[580px]">
               <img
                 src={category1}
@@ -99,7 +120,7 @@ const Specialized = () => {
                 a healthier and more beautiful space.
               </p>
             </div>
-          </div>
+          </motion.div>
         </section>
       </Services>
     </>
