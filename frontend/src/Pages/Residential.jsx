@@ -35,12 +35,11 @@ const Residential = () => {
             <img src={residential1} alt="image" className="rounded-xl" />
           </div>
           <p className="lg:max-w-xl text-xl md:text-2xl">
-            Welcome to the new chapter of home living, where every corner
-            radiates comfort and luxury. Your home is your sanctuary, where life
-            unfolds and memories are made. At Platinum Beam Concept, we
-            understand this and offer Residential Cleaning services designed
-            with the homeowner in mind. Our unique service brings a level of
-            care and luxury that is unmatched in the industry.
+            Your home is your sanctuary, where life unfolds and memories are
+            made. At Platinum Beam Concept, we understand this and offer
+            Residential Cleaning services designed with the homeowner in mind.
+            Our unique service brings a level of care and luxury that is
+            unmatched in the industry.
           </p>
         </div>
 

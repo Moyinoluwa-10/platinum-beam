@@ -11,7 +11,9 @@ import bgImg from "../assets/images/bg-contact.png";
 // svgs
 import whatsapp from "../assets/svgs/whatsapp.svg";
 import email from "../assets/svgs/email.svg";
-import location from "../assets/svgs/location.svg";
+import instagram from "../assets/svgs/instagram.svg";
+import facebook from "../assets/svgs/facebook.svg";
+import linkedin from "../assets/svgs/linkedin.svg";
 
 const Contact = () => {
   return (
@@ -39,13 +41,36 @@ const Contact = () => {
           </div>
           <div className="flex flex-col place-items-center gap-5 md:gap-8 max-w-xs">
             <img src={email} alt="email-logo" />
-            <p className="text-xl md:text-2xl">infoplatinumbeam@gmail.com</p>
+            <p className="text-xl md:text-2xl">info@platinumbeamconcept.com</p>
           </div>
           <div className="flex flex-col place-items-center gap-5 md:gap-8 max-w-xs">
-            <img src={location} alt="location-logo" />
-            <p className="text-xl md:text-2xl">
-              Block A2, Plot 12B, Fajuyi Estate, Off Ilawe Road, Ado Ekiti
-            </p>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.instagram.com/platinumbeamconcept"
+                target="_blank"
+                rel="noreferrer"
+                className="relative transition-all duration-1000 hover:bottom-1"
+              >
+                <img src={instagram} alt="instagram-logo" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100094608620510"
+                target="_blank"
+                rel="noreferrer"
+                className="relative transition-all duration-1000 hover:bottom-1"
+              >
+                <img src={facebook} alt="facebook-logo" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/platinum-beam-concept-limited/about/"
+                target="_blank"
+                rel="noreferrer"
+                className="relative transition-all duration-1000 hover:bottom-1"
+              >
+                <img src={linkedin} alt="linkedin-logo" />
+              </a>
+            </div>
+            <p className="text-xl md:text-2xl">Social media links</p>
           </div>
         </div>
       </section>
