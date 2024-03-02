@@ -104,8 +104,8 @@ const Footer = () => {
             Ado Ekiti
           </p>
           <p className="text-lg mb-5">
-            <a href="mailto:infoplatinumbeam@gmail.com" className="footer-link">
-              infoplatinumbeam@gmail.com
+            <a href="mailto:info@platinumbeamconcept.com" className="footer-link">
+              info@platinumbeamconcept.com
             </a>
           </p>
           <p className="text-lg mb-5">
@@ -283,10 +283,10 @@ const Footer = () => {
             </p>
             <p className="mb-5">
               <a
-                href="mailto:infoplatinumbeam@gmail.com"
+                href="mailto:info@platinumbeamconcept.com"
                 className="footer-link"
               >
-                infoplatinumbeam@gmail.com
+                info@platinumbeamconcept.com
               </a>
             </p>
             <p className="mb-5">
