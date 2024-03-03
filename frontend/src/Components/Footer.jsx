@@ -109,7 +109,7 @@ const Footer = () => {
             </a>
           </p>
           <p className="text-lg mb-5">
-            <a href="tel:09131704005" className="footer-link">
+            <a href="tel:+2349131704005" className="footer-link">
               09131704005
             </a>
           </p>
@@ -290,7 +290,7 @@ const Footer = () => {
               </a>
             </p>
             <p className="mb-5">
-              <a href="tel:09131704005" className="footer-link">
+              <a href="tel:+2349131704005" className="footer-link">
                 09131704005
               </a>
             </p>
